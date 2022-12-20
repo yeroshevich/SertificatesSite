@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "D:\\repository\\newRepo\\server\\dist\\logs\\debug\\.8195c77dc1f4f9c454b3b82609aec5799c55adde-audit.json",
+    "files": [
+        {
+            "date": 1670393517183,
+            "name": "D:\\repository\\newRepo\\server\\dist\\logs\\debug\\2022-12-07.log",
+            "hash": "fb7ccbee2b71d10cab0cd5ffbb840c0561bef8ba244e657b7ad3dc27ccf0c0d7"
+        }
+    ],
+    "hashType": "sha256"
+}
