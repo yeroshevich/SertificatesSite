@@ -1,0 +1,167 @@
+@import 'Consts';
+$burgerColor:#8DC640;
+
+
+.headerBlock{
+  display: flex;
+  a{
+    @include HREF;
+  }
+  .header{
+    transition: 2s;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top:70px;
+    height: 70px;
+    width: 90%;
+    padding-bottom: 25px;
+    .logo{
+      height: 100%;
+    }
+    .menu{
+      justify-content: end;
+      nav{
+        padding-inline: 10px;
+        height: 20px;
+        &:last-child{
+          min-width: 205px;
+          a{
+            border-bottom: 1px solid #8DC640;
+            padding-bottom: 5px;
+          }
+        }
+
+      }
+    }
+    .burgerBlock{
+      div{
+        .hamburgerMenu{
+          flex-direction: column;
+          justify-content: end;
+          align-items: end;
+          cursor: pointer;
+          .line{
+            width: 40px;
+            height: 4px;
+            border-radius: 30px;
+            background-color: $burgerColor;
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+
+  }
+  .hiddenBurger{
+    transform: translateX(1060px) !important;
+    opacity: 0;
+  }
+  .visibleBurger{
+    transform: translateX(0px) !important;
+  }
+  .burgerMenu{
+    transition: 1s;
+    margin-top: 140px;
+    background-color: $lightGray;
+    width: 100%;
+    nav{
+      width: 100%;
+      text-align: center;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      div{
+        text-align: center;
+        width: 80%;
+        margin-inline: 10%;
+        border-bottom: 1px solid #c9c6c6;
+        padding-bottom: 15px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1280px)
+{
+  .header{
+    margin-right: 200px;
+    padding-right: 14%;
+    left: 14%;
+  }
+  .menu{
+    width: 100%;
+    nav{
+      &:last-child{
+        margin-left: 10%;
+      }
+    }
+  }
+}
+@media (min-width: 1190px)
+{
+  .header{
+    margin-right: 100px;
+    padding-right: 7%;
+    left: 14%;
+  }
+}
+@media (max-width: 1280px)
+{
+  .header{
+    margin: 0;
+    padding: 0;
+    left: 8%;
+  }
+  .menu{
+    min-width: 600px;
+    nav{
+      &:last-child{
+        margin-left: 3%;
+      }
+    }
+  }
+
+}
+@media (max-width: 900px)
+{
+  .header{
+    left: 1%;
+  }
+}
+@media (min-width: 768px)
+{
+  .menu{
+    display: flex;
+  }
+  .hamburgerMenu{
+    display: none;
+  }
+  .burgerBlock{
+    display: none;
+  }
+}
+@media (max-width: 768px)
+{
+  .header{
+    left: 10%;
+  }
+  .burgerBlock{
+    position: absolute;
+    right: 45px;
+  }
+  .menu{
+    display: none;
+  }
+  .hamburgerMenu{
+    display: flex;
+  }
+}
+@media (max-width: 325px)
+{
+  .header{
+    left: 4%;
+  }
+  .burgerBlock{
+    right: 0;
+  }
+}
