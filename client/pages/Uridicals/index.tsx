@@ -1,9 +1,14 @@
+import UridicalHeader from "../../components/UridicalHeader";
+import UridicalFooter from "../../components/UridicalFooter";
+import UridicalContent from "../../components/UridicalContent";
 
 const UridicalsPage = () => {
     return (
-        <div>
-
-        </div>
+        <>
+            <UridicalHeader/>
+            <UridicalContent/>
+            <UridicalFooter/>
+        </>
     );
 };
 

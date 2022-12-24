@@ -1,0 +1,120 @@
+.footerBlock {
+  width: 100%;
+  position: relative;
+  padding-left: 200px;
+  background-color: #fff;
+  transition: 2s;
+}
+.footerBlock .footer {
+  transition: 2s;
+  min-width: 300px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+}
+.footerBlock .footer .logoBlock {
+  width: 100%;
+  display: grid;
+}
+.footerBlock .footer .logoBlock .logo img {
+  width: 219px;
+  height: 50px;
+}
+.footerBlock .footer .logoBlock .socialLinks {
+  display: flex;
+}
+.footerBlock .footer .logoBlock .socialLinks div {
+  padding-left: 15px;
+}
+.footerBlock .footer .underFooter {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+@media (min-width: 1280px) {
+  .footer {
+    width: 90%;
+    padding-right: 20px;
+    padding-top: 50px;
+  }
+  .logoBlock {
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    padding-bottom: 50px;
+    width: 90%;
+  }
+  .logoBlock .socialLinks {
+    justify-content: end;
+    width: 100%;
+  }
+}
+@media (max-width: 1280px) {
+  .footerBlock {
+    padding-left: 100px;
+    padding-top: 50px;
+  }
+  .logoBlock {
+    grid-template-columns: min-content 700px;
+    align-items: center;
+    width: 90%;
+    padding-bottom: 50px;
+  }
+  .logoBlock .socialLinks {
+    justify-content: end;
+  }
+}
+@media (max-width: 980px) {
+  .footerBlock {
+    padding-left: 15px;
+  }
+  .logoBlock {
+    grid-template-columns: min-content 600px;
+  }
+}
+@media (max-width: 845px) {
+  .logoBlock {
+    grid-template-columns: 1fr;
+    padding-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+  .logoBlock .logo {
+    margin: auto;
+    padding-bottom: 10px;
+  }
+  .logoBlock .socialLinks {
+    justify-content: center;
+  }
+  .underFooter {
+    width: 800px;
+  }
+}
+@media (max-width: 768px) {
+  .underFooter {
+    margin: auto;
+    width: 500px;
+    text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  .logoBlock {
+    padding-bottom: 20px;
+  }
+  .socialLinks {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .socialLinks div {
+    padding-bottom: 10px;
+  }
+  .underFooter {
+    width: 290px;
+  }
+}
+
+/*# sourceMappingURL=PhisicalsFooter.module.css.map */

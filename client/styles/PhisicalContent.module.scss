@@ -1,0 +1,250 @@
+@import "Consts";
+@import "https://rsms.me/inter/inter.css";
+
+@mixin contentContainer{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.content{
+  display: grid;
+  grid-template-rows: auto 1fr auto max-content max-content;
+  min-width: 300px;
+  margin: auto;
+  .text{
+    .title{
+      @include gotham;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+    }
+
+    .description{
+      font-family: 'Inter',serif;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%;
+
+    }
+    div{
+      div{
+        &:last-child{
+          padding-top: 20px;
+        }
+      }
+    }
+  }
+  .buyButton{
+    button{
+      cursor: pointer;
+      @include gotham;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 15px;
+      text-transform: uppercase;
+
+      background-color: transparent;
+      padding: 20px 15px;
+      border: 1px solid $lightGreen;
+    }
+  }
+  .firstContent{
+    display: grid;
+  }
+  .rectImage{
+    @include contentContainer;
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+  .secondContent{
+    position: relative;
+    @include contentContainer;
+    display: grid;
+    .smallImage{
+      display: flex;
+
+    }
+  }
+
+}
+.anotherContent{
+  @include contentContainer;
+}
+@mixin secondContentDefaultTitleDesc{
+  .title{
+    width: 400px;
+  }
+  .description{
+    padding: 50px 0;
+    width: 450px;
+  }
+}
+@media (min-width: 1280px)
+{
+  .content{
+    padding-top: 220px;
+  }
+  .text{
+    padding-inline: 200px;
+  }
+  .firstContent{
+    grid-template-columns: 1fr 1fr;
+    .title{
+      width: 500px;
+      font-size: 48px;
+    }
+    .description{
+      padding-left: 30px;
+      font-size: 16px;
+      width: 600px;
+
+      .buyButton{
+        margin-top: 50px;
+      }
+    }
+  }
+  .secondContent{
+    grid-template-columns: 800px 1fr;
+    @include secondContentDefaultTitleDesc;
+    .smallImage{
+      justify-content: end;
+      img{
+        width: 770px;
+        height: 475px;
+      }
+    }
+  }
+
+}
+@media (max-width: 1280px) {
+  .content{
+    padding-top: 140px;
+  }
+  .text{
+    padding-inline: 100px;
+    margin: auto;
+    padding: 0;
+  }
+  .firstContent{
+    grid-template-columns: 1fr;
+    align-self: center;
+    justify-content: center;
+    .title{
+      text-align: center;
+      width: 600px;
+      margin: auto;
+    }
+    .description{
+      width: 600px;
+      padding-top: 50px;
+      padding-left: 0;
+      text-align: center;
+    }
+  }
+  .secondContent {
+    grid-template-columns: 1fr;
+
+    .text{
+      .title{
+        text-align: center;
+      }
+
+      .description{
+        text-align: center;
+      }
+
+    }
+    @include secondContentDefaultTitleDesc;
+    .smallImage{
+      padding-top: 50px;
+      justify-content: center;
+      img{
+        width: 570px;
+        height: auto;
+      }
+    }
+
+    .buyButton{
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+@media (min-width: 768px)
+{
+    .title{
+      font-size: 38px;
+      width: 600px;
+    }
+    .description{
+      width: 800px;
+    }
+}
+@media (max-width: 768px) {
+  .content{
+    padding-top: 140px;
+  }
+    .title{
+      font-size: 24px;
+      margin: auto;
+    }
+    .description{
+      font-size: 12pt;
+      width: 600px;
+    }
+  .secondContent{
+    .smallImage{
+      width: 100%;
+      padding-top: 50px;
+      justify-content: center;
+      img {
+        width: 350px;
+      }
+    }
+  }
+}
+@media (max-width: 590px)
+{
+  .text {
+    .title {
+      width: 400px;
+    }
+    .description {
+      font-size: 12px;
+      width: 400px;
+      margin: auto;
+    }
+  }
+  .secondContent{
+    .smallImage{
+      img{
+        width: 300px;
+      }
+
+    }
+  }
+}
+@media (max-width: 360px)
+{
+  .text{
+    margin: 0;
+    .title{
+      width: 300px;
+      font-size: 20px;
+    }
+    .description{
+      width: 300px;
+    }
+  }
+  .secondContent{
+    .smallImage{
+      img{
+        width: 250px;
+        height: auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+import styles from '../../styles/FaqList.module.scss'
+import {FAQ} from "../../interfaces/FAQ";
+import FaqItem from "./FaqItem";
+
+interface FaqListProps{
+    faqs:Array<FAQ>
+}
+
+const FaqList = ({faqs}:FaqListProps) => {
+    return (
+        <div className={styles.listBlock}>
+            <header className={styles.content}>FAQ</header>
+            <div className={styles.list}>
+                {
+                    faqs.map(faq=>
+                    <FaqItem faq={faq}/>)
+                }
+            </div>
+        </div>
+    );
+};
+
+export default FaqList;

@@ -1,36 +1,45 @@
 @import 'Consts';
-$burgerColor:#8DC640;
 
+@mixin uridicalHref{
+  &:last-child{
+    min-width: 205px;
+    a{
+      border-bottom: 1px solid #8DC640;
+      padding-bottom: 5px;
+    }
+  }
+}
 
 .headerBlock{
-  display: flex;
+  max-width: 1602px;
+  z-index: 9;
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  height: 140px;
+  margin-left: -1px;
   a{
     @include HREF;
   }
   .header{
     transition: 2s;
     position: absolute;
-    display: flex;
+    display: grid;
     align-items: center;
+    grid-template-columns: max-content 1fr;
     top:70px;
     height: 70px;
-    width: 90%;
     padding-bottom: 25px;
     .logo{
       height: 100%;
+      @include logo;
     }
     .menu{
       justify-content: end;
       nav{
-        padding-inline: 10px;
+        padding-left: 20px;
         height: 20px;
-        &:last-child{
-          min-width: 205px;
-          a{
-            border-bottom: 1px solid #8DC640;
-            padding-bottom: 5px;
-          }
-        }
+        @include uridicalHref;
 
       }
     }
@@ -45,7 +54,7 @@ $burgerColor:#8DC640;
             width: 40px;
             height: 4px;
             border-radius: 30px;
-            background-color: $burgerColor;
+            background-color: $lightGreen;
             margin-bottom: 5px;
           }
         }
@@ -55,16 +64,17 @@ $burgerColor:#8DC640;
   }
   .hiddenBurger{
     transform: translateX(1060px) !important;
-    opacity: 0;
+    transition: .1s;
   }
   .visibleBurger{
     transform: translateX(0px) !important;
+    transition: 1s;
   }
   .burgerMenu{
-    transition: 1s;
-    margin-top: 140px;
     background-color: $lightGray;
     width: 100%;
+    position: absolute;
+    top:140px;
     nav{
       width: 100%;
       text-align: center;
@@ -77,6 +87,11 @@ $burgerColor:#8DC640;
         border-bottom: 1px solid #c9c6c6;
         padding-bottom: 15px;
       }
+      &:last-child{
+        div{
+            border-bottom: 1px solid $lightGreen;
+        }
+      }
     }
   }
 }
@@ -84,36 +99,29 @@ $burgerColor:#8DC640;
 @media (min-width: 1280px)
 {
   .header{
-    margin-right: 200px;
-    padding-right: 14%;
-    left: 14%;
+    left: 200px;
+    width: 90%;
+    padding-right: 200px;
+
   }
   .menu{
     width: 100%;
     nav{
       &:last-child{
-        margin-left: 10%;
+        margin-left: 50px;
       }
     }
   }
 }
-@media (min-width: 1190px)
-{
-  .header{
-    margin-right: 100px;
-    padding-right: 7%;
-    left: 14%;
-  }
-}
+
 @media (max-width: 1280px)
 {
   .header{
-    margin: 0;
-    padding: 0;
-    left: 8%;
+    left: 100px;
+    padding-right: 100px;
   }
   .menu{
-    min-width: 600px;
+    min-width: 800px;
     nav{
       &:last-child{
         margin-left: 3%;
@@ -122,11 +130,23 @@ $burgerColor:#8DC640;
   }
 
 }
-@media (max-width: 900px)
+
+@media (max-width: 1200px)
+{
+  .menu{
+    min-width: 700px;
+
+  }
+}
+@media (max-width: 980px)
 {
   .header{
-    left: 1%;
+    left: 15px;
   }
+  .menu{
+    min-width: 600px;
+  }
+
 }
 @media (min-width: 768px)
 {
@@ -139,29 +159,45 @@ $burgerColor:#8DC640;
   .burgerBlock{
     display: none;
   }
+  .hiddenBurger{
+    display: none;
+  }
+  .headerBlock{
+    height: 140px;
+  }
 }
 @media (max-width: 768px)
 {
-  .header{
-    left: 10%;
-  }
+
   .burgerBlock{
     position: absolute;
     right: 45px;
+    width: 100%;
+    top:8px;
   }
   .menu{
     display: none;
   }
   .hamburgerMenu{
     display: flex;
+    width: 100%;
   }
+  .header{
+    width: 100%;
+  }
+
+
+
 }
 @media (max-width: 325px)
 {
+  .headerBlock{
+    min-width: 300px;
+  }
   .header{
-    left: 4%;
+    left: 2%;
   }
   .burgerBlock{
-    right: 0;
+    right: 15px;
   }
 }

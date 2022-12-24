@@ -9,6 +9,21 @@
             "date": 1671522825241,
             "name": "D:\\repository\\SertificatesSite\\server\\src\\logs\\debug\\2022-12-20.log",
             "hash": "937e98b27a2ee6426ddbd5ceefab06611b63268d77e3f7b13f044bdf45806e96"
+        },
+        {
+            "date": 1671617479364,
+            "name": "D:\\repository\\SertificatesSite\\server\\src\\logs\\debug\\2022-12-21.log",
+            "hash": "3611f9bc814bb7e8c7e50a4f05c90cf98e7850753d5c91f013c9c4832ba7bccd"
+        },
+        {
+            "date": 1671708922185,
+            "name": "D:\\repository\\SertificatesSite\\server\\src\\logs\\debug\\2022-12-22.log",
+            "hash": "13316409e34b3d10eac2236f7f69511fbecec4b9273c560903a8eb93586ecb1c"
+        },
+        {
+            "date": 1671774767053,
+            "name": "D:\\repository\\SertificatesSite\\server\\src\\logs\\debug\\2022-12-23.log",
+            "hash": "20f698dc36d4e3f848d1662e70af5f4b2f9a8fde6bc5f2b5d0a2dda5ef10e160"
         }
     ],
     "hashType": "sha256"

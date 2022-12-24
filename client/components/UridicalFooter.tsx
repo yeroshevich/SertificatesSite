@@ -1,9 +1,10 @@
+import styles from '../styles/UridicalsFooter.module.scss'
 
 const UridicalFooter = () => {
     return (
-        <div>
-
-        </div>
+        <footer className={styles.footer}>
+            footer
+        </footer>
     );
 };
 
