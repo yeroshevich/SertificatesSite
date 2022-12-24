@@ -1,5 +1,5 @@
 import { Response } from 'express';
-import { Controller, Req, Body, Post, UseBefore, HttpCode, Res } from 'routing-controllers';
+import {Controller, Req, Body, Post, UseBefore, HttpCode, Res, Get} from 'routing-controllers';
 import { CreateUserDto } from '@dtos/users.dto';
 import { RequestWithUser } from '@interfaces/auth.interface';
 import { User } from '@interfaces/users.interface';

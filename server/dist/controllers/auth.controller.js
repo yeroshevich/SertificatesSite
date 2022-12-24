@@ -11,20 +11,26 @@ let AuthController = class AuthController {
     constructor() {
         this.authService = new auth_service_1.default();
     }
-    async signUp(userData) {
-        const signUpUserData = await this.authService.signup(userData);
-        return { data: signUpUserData, message: 'signup' };
+    signUp(userData) {
+        return tslib_1.__awaiter(this, void 0, void 0, function* () {
+            const signUpUserData = yield this.authService.signup(userData);
+            return { data: signUpUserData, message: 'signup' };
+        });
     }
-    async logIn(res, userData) {
-        const { cookie, findUser } = await this.authService.login(userData);
-        res.setHeader('Set-Cookie', [cookie]);
-        return { data: findUser, message: 'login' };
+    logIn(res, userData) {
+        return tslib_1.__awaiter(this, void 0, void 0, function* () {
+            const { cookie, findUser } = yield this.authService.login(userData);
+            res.setHeader('Set-Cookie', [cookie]);
+            return { data: findUser, message: 'login' };
+        });
     }
-    async logOut(req, res) {
-        const userData = req.user;
-        const logOutUserData = await this.authService.logout(userData);
-        res.setHeader('Set-Cookie', ['Authorization=; Max-age=0']);
-        return { data: logOutUserData, message: 'logout' };
+    logOut(req, res) {
+        return tslib_1.__awaiter(this, void 0, void 0, function* () {
+            const userData = req.user;
+            const logOutUserData = yield this.authService.logout(userData);
+            res.setHeader('Set-Cookie', ['Authorization=; Max-age=0']);
+            return { data: logOutUserData, message: 'logout' };
+        });
     }
 };
 tslib_1.__decorate([

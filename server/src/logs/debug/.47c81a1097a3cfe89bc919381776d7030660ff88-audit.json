@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "E:\\WorkingRepository\\SertificatesSite\\server\\src\\logs\\debug\\.47c81a1097a3cfe89bc919381776d7030660ff88-audit.json",
+    "files": [
+        {
+            "date": 1671866605792,
+            "name": "E:\\WorkingRepository\\SertificatesSite\\server\\src\\logs\\debug\\2022-12-24.log",
+            "hash": "bab04921bceaf2b5ff879d1360b1fdb5f5d9d20d061a7f4c33028236ca75432f"
+        }
+    ],
+    "hashType": "sha256"
+}

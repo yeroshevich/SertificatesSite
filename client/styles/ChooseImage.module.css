@@ -1,0 +1,20 @@
+.list {
+  height: 500px;
+  overflow: visible;
+}
+
+.card {
+  text-align: center;
+  height: 300px;
+}
+.card .image {
+  max-width: 280px;
+  max-height: 280px;
+}
+.card:hover {
+  transition: background-color 2s;
+  background-color: cornflowerblue;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=ChooseImage.module.css.map */

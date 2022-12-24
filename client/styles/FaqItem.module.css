@@ -5,6 +5,7 @@
 .content div {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .content div img {
   width: 40px;
@@ -35,6 +36,10 @@
 .faqBlock .doubleContent .text {
   padding-inline: 15px;
 }
+.faqBlock .singleContent {
+  text-align: justify;
+}
+
 .droppedContent {
   max-height: 600px;
   transition: max-height 1.5s;
@@ -50,7 +55,6 @@
     padding: 50px 200px;
   }
   .content div {
-    width: 800px;
     font-size: 22px;
   }
   .faqBlock .innerContent img {
@@ -60,6 +64,9 @@
   .faqBlock .doubleContent .text {
     width: 600px;
     min-width: 600px;
+  }
+  .faqBlock .singleContent {
+    font-size: 20px;
   }
 }
 @media (max-width: 1280px) {
@@ -76,6 +83,9 @@
   .faqBlock .doubleContent .text {
     width: 500px;
     min-width: 500px;
+  }
+  .faqBlock .singleContent {
+    font-size: 16px;
   }
 }
 @media (max-width: 980px) {
@@ -102,6 +112,9 @@
   .faqBlock .doubleContent .text {
     width: 600px;
     min-width: 400px;
+  }
+  .faqBlock .singleContent {
+    font-size: 14px;
   }
 }
 @media (max-width: 500px) {

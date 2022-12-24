@@ -12,8 +12,8 @@ const FaqList = ({faqs}:FaqListProps) => {
             <header className={styles.content}>FAQ</header>
             <div className={styles.list}>
                 {
-                    faqs.map(faq=>
-                    <FaqItem faq={faq}/>)
+                    faqs.map((faq,index)=>
+                    <FaqItem faq={faq} key={index}/>)
                 }
             </div>
         </div>

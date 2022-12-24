@@ -3,6 +3,7 @@
   div{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     img{
       width: 40px;
       height: 10px;
@@ -36,7 +37,7 @@
     }
   }
   .singleContent{
-
+    text-align: justify;
   }
 }
 .droppedContent{
@@ -52,7 +53,6 @@
   .content{
     padding: 50px 200px;
     div{
-      width: 800px;
       font-size: 22px;
     }
   }
@@ -68,6 +68,9 @@
         width: 600px;
         min-width: 600px;
       }
+    }
+    .singleContent{
+      font-size: 20px;
     }
   }
 }
@@ -91,6 +94,9 @@
         width:500px;
         min-width: 500px;
       }
+    }
+    .singleContent{
+      font-size: 16px;
     }
   }
 }
@@ -133,6 +139,9 @@
         width: 600px;
         min-width: 400px;
       }
+    }
+    .singleContent{
+      font-size: 14px;
     }
   }
 }

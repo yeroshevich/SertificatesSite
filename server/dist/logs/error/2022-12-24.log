@@ -1,0 +1,353 @@
+2022-12-24 17:05:10 error: uncaughtException: Cannot find module '@controllers/users.controller'
+Require stack:
+- E:\WorkingRepository\SertificatesSite\server\src\server.ts
+Error: Cannot find module '@controllers/users.controller'
+Require stack:
+- E:\WorkingRepository\SertificatesSite\server\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:955:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (E:\WorkingRepository\SertificatesSite\server\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._resolveFilename (E:\WorkingRepository\SertificatesSite\server\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function.Module._load (node:internal/modules/cjs/loader:803:27)
+    at Module.require (node:internal/modules/cjs/loader:1021:19)
+    at require (node:internal/modules/cjs/helpers:103:18)
+    at Object.<anonymous> (E:\WorkingRepository\SertificatesSite\server\src\server.ts:4:1)
+    at Module._compile (node:internal/modules/cjs/loader:1119:14)
+    at Module.m._compile (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1173:10)
+2022-12-24 17:05:16 error: uncaughtException: Cannot find module '@controllers/index.controller'
+Require stack:
+- E:\WorkingRepository\SertificatesSite\server\src\server.ts
+Error: Cannot find module '@controllers/index.controller'
+Require stack:
+- E:\WorkingRepository\SertificatesSite\server\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:955:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (E:\WorkingRepository\SertificatesSite\server\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._resolveFilename (E:\WorkingRepository\SertificatesSite\server\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function.Module._load (node:internal/modules/cjs/loader:803:27)
+    at Module.require (node:internal/modules/cjs/loader:1021:19)
+    at require (node:internal/modules/cjs/helpers:103:18)
+    at Object.<anonymous> (E:\WorkingRepository\SertificatesSite\server\src\server.ts:3:1)
+    at Module._compile (node:internal/modules/cjs/loader:1119:14)
+    at Module.m._compile (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1173:10)
+2022-12-24 17:05:34 error: uncaughtException: Cannot find module '@controllers/index.controller'
+Require stack:
+- E:\WorkingRepository\SertificatesSite\server\src\server.ts
+Error: Cannot find module '@controllers/index.controller'
+Require stack:
+- E:\WorkingRepository\SertificatesSite\server\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:955:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (E:\WorkingRepository\SertificatesSite\server\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._resolveFilename (E:\WorkingRepository\SertificatesSite\server\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function.Module._load (node:internal/modules/cjs/loader:803:27)
+    at Module.require (node:internal/modules/cjs/loader:1021:19)
+    at require (node:internal/modules/cjs/helpers:103:18)
+    at Object.<anonymous> (E:\WorkingRepository\SertificatesSite\server\src\server.ts:3:1)
+    at Module._compile (node:internal/modules/cjs/loader:1119:14)
+    at Module.m._compile (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1173:10)
+2022-12-24 17:05:42 error: uncaughtException: Cannot find module '@controllers/index.controller'
+Require stack:
+- E:\WorkingRepository\SertificatesSite\server\src\server.ts
+Error: Cannot find module '@controllers/index.controller'
+Require stack:
+- E:\WorkingRepository\SertificatesSite\server\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:955:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (E:\WorkingRepository\SertificatesSite\server\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._resolveFilename (E:\WorkingRepository\SertificatesSite\server\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function.Module._load (node:internal/modules/cjs/loader:803:27)
+    at Module.require (node:internal/modules/cjs/loader:1021:19)
+    at require (node:internal/modules/cjs/helpers:103:18)
+    at Object.<anonymous> (E:\WorkingRepository\SertificatesSite\server\src\server.ts:3:1)
+    at Module._compile (node:internal/modules/cjs/loader:1119:14)
+    at Module.m._compile (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1173:10)
+2022-12-24 17:05:55 error: uncaughtException: Cannot find module '@controllers/users.controller'
+Require stack:
+- E:\WorkingRepository\SertificatesSite\server\src\server.ts
+Error: Cannot find module '@controllers/users.controller'
+Require stack:
+- E:\WorkingRepository\SertificatesSite\server\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:955:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (E:\WorkingRepository\SertificatesSite\server\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._resolveFilename (E:\WorkingRepository\SertificatesSite\server\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function.Module._load (node:internal/modules/cjs/loader:803:27)
+    at Module.require (node:internal/modules/cjs/loader:1021:19)
+    at require (node:internal/modules/cjs/helpers:103:18)
+    at Object.<anonymous> (E:\WorkingRepository\SertificatesSite\server\src\server.ts:4:1)
+    at Module._compile (node:internal/modules/cjs/loader:1119:14)
+    at Module.m._compile (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1173:10)
+2022-12-24 17:06:43 error: uncaughtException: Cannot find module '@controllers/users.controller'
+Require stack:
+- E:\WorkingRepository\SertificatesSite\server\src\server.ts
+Error: Cannot find module '@controllers/users.controller'
+Require stack:
+- E:\WorkingRepository\SertificatesSite\server\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:955:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (E:\WorkingRepository\SertificatesSite\server\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._resolveFilename (E:\WorkingRepository\SertificatesSite\server\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function.Module._load (node:internal/modules/cjs/loader:803:27)
+    at Module.require (node:internal/modules/cjs/loader:1021:19)
+    at require (node:internal/modules/cjs/helpers:103:18)
+    at Object.<anonymous> (E:\WorkingRepository\SertificatesSite\server\src\server.ts:4:1)
+    at Module._compile (node:internal/modules/cjs/loader:1119:14)
+    at Module.m._compile (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1173:10)
+2022-12-24 18:38:00 error: uncaughtException: Cannot find module '@controllers/users.controller'
+Require stack:
+- E:\WorkingRepository\SertificatesSite\server\src\server.ts
+Error: Cannot find module '@controllers/users.controller'
+Require stack:
+- E:\WorkingRepository\SertificatesSite\server\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:955:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (E:\WorkingRepository\SertificatesSite\server\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._resolveFilename (E:\WorkingRepository\SertificatesSite\server\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function.Module._load (node:internal/modules/cjs/loader:803:27)
+    at Module.require (node:internal/modules/cjs/loader:1021:19)
+    at require (node:internal/modules/cjs/helpers:103:18)
+    at Object.<anonymous> (E:\WorkingRepository\SertificatesSite\server\src\server.ts:4:1)
+    at Module._compile (node:internal/modules/cjs/loader:1119:14)
+    at Module.m._compile (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1173:10)
+2022-12-24 18:41:18 error: uncaughtException: Cannot find module '@controllers/users.controller'
+Require stack:
+- E:\WorkingRepository\SertificatesSite\server\src\server.ts
+Error: Cannot find module '@controllers/users.controller'
+Require stack:
+- E:\WorkingRepository\SertificatesSite\server\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:955:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (E:\WorkingRepository\SertificatesSite\server\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._resolveFilename (E:\WorkingRepository\SertificatesSite\server\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function.Module._load (node:internal/modules/cjs/loader:803:27)
+    at Module.require (node:internal/modules/cjs/loader:1021:19)
+    at require (node:internal/modules/cjs/helpers:103:18)
+    at Object.<anonymous> (E:\WorkingRepository\SertificatesSite\server\src\server.ts:4:1)
+    at Module._compile (node:internal/modules/cjs/loader:1119:14)
+    at Module.m._compile (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1173:10)
+2022-12-24 18:42:14 error: uncaughtException: Cannot find module '@controllers/users.controller'
+Require stack:
+- E:\WorkingRepository\SertificatesSite\server\src\server.ts
+Error: Cannot find module '@controllers/users.controller'
+Require stack:
+- E:\WorkingRepository\SertificatesSite\server\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:955:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (E:\WorkingRepository\SertificatesSite\server\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._resolveFilename (E:\WorkingRepository\SertificatesSite\server\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function.Module._load (node:internal/modules/cjs/loader:803:27)
+    at Module.require (node:internal/modules/cjs/loader:1021:19)
+    at require (node:internal/modules/cjs/helpers:103:18)
+    at Object.<anonymous> (E:\WorkingRepository\SertificatesSite\server\src\server.ts:4:1)
+    at Module._compile (node:internal/modules/cjs/loader:1119:14)
+    at Module.m._compile (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1173:10)
+2022-12-24 18:42:35 error: uncaughtException: ConfigController is not defined
+ReferenceError: ConfigController is not defined
+    at Object.<anonymous> (E:\WorkingRepository\SertificatesSite\server\src\server.ts:9:55)
+    at Module._compile (node:internal/modules/cjs/loader:1119:14)
+    at Module.m._compile (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1173:10)
+    at Object.require.extensions.<computed> [as .ts] (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:997:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:838:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at phase4 (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\bin.ts:649:14)
+    at bootstrap (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\bin.ts:95:10)
+2022-12-24 18:43:00 error: uncaughtException: Cannot find module '@/repositories/users.repository'
+Require stack:
+- E:\WorkingRepository\SertificatesSite\server\src\middlewares\auth.middleware.ts
+- E:\WorkingRepository\SertificatesSite\server\src\controllers\auth.controller.ts
+- E:\WorkingRepository\SertificatesSite\server\src\server.ts
+Error: Cannot find module '@/repositories/users.repository'
+Require stack:
+- E:\WorkingRepository\SertificatesSite\server\src\middlewares\auth.middleware.ts
+- E:\WorkingRepository\SertificatesSite\server\src\controllers\auth.controller.ts
+- E:\WorkingRepository\SertificatesSite\server\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:955:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (E:\WorkingRepository\SertificatesSite\server\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._resolveFilename (E:\WorkingRepository\SertificatesSite\server\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function.Module._load (node:internal/modules/cjs/loader:803:27)
+    at Module.require (node:internal/modules/cjs/loader:1021:19)
+    at require (node:internal/modules/cjs/helpers:103:18)
+    at Object.<anonymous> (E:\WorkingRepository\SertificatesSite\server\src\middlewares\auth.middleware.ts:6:1)
+    at Module._compile (node:internal/modules/cjs/loader:1119:14)
+    at Module.m._compile (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1173:10)
+2022-12-24 18:43:15 error: uncaughtException: ConfigController is not defined
+ReferenceError: ConfigController is not defined
+    at Object.<anonymous> (E:\WorkingRepository\SertificatesSite\server\src\server.ts:9:55)
+    at Module._compile (node:internal/modules/cjs/loader:1119:14)
+    at Module.m._compile (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1173:10)
+    at Object.require.extensions.<computed> [as .ts] (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:997:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:838:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at phase4 (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\bin.ts:649:14)
+    at bootstrap (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\bin.ts:95:10)
+2022-12-24 18:43:28 error: uncaughtException: ConfigController is not defined
+ReferenceError: ConfigController is not defined
+    at Object.<anonymous> (E:\WorkingRepository\SertificatesSite\server\src\server.ts:9:55)
+    at Module._compile (node:internal/modules/cjs/loader:1119:14)
+    at Module.m._compile (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1173:10)
+    at Object.require.extensions.<computed> [as .ts] (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:997:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:838:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at phase4 (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\bin.ts:649:14)
+    at bootstrap (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\bin.ts:95:10)
+2022-12-24 18:43:38 error: uncaughtException: ConfigController is not defined
+ReferenceError: ConfigController is not defined
+    at Object.<anonymous> (E:\WorkingRepository\SertificatesSite\server\src\server.ts:9:55)
+    at Module._compile (node:internal/modules/cjs/loader:1119:14)
+    at Module.m._compile (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1173:10)
+    at Object.require.extensions.<computed> [as .ts] (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:997:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:838:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at phase4 (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\bin.ts:649:14)
+    at bootstrap (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\bin.ts:95:10)
+2022-12-24 18:43:55 error: uncaughtException: ConfigController is not defined
+ReferenceError: ConfigController is not defined
+    at Object.<anonymous> (E:\WorkingRepository\SertificatesSite\server\src\server.ts:9:55)
+    at Module._compile (node:internal/modules/cjs/loader:1119:14)
+    at Module.m._compile (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1173:10)
+    at Object.require.extensions.<computed> [as .ts] (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:997:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:838:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at phase4 (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\bin.ts:649:14)
+    at bootstrap (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\bin.ts:95:10)
+2022-12-24 18:45:26 error: uncaughtException: ConfigController is not defined
+ReferenceError: ConfigController is not defined
+    at Object.<anonymous> (E:\WorkingRepository\SertificatesSite\server\src\server.ts:9:55)
+    at Module._compile (node:internal/modules/cjs/loader:1119:14)
+    at Module.m._compile (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1173:10)
+    at Object.require.extensions.<computed> [as .ts] (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:997:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:838:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at phase4 (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\bin.ts:649:14)
+    at bootstrap (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\bin.ts:95:10)
+2022-12-24 18:45:49 error: uncaughtException: ConfigController is not defined
+ReferenceError: ConfigController is not defined
+    at Object.<anonymous> (E:\WorkingRepository\SertificatesSite\server\src\server.ts:9:55)
+    at Module._compile (node:internal/modules/cjs/loader:1119:14)
+    at Module.m._compile (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1173:10)
+    at Object.require.extensions.<computed> [as .ts] (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:997:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:838:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at phase4 (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\bin.ts:649:14)
+    at bootstrap (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\bin.ts:95:10)
+2022-12-24 18:46:12 error: uncaughtException: ConfigController is not defined
+ReferenceError: ConfigController is not defined
+    at Object.<anonymous> (E:\WorkingRepository\SertificatesSite\server\src\server.ts:8:55)
+    at Module._compile (node:internal/modules/cjs/loader:1119:14)
+    at Module.m._compile (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1173:10)
+    at Object.require.extensions.<computed> [as .ts] (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:997:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:838:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at phase4 (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\bin.ts:649:14)
+    at bootstrap (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\bin.ts:95:10)
+2022-12-24 18:46:38 error: uncaughtException: ConfigController is not defined
+ReferenceError: ConfigController is not defined
+    at Object.<anonymous> (E:\WorkingRepository\SertificatesSite\server\src\server.ts:8:55)
+    at Module._compile (node:internal/modules/cjs/loader:1119:14)
+    at Module.m._compile (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1173:10)
+    at Object.require.extensions.<computed> [as .ts] (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:997:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:838:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at phase4 (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\bin.ts:649:14)
+    at bootstrap (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\bin.ts:95:10)
+2022-12-24 18:47:24 error: uncaughtException: ConfigController is not defined
+ReferenceError: ConfigController is not defined
+    at Object.<anonymous> (E:\WorkingRepository\SertificatesSite\server\src\server.ts:8:55)
+    at Module._compile (node:internal/modules/cjs/loader:1119:14)
+    at Module.m._compile (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1173:10)
+    at Object.require.extensions.<computed> [as .ts] (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:997:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:838:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at phase4 (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\bin.ts:649:14)
+    at bootstrap (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\bin.ts:95:10)
+2022-12-24 18:50:58 error: uncaughtException: ConfigController is not defined
+ReferenceError: ConfigController is not defined
+    at Object.<anonymous> (E:\WorkingRepository\SertificatesSite\server\src\server.ts:8:55)
+    at Module._compile (node:internal/modules/cjs/loader:1119:14)
+    at Module.m._compile (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1173:10)
+    at Object.require.extensions.<computed> [as .ts] (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:997:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:838:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at phase4 (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\bin.ts:649:14)
+    at bootstrap (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\bin.ts:95:10)
+2022-12-24 18:51:45 error: uncaughtException: ConfigController is not defined
+ReferenceError: ConfigController is not defined
+    at Object.<anonymous> (E:\WorkingRepository\SertificatesSite\server\src\server.ts:8:55)
+    at Module._compile (node:internal/modules/cjs/loader:1119:14)
+    at Module.m._compile (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1173:10)
+    at Object.require.extensions.<computed> [as .ts] (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:997:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:838:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at phase4 (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\bin.ts:649:14)
+    at bootstrap (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\bin.ts:95:10)
+2022-12-24 18:53:17 error: uncaughtException: ConfigController is not defined
+ReferenceError: ConfigController is not defined
+    at Object.<anonymous> (E:\WorkingRepository\SertificatesSite\server\src\server.ts:8:55)
+    at Module._compile (node:internal/modules/cjs/loader:1119:14)
+    at Module.m._compile (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1173:10)
+    at Object.require.extensions.<computed> [as .ts] (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:997:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:838:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at phase4 (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\bin.ts:649:14)
+    at bootstrap (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\bin.ts:95:10)
+2022-12-24 18:54:00 error: uncaughtException: ConfigController is not defined
+ReferenceError: ConfigController is not defined
+    at Object.<anonymous> (E:\WorkingRepository\SertificatesSite\server\src\server.ts:8:55)
+    at Module._compile (node:internal/modules/cjs/loader:1119:14)
+    at Module.m._compile (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1173:10)
+    at Object.require.extensions.<computed> [as .ts] (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:997:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:838:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at phase4 (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\bin.ts:649:14)
+    at bootstrap (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\bin.ts:95:10)
+2022-12-24 18:54:46 error: uncaughtException: ConfigController is not defined
+ReferenceError: ConfigController is not defined
+    at Object.<anonymous> (E:\WorkingRepository\SertificatesSite\server\src\server.ts:8:55)
+    at Module._compile (node:internal/modules/cjs/loader:1119:14)
+    at Module.m._compile (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1173:10)
+    at Object.require.extensions.<computed> [as .ts] (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:997:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:838:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at phase4 (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\bin.ts:649:14)
+    at bootstrap (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\bin.ts:95:10)
+2022-12-24 18:56:06 error: uncaughtException: ConfigController is not defined
+ReferenceError: ConfigController is not defined
+    at Object.<anonymous> (E:\WorkingRepository\SertificatesSite\server\dist\server.js:18:5)
+    at Module._compile (node:internal/modules/cjs/loader:1119:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1173:10)
+    at Module.load (node:internal/modules/cjs/loader:997:32)
+    at Module._load (node:internal/modules/cjs/loader:838:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at node:internal/main/run_main_module:18:47

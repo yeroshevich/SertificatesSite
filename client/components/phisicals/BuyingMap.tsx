@@ -2,22 +2,33 @@ import {YMaps, Map, ZoomControl, Placemark,GeoObject} from "@pbe/react-yandex-ma
 import {API_KEY, MINSK_COORDINATES} from "../../app/CONSTS";
 import {GeometryCoordinates} from "../../interfaces/GeometryCoordinates";
 import {YMapsApi} from "@pbe/react-yandex-maps/typings/util/typing";
-import {useRef, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import styles from '../../styles/Map.module.scss'
+import ymaps, {modules} from "yandex-maps";
 
 export interface BuyingMapProps{
     addresses:GeometryCoordinates[]
 }
 
 
-
 const BuyingMap = ({addresses}:BuyingMapProps) => {
 
     const [ymaps,setYmaps] = useState<YMapsApi>()
 
+    const [defaultMarks,setDefaultMarks] = useState<Array<ymaps.Placemark>>()
+
     const map = useRef()
 
-
+    const reloadRoutes = ()=>{
+        // @ts-ignore
+        if(map.current.geoObjects.getLength() != addresses.length)
+        {
+            // @ts-ignore
+            const lastIndex = map.current.geoObjects.getLength()-1
+            //@ts-ignore
+            map.current.geoObjects.splice(lastIndex,1)
+        }
+    }
     const buildRoute = (coords:GeometryCoordinates)=>{
         if(ymaps)
         {
@@ -31,8 +42,7 @@ const BuyingMap = ({addresses}:BuyingMapProps) => {
                     boundsAutoApply:true
                 }
             )
-            // @ts-ignore
-            map.current.geoObjects.removeAll()
+            reloadRoutes()
             // @ts-ignore
             map.current.geoObjects.add(multi)
 
@@ -46,6 +56,11 @@ const BuyingMap = ({addresses}:BuyingMapProps) => {
                 ГДЕ МОЖНО ПРИОБРЕСТИ ПОДАРОЧНЫЙ СЕРТИФИКАТ
             </header>
             <div  className={styles.map}>
+                <button
+                    onClick={reloadRoutes}
+                    className={styles.closeRouting}>
+                    Отменить маршрут
+                </button>
 
                 <YMaps
                     query={{ apikey: API_KEY }}
@@ -74,17 +89,8 @@ const BuyingMap = ({addresses}:BuyingMapProps) => {
                                                iconContent:index+1,
                                                hintContent:address.description,
                                                balloonContentHeader:`<div>${address.description}</div>`,
-                                               balloonContent:`<button style="background-color: transparent; border: 0" onclick="document.getElementById(${address.latitude}).click()">Проложить маршрут</button>`
-
-
+                                               balloonContent:`<button style="background-color: transparent; border: 0;cursor: pointer" onclick="document.getElementById(${address.latitude}).click()">Проложить маршрут</button>`
                                            }}
-                                           options={{
-                                               //openBalloonOnClick:true,
-                                               // hasHint:true,
-                                               // openEmptyHint:true,
-                                               //openEmptyBalloon:true,
-                                           }}
-
                                        />
                                        <span id={`${address.latitude}`} onClick={()=>buildRoute(address)} style={{display:'none'}}></span>
                                    </div>

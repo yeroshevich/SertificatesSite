@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "E:\\repository\\tempsertif\\server\\src\\logs\\debug\\.cbbc345608d1ac6ede414221e2edd25e658938a4-audit.json",
+    "files": [
+        {
+            "date": 1671897717923,
+            "name": "E:\\repository\\tempsertif\\server\\src\\logs\\debug\\2022-12-24.log",
+            "hash": "41259e9677acfb2f557b5e97ebc2b87c70f0e409651616bd2e4b7d0a15361d56"
+        }
+    ],
+    "hashType": "sha256"
+}

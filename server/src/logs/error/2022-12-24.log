@@ -1,0 +1,157 @@
+2022-12-24 19:13:01 error: [GET] /images >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 19:13:09 error: [GET] /images >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 19:14:37 error: uncaughtException: ⨯ Unable to compile TypeScript:
+src/controllers/image.controller.ts(9,29): error TS1109: Expression expected.
+
+TSError: ⨯ Unable to compile TypeScript:
+src/controllers/image.controller.ts(9,29): error TS1109: Expression expected.
+
+    at createTSError (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:863:19)
+    at E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1173:10)
+    at Object.require.extensions.<computed> [as .ts] (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:997:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:838:12)
+    at Module.require (node:internal/modules/cjs/loader:1021:19)
+2022-12-24 19:15:36 error: [GET] /images >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 19:16:40 error: [GET] /images >> StatusCode:: 500, Message:: path must be absolute or specify root to res.sendFile
+2022-12-24 19:16:42 error: [GET] /images >> StatusCode:: 500, Message:: path must be absolute or specify root to res.sendFile
+2022-12-24 19:16:56 error: [GET] /images >> StatusCode:: 500, Message:: path must be absolute or specify root to res.sendFile
+2022-12-24 19:17:03 error: [GET] /images >> StatusCode:: 500, Message:: path must be absolute or specify root to res.sendFile
+2022-12-24 19:17:58 error: [GET] /images >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 19:18:13 error: [GET] /images >> StatusCode:: 500, Message:: path must be absolute or specify root to res.sendFile
+2022-12-24 19:18:15 error: [GET] /images >> StatusCode:: 500, Message:: path must be absolute or specify root to res.sendFile
+2022-12-24 19:19:08 error: [GET] /images >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 19:21:32 error: [GET] /images >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 19:28:33 error: [GET] /images >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 19:29:36 error: [GET] /images >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 19:33:01 error: [GET] /images >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 19:34:40 error: [GET] /images >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 19:34:49 error: [GET] /images >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 19:38:01 error: [GET] /images >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 19:42:35 error: [GET] /images >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 19:45:09 error: [GET] /images >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 19:47:33 error: [GET] /images >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 19:47:33 error: uncaughtException: Cannot read properties of undefined (reading 'push')
+TypeError: Cannot read properties of undefined (reading 'push')
+    at ServerResponse._writeRaw (node:_http_outgoing:376:19)
+    at ServerResponse._send (node:_http_outgoing:349:15)
+    at ServerResponse.end (node:_http_outgoing:965:10)
+    at E:\WorkingRepository\SertificatesSite\server\src\controllers\image.controller.ts:19:18
+    at FSReqCallback.readFileAfterClose [as oncomplete] (node:internal/fs/read_file_context:68:3)
+2022-12-24 19:49:08 error: [GET] /images >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 19:49:57 error: [GET] /images >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 19:56:11 error: [GET] /images >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 19:57:47 error: [GET] /images >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 19:57:53 error: [GET] /images >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 19:58:18 error: [GET] /images >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 19:58:20 error: [GET] /images >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 19:58:27 error: [GET] /images >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 19:59:26 error: [GET] /images >> StatusCode:: 500, Message:: Cannot set headers after they are sent to the client
+2022-12-24 19:59:27 error: [GET] /images >> StatusCode:: 500, Message:: Cannot set headers after they are sent to the client
+2022-12-24 19:59:39 error: [GET] /images >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 20:00:25 error: [GET] /images >> StatusCode:: 500, Message:: The "chunk" argument must be of type string or an instance of Buffer or Uint8Array. Received an instance of Array
+2022-12-24 20:08:55 error: [GET] /images >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 20:08:55 error: uncaughtException: expected a function
+Error: expected a function
+    at wrapAsync (E:\WorkingRepository\SertificatesSite\server\node_modules\async\dist\async.js:201:50)
+    at _asyncMap (E:\WorkingRepository\SertificatesSite\server\node_modules\async\dist\async.js:242:25)
+    at Object.map (E:\WorkingRepository\SertificatesSite\server\node_modules\async\dist\async.js:749:16)
+    at Object.awaitable [as map] (E:\WorkingRepository\SertificatesSite\server\node_modules\async\dist\async.js:211:32)
+    at E:\WorkingRepository\SertificatesSite\server\src\controllers\image.controller.ts:26:13
+    at FSReqCallback.oncomplete (node:fs:201:23)
+2022-12-24 20:16:40 error: uncaughtException: ⨯ Unable to compile TypeScript:
+src/services/image.service.ts(13,1): error TS1005: '}' expected.
+
+TSError: ⨯ Unable to compile TypeScript:
+src/services/image.service.ts(13,1): error TS1005: '}' expected.
+
+    at createTSError (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:863:19)
+    at E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1173:10)
+    at Object.require.extensions.<computed> [as .ts] (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:997:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:838:12)
+    at Module.require (node:internal/modules/cjs/loader:1021:19)
+2022-12-24 20:17:17 error: uncaughtException: ⨯ Unable to compile TypeScript:
+src/services/image.service.ts(16,1): error TS1005: '}' expected.
+
+TSError: ⨯ Unable to compile TypeScript:
+src/services/image.service.ts(16,1): error TS1005: '}' expected.
+
+    at createTSError (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:863:19)
+    at E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1173:10)
+    at Object.require.extensions.<computed> [as .ts] (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:997:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:838:12)
+    at Module.require (node:internal/modules/cjs/loader:1021:19)
+2022-12-24 20:18:51 error: [GET] /images >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 20:19:06 error: [GET] /images/path=temp.png >> StatusCode:: 500, Message:: ENOENT: no such file or directory, open 'E:\WorkingRepository\SertificatesSite\server\src\userImages\path=temp.png'
+2022-12-24 20:19:17 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 20:19:53 error: [GET] /images >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 20:21:15 error: uncaughtException: Path is not defined
+ReferenceError: Path is not defined
+    at Object.<anonymous> (E:\WorkingRepository\SertificatesSite\server\src\controllers\image.controller.ts:13:53)
+    at Module._compile (node:internal/modules/cjs/loader:1119:14)
+    at Module.m._compile (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1173:10)
+    at Object.require.extensions.<computed> [as .ts] (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:997:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:838:12)
+    at Module.require (node:internal/modules/cjs/loader:1021:19)
+    at require (node:internal/modules/cjs/helpers:103:18)
+    at Object.<anonymous> (E:\WorkingRepository\SertificatesSite\server\src\server.ts:4:1)
+2022-12-24 20:22:14 error: [GET] /images >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 20:22:16 error: [GET] /images >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 20:22:32 error: [GET] /images >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 20:22:42 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 20:23:24 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: The "chunk" argument must be of type string or an instance of Buffer or Uint8Array. Received an instance of Object
+2022-12-24 20:23:48 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 20:25:29 error: [GET] /images >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 20:25:33 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 20:26:52 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 20:27:18 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 20:27:24 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 20:28:33 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 20:28:36 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 20:28:57 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 20:29:19 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 20:30:49 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 20:30:53 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 20:32:08 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 20:32:33 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 20:32:46 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 20:33:49 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 21:11:09 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-24 22:15:16 error: uncaughtException: Cannot find module '@/repositories/users.repository'
+Require stack:
+- E:\WorkingRepository\SertificatesSite\server\src\middlewares\auth.middleware.ts
+- E:\WorkingRepository\SertificatesSite\server\src\controllers\auth.controller.ts
+- E:\WorkingRepository\SertificatesSite\server\src\server.ts
+Error: Cannot find module '@/repositories/users.repository'
+Require stack:
+- E:\WorkingRepository\SertificatesSite\server\src\middlewares\auth.middleware.ts
+- E:\WorkingRepository\SertificatesSite\server\src\controllers\auth.controller.ts
+- E:\WorkingRepository\SertificatesSite\server\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:955:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (E:\WorkingRepository\SertificatesSite\server\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._resolveFilename (E:\WorkingRepository\SertificatesSite\server\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function.Module._load (node:internal/modules/cjs/loader:803:27)
+    at Module.require (node:internal/modules/cjs/loader:1021:19)
+    at require (node:internal/modules/cjs/helpers:103:18)
+    at Object.<anonymous> (E:\WorkingRepository\SertificatesSite\server\src\middlewares\auth.middleware.ts:6:1)
+    at Module._compile (node:internal/modules/cjs/loader:1119:14)
+    at Module.m._compile (E:\WorkingRepository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1173:10)
+2022-12-24 22:29:20 error: [POST] /signup >> StatusCode:: 409, Message:: This email admin already exists
+2022-12-24 22:30:38 error: [POST] /signup >> StatusCode:: 409, Message:: This username admin already exists
