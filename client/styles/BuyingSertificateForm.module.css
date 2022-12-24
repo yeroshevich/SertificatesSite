@@ -1,0 +1,98 @@
+.content {
+  padding-top: 140px;
+  padding-inline: 200px;
+  width: 100%;
+  padding-left: 35%;
+}
+.content .container {
+  text-align: left;
+  max-width: 600px;
+}
+.content .container .header {
+  font-size: 15pt;
+  font-family: "Gotham Pro", serif;
+  color: #4B4B4B;
+  padding-bottom: 15px;
+}
+.content .container .form {
+  width: 100%;
+  margin: auto;
+}
+.content .container .form .agrees {
+  display: flex;
+  align-items: start;
+  padding-bottom: 15px;
+}
+.content .container .form .agrees span {
+  text-align: justify;
+  float: left;
+  font-size: 12px;
+}
+.content .container .form .agrees span .checkbox {
+  padding-right: 10px;
+}
+.content .container .form .agrees span .redCross {
+  position: absolute;
+  content: " *";
+  color: red;
+  z-index: 5000;
+}
+.content .container .form .placeholder {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  opacity: 0.4;
+  pointer-events: none;
+}
+.content .container .form .placeholder span:after {
+  position: absolute;
+  content: " *";
+  color: red;
+}
+.content .container .form .inputBlock {
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+}
+.content .container .form .inputBlock:last-child {
+  border: 0;
+}
+.content .container .form .inputBlock textarea {
+  font-family: "Inter", serif;
+  color: #4B4B4B;
+  font-size: 16px;
+  padding: 15px;
+  max-width: 600px;
+  min-width: 600px;
+  min-height: 100px;
+  max-height: 300px;
+  border: 0;
+  outline: 0;
+}
+.content .container .form .inputBlock input {
+  padding: 15px 5px;
+  width: 100%;
+  border: 0;
+  outline: 0;
+}
+.content .container .form .inputBlock input:not(:placeholder-shown) ~ label {
+  color: transparent;
+  visibility: hidden;
+}
+.content .container .form .inputBlock textarea:not(:placeholder-shown) ~ label {
+  color: transparent;
+  visibility: hidden;
+}
+.content .container .form button {
+  width: 100%;
+  height: 50px;
+  font-weight: bold;
+  font-family: "Gotham Pro", serif;
+  color: #4B4B4B;
+  background-color: #8DC640;
+  border: 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/*# sourceMappingURL=BuyingSertificateForm.module.css.map */
