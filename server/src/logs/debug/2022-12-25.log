@@ -2,3 +2,205 @@
 2022-12-25 12:00:50 info: ======= ENV: development =======
 2022-12-25 12:00:50 info: 🚀 App listening on the port 8080
 2022-12-25 12:00:50 info: =================================
+2022-12-25 19:59:16 info: =================================
+2022-12-25 19:59:16 info: ======= ENV: development =======
+2022-12-25 19:59:16 info: 🚀 App listening on the port 8080
+2022-12-25 19:59:16 info: =================================
+2022-12-25 19:59:18 info: [0mGET /images/temp.png [32m200[0m 55.819 ms - -[0m
+2022-12-25 19:59:42 info: [0mGET /images/temp.png [32m200[0m 2.548 ms - -[0m
+2022-12-25 19:59:42 info: [0mGET /favicon.ico [33m404[0m 3.154 ms - 150[0m
+2022-12-25 19:59:56 info: [0mGET /images/temp.png [32m200[0m 1.025 ms - -[0m
+2022-12-25 19:59:58 info: [0mGET /images/temp.png [32m200[0m 0.924 ms - -[0m
+2022-12-25 20:00:24 info: =================================
+2022-12-25 20:00:24 info: ======= ENV: development =======
+2022-12-25 20:00:24 info: 🚀 App listening on the port 8080
+2022-12-25 20:00:24 info: =================================
+2022-12-25 20:00:25 info: [0mGET /images/temp.png [32m200[0m 5.270 ms - -[0m
+2022-12-25 20:01:02 info: =================================
+2022-12-25 20:01:02 info: ======= ENV: development =======
+2022-12-25 20:01:02 info: 🚀 App listening on the port 8080
+2022-12-25 20:01:02 info: =================================
+2022-12-25 20:02:33 info: =================================
+2022-12-25 20:02:33 info: ======= ENV: development =======
+2022-12-25 20:02:33 info: 🚀 App listening on the port 8080
+2022-12-25 20:02:33 info: =================================
+2022-12-25 20:02:34 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-25 20:02:34 info: [0mGET /images/temp.png [31m500[0m 6.554 ms - -[0m
+2022-12-25 20:02:40 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-25 20:02:40 info: [0mGET /images/temp.png [31m500[0m 1.336 ms - -[0m
+2022-12-25 20:02:42 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-25 20:02:42 info: [0mGET /images/temp.png [31m500[0m 1.008 ms - -[0m
+2022-12-25 20:02:55 info: =================================
+2022-12-25 20:02:55 info: ======= ENV: development =======
+2022-12-25 20:02:55 info: 🚀 App listening on the port 8080
+2022-12-25 20:02:55 info: =================================
+2022-12-25 20:03:26 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-25 20:03:26 info: [0mGET /images/temp.png [31m500[0m 26.535 ms - 34[0m
+2022-12-25 20:03:29 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-25 20:03:29 info: [0mGET /images/temp.png [31m500[0m 6.086 ms - 34[0m
+2022-12-25 20:03:55 info: =================================
+2022-12-25 20:03:55 info: ======= ENV: development =======
+2022-12-25 20:03:55 info: 🚀 App listening on the port 8080
+2022-12-25 20:03:55 info: =================================
+2022-12-25 20:03:59 info: [0mGET /images/temp.png [32m200[0m 6.188 ms - -[0m
+2022-12-25 20:04:01 info: [0mGET /images/temp.png [32m200[0m 2.745 ms - -[0m
+2022-12-25 20:04:04 info: [0mGET /images/temp.png [32m200[0m 1.355 ms - -[0m
+2022-12-25 20:04:08 info: [0mGET /images/temp.png [32m200[0m 1.916 ms - -[0m
+2022-12-25 20:05:52 info: =================================
+2022-12-25 20:05:52 info: ======= ENV: development =======
+2022-12-25 20:05:52 info: 🚀 App listening on the port 8080
+2022-12-25 20:05:52 info: =================================
+2022-12-25 20:05:54 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-25 20:05:54 info: [0mGET /images/temp.png [31m500[0m 26.605 ms - 34[0m
+2022-12-25 20:06:47 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-25 20:06:47 info: [0mGET /images/temp.png [31m500[0m 4.428 ms - 34[0m
+2022-12-25 20:07:01 info: =================================
+2022-12-25 20:07:01 info: ======= ENV: development =======
+2022-12-25 20:07:01 info: 🚀 App listening on the port 8080
+2022-12-25 20:07:01 info: =================================
+2022-12-25 20:08:02 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-25 20:08:02 info: [0mGET /images/temp.png [31m500[0m 25.382 ms - 34[0m
+2022-12-25 20:08:41 info: =================================
+2022-12-25 20:08:41 info: ======= ENV: development =======
+2022-12-25 20:08:41 info: 🚀 App listening on the port 8080
+2022-12-25 20:08:41 info: =================================
+2022-12-25 20:10:06 info: =================================
+2022-12-25 20:10:06 info: ======= ENV: development =======
+2022-12-25 20:10:06 info: 🚀 App listening on the port 8080
+2022-12-25 20:10:06 info: =================================
+2022-12-25 20:10:18 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-25 20:10:18 info: [0mGET /images/temp.png [31m500[0m 25.345 ms - 34[0m
+2022-12-25 20:10:30 info: =================================
+2022-12-25 20:10:30 info: ======= ENV: development =======
+2022-12-25 20:10:30 info: 🚀 App listening on the port 8080
+2022-12-25 20:10:30 info: =================================
+2022-12-25 20:10:33 info: [0mGET /images/temp.png [32m200[0m 6.798 ms - -[0m
+2022-12-25 20:10:37 info: [0mGET /images/temp.png [32m200[0m 2.079 ms - -[0m
+2022-12-25 20:10:39 info: [0mGET /images/temp.png [32m200[0m 0.671 ms - -[0m
+2022-12-25 20:11:19 info: =================================
+2022-12-25 20:11:19 info: ======= ENV: development =======
+2022-12-25 20:11:19 info: 🚀 App listening on the port 8080
+2022-12-25 20:11:19 info: =================================
+2022-12-25 20:11:21 info: [0mGET /images/temp.png [33m404[0m 8.110 ms - 154[0m
+2022-12-25 20:11:26 info: [0mGET /images/temp.png [33m404[0m 2.970 ms - 154[0m
+2022-12-25 20:11:27 info: [0mGET /images/temp.png [33m404[0m 1.885 ms - 154[0m
+2022-12-25 20:12:17 info: =================================
+2022-12-25 20:12:17 info: ======= ENV: development =======
+2022-12-25 20:12:17 info: 🚀 App listening on the port 8080
+2022-12-25 20:12:17 info: =================================
+2022-12-25 20:12:21 info: [0mGET /images/temp.png [32m200[0m 10.089 ms - 6451[0m
+2022-12-25 20:12:33 info: [0mGET /images/temp.png [32m200[0m 3.679 ms - 6451[0m
+2022-12-25 20:12:36 info: [0mGET /images/temp.png [32m200[0m 2.195 ms - 6451[0m
+2022-12-25 20:12:49 info: [0mGET /images/temp.png [32m200[0m 2.109 ms - 6451[0m
+2022-12-25 20:14:06 info: =================================
+2022-12-25 20:14:06 info: ======= ENV: development =======
+2022-12-25 20:14:06 info: 🚀 App listening on the port 8080
+2022-12-25 20:14:06 info: =================================
+2022-12-25 20:44:00 info: =================================
+2022-12-25 20:44:00 info: ======= ENV: development =======
+2022-12-25 20:44:00 info: 🚀 App listening on the port 8080
+2022-12-25 20:44:00 info: =================================
+2022-12-25 20:44:08 info: =================================
+2022-12-25 20:44:08 info: ======= ENV: development =======
+2022-12-25 20:44:08 info: 🚀 App listening on the port 8080
+2022-12-25 20:44:08 info: =================================
+2022-12-25 20:44:31 info: [0mGET /images/temp.png [32m200[0m 29.992 ms - -[0m
+2022-12-25 20:47:00 info: =================================
+2022-12-25 20:47:00 info: ======= ENV: development =======
+2022-12-25 20:47:00 info: 🚀 App listening on the port 8080
+2022-12-25 20:47:00 info: =================================
+2022-12-25 20:48:27 info: =================================
+2022-12-25 20:48:27 info: ======= ENV: development =======
+2022-12-25 20:48:27 info: 🚀 App listening on the port 8080
+2022-12-25 20:48:27 info: =================================
+2022-12-25 20:48:28 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-25 20:48:28 info: [0mGET /images/temp.png [31m500[0m 64.423 ms - 34[0m
+2022-12-25 20:48:29 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-25 20:48:29 info: [0mGET /images/temp.png [31m500[0m 2.926 ms - 34[0m
+2022-12-25 20:50:15 info: =================================
+2022-12-25 20:50:15 info: ======= ENV: development =======
+2022-12-25 20:50:15 info: 🚀 App listening on the port 8080
+2022-12-25 20:50:15 info: =================================
+2022-12-25 21:03:12 info: =================================
+2022-12-25 21:03:12 info: ======= ENV: development =======
+2022-12-25 21:03:12 info: 🚀 App listening on the port 8080
+2022-12-25 21:03:12 info: =================================
+2022-12-25 21:04:13 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-25 21:04:13 info: [0mGET /images/temp.png [31m500[0m 72.372 ms - 34[0m
+2022-12-25 21:13:49 info: =================================
+2022-12-25 21:13:49 info: ======= ENV: development =======
+2022-12-25 21:13:49 info: 🚀 App listening on the port 8080
+2022-12-25 21:13:49 info: =================================
+2022-12-25 21:13:50 info: [0mGET /images/temp.png [32m200[0m 16.494 ms - -[0m
+2022-12-25 21:14:01 info: [0mGET / [33m404[0m 3.383 ms - 139[0m
+2022-12-25 21:14:05 info: [0mGET /images/temp.png [32m200[0m 4.297 ms - -[0m
+2022-12-25 21:14:06 info: [0mGET /images/temp.png [32m200[0m 1.059 ms - -[0m
+2022-12-25 21:14:17 info: [0mGET /images/temp.png [32m200[0m 0.884 ms - -[0m
+2022-12-25 21:14:20 info: [0mGET /images/temp.png [32m200[0m 0.958 ms - -[0m
+2022-12-25 21:14:27 info: [0mGET /images/temp.png [32m200[0m 0.811 ms - -[0m
+2022-12-25 21:36:41 info: =================================
+2022-12-25 21:36:41 info: ======= ENV: development =======
+2022-12-25 21:36:41 info: 🚀 App listening on the port 8080
+2022-12-25 21:36:41 info: =================================
+2022-12-25 21:36:43 info: [0mGET /images/temp.png [32m200[0m 27.649 ms - 6451[0m
+2022-12-25 21:36:48 info: [0mGET /images/temp.png [32m200[0m 2.869 ms - 6451[0m
+2022-12-25 21:36:50 info: [0mGET /images/temp.png [32m200[0m 3.220 ms - 6451[0m
+2022-12-25 21:36:54 info: [0mGET /images/temp.png [36m304[0m 11.428 ms - -[0m
+2022-12-25 21:37:13 info: [0mGET /images/temp.png [36m304[0m 2.242 ms - -[0m
+2022-12-25 21:42:45 info: =================================
+2022-12-25 21:42:45 info: ======= ENV: development =======
+2022-12-25 21:42:45 info: 🚀 App listening on the port 8080
+2022-12-25 21:42:45 info: =================================
+2022-12-25 21:43:07 info: [0mGET /configs/physical [32m200[0m 36.895 ms - 331[0m
+2022-12-25 21:43:43 info: =================================
+2022-12-25 21:43:43 info: ======= ENV: development =======
+2022-12-25 21:43:43 info: 🚀 App listening on the port 8080
+2022-12-25 21:43:43 info: =================================
+2022-12-25 21:44:06 info: =================================
+2022-12-25 21:44:06 info: ======= ENV: development =======
+2022-12-25 21:44:06 info: 🚀 App listening on the port 8080
+2022-12-25 21:44:06 info: =================================
+2022-12-25 21:44:09 info: [0mGET /configs/physical [32m200[0m 30.119 ms - 331[0m
+2022-12-25 21:46:09 info: [0mGET /configs/physical [32m200[0m 19.075 ms - 331[0m
+2022-12-25 21:47:06 info: [0mGET /configs/physical [32m200[0m 14.452 ms - 331[0m
+2022-12-25 21:47:22 info: [0mGET /configs/physical [32m200[0m 12.972 ms - 331[0m
+2022-12-25 21:47:47 info: [0mGET /configs/physical [32m200[0m 10.374 ms - 331[0m
+2022-12-25 21:48:30 info: [0mGET /configs/physical [32m200[0m 10.504 ms - 331[0m
+2022-12-25 21:48:31 info: [0mGET /configs/physical [32m200[0m 6.384 ms - 331[0m
+2022-12-25 21:50:59 info: [0mGET /configs/physical [32m200[0m 11.948 ms - 116[0m
+2022-12-25 21:51:54 info: [0mGET /configs/physical [32m200[0m 9.050 ms - 116[0m
+2022-12-25 21:52:14 info: =================================
+2022-12-25 21:52:14 info: ======= ENV: development =======
+2022-12-25 21:52:14 info: 🚀 App listening on the port 8080
+2022-12-25 21:52:14 info: =================================
+2022-12-25 21:52:35 info: [0mGET /configs/physical [32m200[0m 32.356 ms - 116[0m
+2022-12-25 21:53:20 info: =================================
+2022-12-25 21:53:20 info: ======= ENV: development =======
+2022-12-25 21:53:20 info: 🚀 App listening on the port 8080
+2022-12-25 21:53:20 info: =================================
+2022-12-25 21:53:22 info: [0mGET /configs/physical [32m200[0m 23.203 ms - 116[0m
+2022-12-25 21:54:07 info: [0mGET /configs/physical [32m200[0m 12.399 ms - 116[0m
+2022-12-25 21:54:24 info: =================================
+2022-12-25 21:54:24 info: ======= ENV: development =======
+2022-12-25 21:54:24 info: 🚀 App listening on the port 8080
+2022-12-25 21:54:24 info: =================================
+2022-12-25 21:54:26 info: [0mGET /configs/physical [32m200[0m 18.105 ms - 116[0m
+2022-12-25 21:54:51 info: [0mGET /configs/physical [32m200[0m 15.506 ms - 116[0m
+2022-12-25 21:55:07 info: [0mGET /configs/physical [32m200[0m 11.270 ms - 116[0m
+2022-12-25 21:55:07 info: [0mGET /configs/physical [32m200[0m 4.874 ms - 116[0m
+2022-12-25 21:56:40 info: [0mGET /configs/physical [32m200[0m 17.500 ms - 116[0m
+2022-12-25 21:57:32 info: =================================
+2022-12-25 21:57:32 info: ======= ENV: development =======
+2022-12-25 21:57:32 info: 🚀 App listening on the port 8080
+2022-12-25 21:57:32 info: =================================
+2022-12-25 21:57:35 info: [0mGET /configs/physical [32m200[0m 18.433 ms - 70[0m
+2022-12-25 21:57:59 info: [0mGET /configs/physical [32m200[0m 13.693 ms - 70[0m
+2022-12-25 22:00:18 info: [0mGET /configs/physical [32m200[0m 14.197 ms - 70[0m
+2022-12-25 22:01:49 info: =================================
+2022-12-25 22:01:49 info: ======= ENV: development =======
+2022-12-25 22:01:49 info: 🚀 App listening on the port 8080
+2022-12-25 22:01:49 info: =================================
+2022-12-25 22:01:51 info: [0mGET /configs/physical [36m304[0m 18.688 ms - -[0m
+2022-12-25 22:01:56 info: [0mGET /configs/physical [36m304[0m 6.224 ms - -[0m
+2022-12-25 22:01:59 info: [0mGET /configs/physical [32m200[0m 5.902 ms - 70[0m
+2022-12-25 22:02:36 info: [0mGET /images/temp.png [36m304[0m 8.965 ms - -[0m

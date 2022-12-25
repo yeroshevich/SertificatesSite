@@ -25,7 +25,7 @@ export async function getStaticProps(){
             description:[
                 'Подарочные карты номинала 10, 15, 20, 25, 30, 50, 100 руб. доступны на кассах магазинов Евроопт и Хит!',
                 'Обаладатели сертификатов могут использовать из сразу же с момента получения в любом магазине «Евроопт» и «Хит!» по всей Беларуси.' +
-                'Сертификат действителен в течение 3-х месяцев с момента приобретения.',
+                ' Сертификат действителен в течение 3-х месяцев с момента приобретения.',
                 'При оплате покупки с использованием подарочного сертификата «Евроопт» можно воспользоваться бонусной картой «Е-плюс» для получения скидки на товары',
             ],
             formImage:{url:'./Rectangle 7.png',title:'rect 7'},
@@ -66,10 +66,10 @@ const CheckFormPage = ({config}:CheckFormPageProps) => {
                     <header>
                         {config.config.header}
                     </header>
-                    <div>
-                        {config.config.description.map((desc,index)=><div key={index}>{desc}</div>)}
+                    <div className={styles.descriptions}>
+                        {config.config.description.map((desc,index)=><div key={index} className={styles.description}>{desc}</div>)}
                     </div>
-                    <CheckForm/>
+                    <CheckForm image={config.config.formImage}/>
                 </div>
                 <PhisicalFooter links={config.config.footerLinks}/>
             </>

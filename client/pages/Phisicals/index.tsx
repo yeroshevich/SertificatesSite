@@ -60,8 +60,12 @@ export async function getStaticProps(){
         pageId:0
     }
 
-    // const config = await axios.get('http://localhost:8080/configs/physical')
-    // console.log(config.data)
+    //  const config = await fetch('http://localhost:8080/configs/physical')
+    //  const config2 = await fetch('https://jsonplaceholder.typicode.com/todos/1')
+    //  const temp = await config.text()
+    //  const temp2 = await config2.text()
+    // console.log(temp2)
+    // console.log(temp)
 
     return {
         props:{

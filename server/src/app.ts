@@ -24,6 +24,7 @@ class App {
     this.initializeMiddlewares();
     this.initializeRoutes(Controllers);
     this.initializeErrorHandling();
+    this.initStatic();
   }
 
   public listen() {
@@ -59,7 +60,9 @@ class App {
       defaultErrorHandler: false,
     });
   }
-
+  private initStatic(){
+    this.app.use('/userImages',express.static('./userImages'))
+  }
   private initializeErrorHandling() {
     this.app.use(errorMiddleware);
   }

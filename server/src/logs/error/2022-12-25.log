@@ -1,0 +1,28 @@
+2022-12-25 20:02:34 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-25 20:02:40 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-25 20:02:42 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-25 20:03:26 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-25 20:03:29 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-25 20:05:54 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-25 20:06:47 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-25 20:08:02 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-25 20:10:18 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-25 20:48:28 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-25 20:48:28 error: uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at new NodeError (node:internal/errors:393:5)
+    at ServerResponse.setHeader (node:_http_outgoing:607:11)
+    at ServerResponse.header (E:\WorkingRepository\SertificatesSite\server\node_modules\express\lib\response.js:794:10)
+    at ServerResponse.send (E:\WorkingRepository\SertificatesSite\server\node_modules\express\lib\response.js:174:12)
+    at E:\WorkingRepository\SertificatesSite\server\src\controllers\image.controller.ts:32:18
+    at FSReqCallback.readFileAfterClose [as oncomplete] (node:internal/fs/read_file_context:68:3)
+2022-12-25 20:48:29 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong
+2022-12-25 20:48:29 error: uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at new NodeError (node:internal/errors:393:5)
+    at ServerResponse.setHeader (node:_http_outgoing:607:11)
+    at ServerResponse.header (E:\WorkingRepository\SertificatesSite\server\node_modules\express\lib\response.js:794:10)
+    at ServerResponse.send (E:\WorkingRepository\SertificatesSite\server\node_modules\express\lib\response.js:174:12)
+    at E:\WorkingRepository\SertificatesSite\server\src\controllers\image.controller.ts:32:18
+    at FSReqCallback.readFileAfterClose [as oncomplete] (node:internal/fs/read_file_context:68:3)
+2022-12-25 21:04:13 error: [GET] /images/temp.png >> StatusCode:: 500, Message:: Something went wrong

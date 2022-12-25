@@ -25,7 +25,7 @@ export default class ConfigService{
 
     if(!config) throw new HttpException(404,'config not found')
 
-    return config
+    return JSON.parse(JSON.stringify(config.config))
   }
   public async updateConfig(config:Config){
     const findedConfig = await ConfigModel.findByPk(config.idConfig)

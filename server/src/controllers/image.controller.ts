@@ -1,6 +1,8 @@
 import {Controller, Get, Param, Res} from "routing-controllers";
 import { Response} from "express";
 import ImageService from "@services/image.service";
+import {promisify} from "util";
+import fs from "fs";
 
 
 
@@ -11,15 +13,19 @@ export default class ImageController{
 
   @Get('/images/:path')
   public async findImageByPath(@Res() res:Response,@Param('path') filePath:string){
-    const {file} = await this.imageService.findFile(filePath)
+    // const {file} = await this.imageService.findFile(filePath)
+    // /////////// // тоже возвращение файла
+    //  res.setHeader('Content-type','image/png')
+    //  res.write(file)
+    // return res.end()
+    // //////////////// позволяет скачать файл
+    await promisify<string, void>(res.download.bind(res))(`${process.cwd()}\\src\\userImages\\temp.png`)
+    return res
 
-    res.setHeader('Content-type','image/png')
-    res.write(file)
+    // /////// просто возвращает файл
+    // res.setHeader('Content-type','image/png')
+    // return file
 
-    ////////////////
-
-    res.download(`${process.cwd()}\\src\\userImages\\`,'temp.png')
-    return res.end()
 
 
   }

@@ -23,7 +23,7 @@ class ConfigService {
             });
             if (!config)
                 throw new HttpException_1.HttpException(404, 'config not found');
-            return config;
+            return JSON.parse(JSON.stringify(config.config));
         });
     }
     updateConfig(config) {

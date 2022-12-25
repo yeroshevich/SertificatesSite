@@ -1,10 +1,79 @@
 .content {
   margin: auto;
+  min-width: 320px;
+}
+.content header {
+  font-family: "Gotham Pro", serif;
+  color: #4B4B4B;
+  font-size: 36px;
+}
+.content .descriptions {
+  font-family: "Inter", serif;
+  color: #4B4B4B;
+}
+.content .descriptions .description {
+  padding: 10px 0;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1400px) {
   .content {
     padding: 140px 200px;
+  }
+  .content .descriptions .description {
+    width: 1200px;
+  }
+}
+@media (max-width: 1400px) {
+  .content {
+    padding: 140px 200px;
+  }
+  .content .descriptions .description {
+    width: 1000px;
+  }
+}
+@media (max-width: 1280px) {
+  .content {
+    padding: 140px 100px;
+  }
+  .content .descriptions .description {
+    width: 1000px;
+  }
+}
+@media (max-width: 1080px) {
+  .content .descriptions .description {
+    width: 900px;
+  }
+}
+@media (max-width: 980px) {
+  .content {
+    padding: 140px 15px;
+  }
+  .content .descriptions .description {
+    width: 800px;
+  }
+}
+@media (max-width: 800px) {
+  .content header {
+    font-size: 26px;
+  }
+  .content .descriptions .description {
+    font-size: 14px;
+    width: 600px;
+  }
+}
+@media (max-width: 600px) {
+  .content .descriptions .description {
+    width: 500px;
+  }
+}
+@media (max-width: 500px) {
+  .content .descriptions .description {
+    width: 400px;
+  }
+}
+@media (max-width: 400px) {
+  .content .descriptions .description {
+    width: 300px;
   }
 }
 

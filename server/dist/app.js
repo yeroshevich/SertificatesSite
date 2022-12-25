@@ -20,6 +20,7 @@ class App {
         this.initializeMiddlewares();
         this.initializeRoutes(Controllers);
         this.initializeErrorHandling();
+        this.initStatic();
     }
     listen() {
         this.app.listen(this.port, () => {
@@ -50,6 +51,9 @@ class App {
             controllers: controllers,
             defaultErrorHandler: false,
         });
+    }
+    initStatic() {
+        this.app.use('/userImages', express_1.default.static('./userImages'));
     }
     initializeErrorHandling() {
         this.app.use(error_middleware_1.default);
