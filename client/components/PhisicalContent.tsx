@@ -9,6 +9,8 @@ import {Address} from "../interfaces/Address";
 import {GeometryCoordinates} from "../interfaces/GeometryCoordinates";
 import {FAQ} from "../interfaces/FAQ";
 import FaqList from "./phisicals/FAQList";
+import useRedirect from "../hooks/useRedirect";
+import {BUYPAGE_PATH} from "../app/CONSTS";
 
 export interface PhisicalContentProps{
     content:Array<ContentPair>,
@@ -20,6 +22,12 @@ export interface PhisicalContentProps{
 }
 
 const PhisicalContent = ({content,rectImage,smallImage,carousel,addresses,faq}:PhisicalContentProps) => {
+
+    const routeTo = useRedirect()
+
+    const handleBuyButtonClick = ()=>{
+        routeTo(BUYPAGE_PATH)
+    }
 
     const {firstContent,secondContent}  = useMemo(()=>{
         return {
@@ -40,7 +48,7 @@ const PhisicalContent = ({content,rectImage,smallImage,carousel,addresses,faq}:P
                         <div className={styles.description}>
                             {firstContent.underDescription}
                             <div className={styles.buyButton}>
-                                <button>Купить сертификат</button>
+                                <button onClick={handleBuyButtonClick}>Купить сертификат</button>
                             </div>
                         </div>
 
@@ -58,7 +66,7 @@ const PhisicalContent = ({content,rectImage,smallImage,carousel,addresses,faq}:P
                             {secondContent.description}
                         </div>
                         <div className={styles.buyButton}>
-                            <button>Купить сертификат</button>
+                            <button  onClick={handleBuyButtonClick}>Купить сертификат</button>
                         </div>
                     </div>
                     <div className={styles.smallImage}>
@@ -68,16 +76,16 @@ const PhisicalContent = ({content,rectImage,smallImage,carousel,addresses,faq}:P
                 </div>
 
             </div>
-            <div className={styles.anotherContent}>
+            <div id={'polezen'} className={styles.anotherContent}>
                 <Advices/>
             </div>
             <div  className={styles.anotherContent}>
                 <ImageSlider slides={carousel}/>
             </div>
-            <div  className={styles.anotherContent + ' '+styles.text}>
+            <div id={'clientBlock'}  className={styles.anotherContent + ' '+styles.text}>
                 <BuyingMap addresses={addresses}/>
             </div>
-            <div className={styles.anotherContent}>
+            <div id={'faqBlock'} className={styles.anotherContent}>
                 <FaqList faqs={faq}/>
             </div>
         </>

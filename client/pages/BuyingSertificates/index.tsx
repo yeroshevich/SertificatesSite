@@ -10,11 +10,11 @@ export async function getStaticProps(){
         idConfig:0,
         config:{
             uridicalLink:{link:'#',title:'Для юридических лиц'},
-            logo:{url:'./logo_green.png',alt:'evrooptLogo',title:'logo'},
+            logo:{url:'./logo_green.png',alt:'evrooptLogo',title:'logo',href:'/'},
             links:[
-                {link:'#',title:'Чем полезен'},
-                {link:'#',title:'Клиенты'},
-                {link:'#',title:'Вопрос-ответ'}
+                // {link:'/',title:'Чем полезен'},
+                // {link:'/',title:'Клиенты'},
+                // {link:'/',title:'Вопрос-ответ'}
             ],
             content:[
                 {

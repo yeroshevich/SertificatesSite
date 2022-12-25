@@ -10,14 +10,15 @@ $maxWidth:600px;
 
 .content {
   padding-top: 140px;
-  padding-inline: 200px;
   width: 100%;
-  padding-left: 35%;
+  min-width: 300px;
 
   .container {
     text-align: left;
     max-width: $maxWidth;
-
+    min-width: 300px;
+    margin: auto;
+    transition: 2s;
     .header {
       font-size: 15pt;
       @include gotham;
@@ -41,7 +42,6 @@ $maxWidth:600px;
           font-size: 12px;
           .redCross{
             @include redCrossMix;
-            z-index: 5000;
           }
         }
       }
@@ -109,5 +109,50 @@ $maxWidth:600px;
       }
 
     }
+  }
+}
+@media (min-width: 1280px){
+  .content{
+    padding-inline: 200px;
+  }
+  .agrees{
+    min-width: $maxWidth;
+  }
+}
+@media (max-width: 1280px)
+{
+  .content{
+    padding-inline: 100px;
+  }
+  .agrees{
+    min-width: $maxWidth;
+  }
+}
+@media (max-width: 850px){
+  .agrees{
+    min-width: calc($maxWidth - 100px);
+  }
+}
+@media (max-width: 700px){
+  .agrees{
+    min-width: calc($maxWidth - 200px);
+    width: calc($maxWidth - 200px);
+  }
+}
+@media (max-width: 600px){
+  .agrees{
+    min-width: calc($maxWidth - 300px);
+    width: calc($maxWidth - 300px);
+  }
+}
+@media (max-width: 500px){
+  .agrees{
+    min-width: calc($maxWidth - 300px);
+    width: 100%;
+  }
+}
+@media (max-width: 500px){
+  .content{
+    padding-inline: 15px;
   }
 }

@@ -1,0 +1,33 @@
+@import "Consts";
+
+@keyframes animateJump {
+  from{
+    transform: none;
+  }
+  to{
+    transform: translateY(50px);
+  }
+}
+
+.errorBlock{
+  margin: auto;
+  position: relative;
+  padding-top: 140px;
+  height: 100vh;
+  header{
+    position: absolute;
+    left: 50%;
+    top:40%;
+    transform: translate(-50%,50%);
+    color:$lightGreen;
+    font-size: 36pt;
+    font-weight: bold;
+    div{
+      text-align: center;
+      animation: animateJump 5s ease-in-out infinite  alternate-reverse;
+      a{
+        color:$lightGreen;
+      }
+     }
+  }
+}

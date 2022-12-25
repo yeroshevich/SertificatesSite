@@ -4,17 +4,19 @@ import PhisicalFooter from "../../components/PhisicalFooter";
 import {PhisicalPage} from "../../interfaces/PhisicalPageConfig";
 import {useEffect} from "react";
 import axios from "axios";
+import TopScroll from "../../components/TopScroll";
+import {URIDICALPAGE_PATH} from "../../app/CONSTS";
 
 export async function getStaticProps(){
     const config:PhisicalPage = {
         idConfig:0,
         config:{
-            uridicalLink:{link:'#',title:'Для юридических лиц'},
-            logo:{url:'./logo_green.png',alt:'evrooptLogo',title:'logo'},
+            uridicalLink:{link:URIDICALPAGE_PATH,title:'Для юридических лиц'},
+            logo:{url:'./logo_green.png',alt:'evrooptLogo',title:'logo',href:'/'},
             links:[
-                {link:'#',title:'Чем полезен'},
-                {link:'#',title:'Клиенты'},
-                {link:'#',title:'Вопрос-ответ'}
+                {link:'',title:'Чем полезен',htmlElementId:'#polezen'},
+                {link:'',title:'Клиенты',htmlElementId:'#clientBlock'},
+                {link:'',title:'Вопрос-ответ',htmlElementId:'#faqBlock'}
             ],
             content:[
                 {
@@ -92,6 +94,7 @@ const PhisicalsPage = ({config}:PhisicalPageProps) => {
             <PhisicalFooter
                 links={config.config.footerLinks}
             />
+            <TopScroll/>
         </>
     );
 };

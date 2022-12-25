@@ -7,11 +7,12 @@
   height: 140px;
   margin-left: -1px;
 }
-.headerBlock a {
+.headerBlock header {
   font-family: "Gotham Pro", serif;
   font-size: 16px;
   line-height: 10px;
   color: #4B4B4B;
+  cursor: pointer;
 }
 .headerBlock .header {
   transition: 2s;

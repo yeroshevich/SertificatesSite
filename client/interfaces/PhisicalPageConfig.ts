@@ -4,6 +4,7 @@ import {ContentPair} from "./ContentPair";
 import {Address} from "./Address";
 import {FAQ} from "./FAQ";
 import {GeometryCoordinates} from "./GeometryCoordinates";
+import {Logo} from "./Logo";
 
 export interface PhisicalPage{
     idConfig:number,
@@ -13,7 +14,7 @@ export interface PhisicalPage{
 }
 export interface PhisicalPageConfig{
     uridicalLink:Link,
-    logo:Image,
+    logo:Logo,
     links:Array<Link>,
     content:Array<ContentPair>,
     rectImage:Image,

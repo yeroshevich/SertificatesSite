@@ -1,4 +1,5 @@
 export interface Link{
     title:string,
-    link:string
+    link:string,
+    htmlElementId?:string
 }

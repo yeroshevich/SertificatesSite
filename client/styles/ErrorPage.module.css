@@ -1,0 +1,32 @@
+@keyframes animateJump {
+  from {
+    transform: none;
+  }
+  to {
+    transform: translateY(50px);
+  }
+}
+.errorBlock {
+  margin: auto;
+  position: relative;
+  padding-top: 140px;
+  height: 100vh;
+}
+.errorBlock header {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, 50%);
+  color: #8DC640;
+  font-size: 36pt;
+  font-weight: bold;
+}
+.errorBlock header div {
+  text-align: center;
+  animation: animateJump 5s ease-in-out infinite alternate-reverse;
+}
+.errorBlock header div a {
+  color: #8DC640;
+}
+
+/*# sourceMappingURL=ErrorPage.module.css.map */

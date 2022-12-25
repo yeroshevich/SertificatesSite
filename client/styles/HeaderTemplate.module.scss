@@ -18,8 +18,9 @@
   width: 100%;
   height: 140px;
   margin-left: -1px;
-  a{
+  header{
     @include HREF;
+    cursor: pointer;
   }
   .header{
     transition: 2s;
