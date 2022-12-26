@@ -1,6 +1,6 @@
 import {Link as link} from "../interfaces/Link";
 import Link from 'next/link'
-import {FC, useState} from "react";
+import {CSSProperties, FC, useState} from "react";
 import styles from '../styles/HeaderTemplate.module.scss';
 import {Logo} from "../interfaces/Logo";
 import OutsideClickHandler from 'react-outside-click-handler';
@@ -11,10 +11,13 @@ import useScrollToBlock from "../hooks/useScrollToBlock";
 export interface HeaderTemplateProps{
     logo:Logo,
     links:Array<link>,
-    uridicalLink:link
+    uridicalLink:link,
+    children?:React.ReactNode,
+    className?:string,
+    style?:CSSProperties
 }
 
-const HeaderTemplate:FC<HeaderTemplateProps> = ({logo,links,uridicalLink}) => {
+const HeaderTemplate:FC<HeaderTemplateProps> = ({logo,links,uridicalLink,children,className,style}) => {
     const s = useWindowResize(768,()=>closeBurgerMenu())
     const [burgerIsVisible,setBurgerVisible] = useState(false)
 
@@ -33,7 +36,7 @@ const HeaderTemplate:FC<HeaderTemplateProps> = ({logo,links,uridicalLink}) => {
     }
 
     return (
-        <div className={styles.headerBlock}>
+        <div className={styles.headerBlock +' '+className} style={style}>
             <header className={styles.header}>
                 <div className={styles.logo}>
                     <a href={logo.href}>
@@ -64,6 +67,7 @@ const HeaderTemplate:FC<HeaderTemplateProps> = ({logo,links,uridicalLink}) => {
                     </OutsideClickHandler>
                 </div>
             </header>
+            {children}
             {
                 <>
                     <div className={styles.burgerMenu +' '+(burgerIsVisible ? styles.visibleBurger:styles.hiddenBurger)}>

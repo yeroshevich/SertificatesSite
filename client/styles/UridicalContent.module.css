@@ -1,0 +1,144 @@
+.contentBlock {
+  min-width: 300px;
+}
+.contentBlock header {
+  font-family: "Gotham Pro", serif;
+  color: #4B4B4B;
+}
+.contentBlock .description {
+  font-family: "Inter", serif;
+  color: #4B4B4B;
+}
+.contentBlock .contentGrid {
+  padding-bottom: 100px;
+  padding-top: 140px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  min-height: 700px;
+}
+.contentBlock .contentGrid img {
+  max-width: 700px;
+  max-height: 700px;
+  transition: 2s;
+}
+.contentBlock .contentGrid .firstContent {
+  margin: auto;
+}
+.contentBlock .contentGrid .firstContent .descriptions .description {
+  padding: 15px 0;
+  line-height: 160%;
+}
+.contentBlock .contentGrid .sendButton {
+  margin-top: 15px;
+}
+.contentBlock .contentGrid .sendButton button {
+  cursor: pointer;
+  font-family: "Gotham Pro", serif;
+  color: #4B4B4B;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 15px;
+  text-transform: uppercase;
+  background-color: transparent;
+  padding: 20px 15px;
+  border: 1px solid #8DC640;
+}
+
+@media (min-width: 1280px) {
+  .contentGrid .firstContent {
+    max-width: 650px;
+    width: 650px;
+  }
+  .contentGrid .firstContent header {
+    font-size: 48px;
+    padding-bottom: 25px;
+  }
+  .contentGrid .firstContent .descriptions .description {
+    font-size: 14px;
+  }
+  .text {
+    padding: 150px 200px;
+  }
+}
+@media (max-width: 1350px) {
+  .text {
+    padding: 100px 25px;
+  }
+  .contentGrid {
+    align-items: center;
+  }
+  .contentGrid .firstContent {
+    padding: 0 25px;
+  }
+  .contentGrid .firstContent header {
+    font-size: 48px;
+    padding-bottom: 25px;
+    text-align: center;
+  }
+  .contentGrid .firstContent .descriptions {
+    width: 580px;
+  }
+  .contentGrid .firstContent .descriptions .description {
+    font-size: 14px;
+    text-align: justify;
+  }
+  .contentGrid .sendButton {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 1280px) {
+  .contentBlock .contentGrid {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contentBlock .contentGrid img {
+    width: 500px;
+  }
+  .contentBlock .contentGrid .firstContent {
+    padding: 25px 25px;
+  }
+  .contentBlock .contentGrid .firstContent header {
+    font-size: 48px;
+    padding-bottom: 25px;
+    text-align: center;
+  }
+  .contentBlock .contentGrid .firstContent .descriptions {
+    width: 650px;
+  }
+  .contentBlock .contentGrid .firstContent .descriptions .description {
+    font-size: 14px;
+    text-align: justify;
+  }
+  .contentBlock .contentGrid .sendButton {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 700px) {
+  .contentBlock .contentGrid .firstContent header {
+    font-size: 34px;
+  }
+  .contentBlock .contentGrid .firstContent .descriptions {
+    width: 500px;
+  }
+}
+@media (max-width: 550px) {
+  .contentBlock .contentGrid img {
+    width: 300px;
+  }
+  .contentBlock .contentGrid .firstContent {
+    padding: 0 10px;
+  }
+  .contentBlock .contentGrid .firstContent header {
+    font-size: 22px;
+  }
+  .contentBlock .contentGrid .firstContent .descriptions {
+    width: 300px;
+  }
+}
+
+/*# sourceMappingURL=UridicalContent.module.css.map */

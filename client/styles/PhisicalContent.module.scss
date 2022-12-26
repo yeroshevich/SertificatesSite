@@ -6,7 +6,7 @@
   margin-bottom: 100px;
 }
 
-.content{
+.contentGrid{
   display: grid;
   grid-template-rows: auto 1fr auto max-content max-content;
   min-width: 300px;
@@ -36,17 +36,7 @@
   }
   .buyButton{
     button{
-      cursor: pointer;
-      @include gotham;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 15px;
-      text-transform: uppercase;
-
-      background-color: transparent;
-      padding: 20px 15px;
-      border: 1px solid $lightGreen;
+      @include lightButton;
     }
   }
   .firstContent{
@@ -84,7 +74,7 @@
 }
 @media (min-width: 1280px)
 {
-  .content{
+  .contentGrid{
     padding-top: 220px;
   }
   .text{
@@ -120,7 +110,7 @@
 
 }
 @media (max-width: 1280px) {
-  .content{
+  .contentGrid{
     padding-top: 140px;
   }
   .text{
@@ -184,7 +174,7 @@
     }
 }
 @media (max-width: 768px) {
-  .content{
+  .contentGrid{
     padding-top: 140px;
   }
     .title{

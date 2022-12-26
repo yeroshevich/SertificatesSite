@@ -17,6 +17,11 @@ let ConfigController = class ConfigController {
             return yield this.configService.updateConfig(config);
         });
     }
+    save(obj) {
+        return tslib_1.__awaiter(this, void 0, void 0, function* () {
+            return yield this.configService.setJSON(obj);
+        });
+    }
 };
 tslib_1.__decorate([
     (0, routing_controllers_1.Get)('/configs/:page'),
@@ -26,12 +31,19 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], ConfigController.prototype, "getConfigs", null);
 tslib_1.__decorate([
-    (0, routing_controllers_1.Post)('/configs'),
+    (0, routing_controllers_1.Patch)('/configs'),
     tslib_1.__param(0, (0, routing_controllers_1.Body)()),
     tslib_1.__metadata("design:type", Function),
     tslib_1.__metadata("design:paramtypes", [Object]),
     tslib_1.__metadata("design:returntype", Promise)
 ], ConfigController.prototype, "updateConfig", null);
+tslib_1.__decorate([
+    (0, routing_controllers_1.Post)('/configs'),
+    tslib_1.__param(0, (0, routing_controllers_1.Body)()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object]),
+    tslib_1.__metadata("design:returntype", Promise)
+], ConfigController.prototype, "save", null);
 ConfigController = tslib_1.__decorate([
     (0, routing_controllers_1.Controller)()
 ], ConfigController);

@@ -1,16 +1,18 @@
-import HeaderTemplate from "./HeaderTemplate";
-import {PHISICALPAGE_PATH} from "../app/CONSTS";
+import HeaderTemplate, {HeaderTemplateProps} from "./HeaderTemplate";
 
-const UridicalHeader = () => {
+
+interface UridicalHeaderProps{
+    templateProps:HeaderTemplateProps,
+}
+
+const UridicalHeader = ({templateProps}:UridicalHeaderProps) => {
     return (
         <>
             <HeaderTemplate
-                logo={{url:'./logo-white 1.png',href:'',alt:'logo_white',title:'evroopt logo'}}
-                links={[
-                    {title:'Как получить сертификат',link:'#'},
-                    {title:'Памятка',link:'#'},
-                ]}
-                uridicalLink={{link:PHISICALPAGE_PATH,title:'Для физических лиц'}}/>
+                logo={templateProps.logo}
+                links={templateProps.links}
+                uridicalLink={templateProps.uridicalLink}>
+            </HeaderTemplate>
         </>
     );
 };

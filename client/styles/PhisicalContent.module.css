@@ -1,27 +1,27 @@
 @import "https://rsms.me/inter/inter.css";
-.content {
+.contentGrid {
   display: grid;
   grid-template-rows: auto 1fr auto max-content max-content;
   min-width: 300px;
   margin: auto;
 }
-.content .text .title {
+.contentGrid .text .title {
   font-family: "Gotham Pro", serif;
   color: #4B4B4B;
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
 }
-.content .text .description {
+.contentGrid .text .description {
   font-family: "Inter", serif;
   font-style: normal;
   font-weight: 400;
   line-height: 160%;
 }
-.content .text div div:last-child {
+.contentGrid .text div div:last-child {
   padding-top: 20px;
 }
-.content .buyButton button {
+.contentGrid .buyButton button {
   cursor: pointer;
   font-family: "Gotham Pro", serif;
   color: #4B4B4B;
@@ -34,24 +34,24 @@
   padding: 20px 15px;
   border: 1px solid #8DC640;
 }
-.content .firstContent {
+.contentGrid .firstContent {
   display: grid;
 }
-.content .rectImage {
+.contentGrid .rectImage {
   margin-top: 100px;
   margin-bottom: 100px;
 }
-.content .rectImage img {
+.contentGrid .rectImage img {
   width: 100%;
   height: auto;
 }
-.content .secondContent {
+.contentGrid .secondContent {
   position: relative;
   margin-top: 100px;
   margin-bottom: 100px;
   display: grid;
 }
-.content .secondContent .smallImage {
+.contentGrid .secondContent .smallImage {
   display: flex;
 }
 
@@ -61,7 +61,7 @@
 }
 
 @media (min-width: 1280px) {
-  .content {
+  .contentGrid {
     padding-top: 220px;
   }
   .text {
@@ -101,7 +101,7 @@
   }
 }
 @media (max-width: 1280px) {
-  .content {
+  .contentGrid {
     padding-top: 140px;
   }
   .text {
@@ -164,7 +164,7 @@
   }
 }
 @media (max-width: 768px) {
-  .content {
+  .contentGrid {
     padding-top: 140px;
   }
   .title {

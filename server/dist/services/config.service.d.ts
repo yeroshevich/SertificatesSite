@@ -1,5 +1,7 @@
 import { Config } from "@interfaces/Config";
+import { SaveConfig } from "@interfaces/SaveConfig";
 export default class ConfigService {
-    findConfigByPage(page: string): Promise<any>;
-    updateConfig(config: Config): Promise<any>;
+    setJSON(obj: SaveConfig): Promise<any>;
+    findConfigByPage(page: string): Promise<Config>;
+    updateConfig(config: SaveConfig): Promise<any>;
 }

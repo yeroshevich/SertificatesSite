@@ -5,6 +5,7 @@ import {Address} from "./Address";
 import {FAQ} from "./FAQ";
 import {GeometryCoordinates} from "./GeometryCoordinates";
 import {Logo} from "./Logo";
+import {HeadLink} from "./HeadLink";
 
 export interface PhisicalPage{
     idConfig:number,
@@ -13,6 +14,8 @@ export interface PhisicalPage{
     pageId:number
 }
 export interface PhisicalPageConfig{
+    head:Array<HeadLink>,
+    title:string,
     uridicalLink:Link,
     logo:Logo,
     links:Array<Link>,
@@ -22,5 +25,6 @@ export interface PhisicalPageConfig{
     carousel:Array<Image>,
     addresses:Array<GeometryCoordinates>,
     faq:Array<FAQ>,
-    footerLinks:Array<Link>
+    footerLinks:Array<Link>,
+    footerLogo:Logo
 }

@@ -1,5 +1,6 @@
 $lightGray:#f9f9f9;
 $lightGreen:#8DC640;
+$whiteGreen: #E3ECD6;
 
 @mixin gotham{
   font-family: 'Gotham Pro', serif;
@@ -8,6 +9,19 @@ $lightGreen:#8DC640;
 @mixin inter{
   font-family: 'Inter',serif;
   color: #4B4B4B;
+}
+@mixin lightButton{
+  cursor: pointer;
+  @include gotham;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 15px;
+  text-transform: uppercase;
+
+  background-color: transparent;
+  padding: 20px 15px;
+  border: 1px solid $lightGreen;
 }
 @mixin logo{
   img{

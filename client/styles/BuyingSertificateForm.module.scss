@@ -8,7 +8,7 @@ $maxWidth:600px;
   color: red;
 }
 
-.content {
+.contentGrid {
   padding-top: 140px;
   width: 100%;
   min-width: 300px;
@@ -112,7 +112,7 @@ $maxWidth:600px;
   }
 }
 @media (min-width: 1280px){
-  .content{
+  .contentGrid{
     padding-inline: 200px;
   }
   .agrees{
@@ -121,7 +121,7 @@ $maxWidth:600px;
 }
 @media (max-width: 1280px)
 {
-  .content{
+  .contentGrid{
     padding-inline: 100px;
   }
   .agrees{
@@ -152,7 +152,7 @@ $maxWidth:600px;
   }
 }
 @media (max-width: 500px){
-  .content{
+  .contentGrid{
     padding-inline: 15px;
   }
 }

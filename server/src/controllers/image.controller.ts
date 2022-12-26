@@ -13,14 +13,15 @@ export default class ImageController{
 
   @Get('/images/:path')
   public async findImageByPath(@Res() res:Response,@Param('path') filePath:string){
-    // const {file} = await this.imageService.findFile(filePath)
-    // /////////// // тоже возвращение файла
-    //  res.setHeader('Content-type','image/png')
-    //  res.write(file)
-    // return res.end()
+    const {file} = await this.imageService.findFile(filePath)
+    /////////// // тоже возвращение файла
+     res.setHeader('Content-type','image/png')
+    res.setHeader('Cross-Origin-Resource-Policy','cross-origin')
+     res.write(file)
+    return res.end()
     // //////////////// позволяет скачать файл
-    await promisify<string, void>(res.download.bind(res))(`${process.cwd()}\\src\\userImages\\temp.png`)
-    return res
+    // await promisify<string, void>(res.download.bind(res))(`${process.cwd()}\\src\\userImages\\temp.png`)
+    // return res
 
     // /////// просто возвращает файл
     // res.setHeader('Content-type','image/png')

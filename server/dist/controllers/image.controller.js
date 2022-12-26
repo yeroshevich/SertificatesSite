@@ -3,21 +3,21 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
 const routing_controllers_1 = require("routing-controllers");
 const image_service_1 = tslib_1.__importDefault(require("@services/image.service"));
-const util_1 = require("util");
 let ImageController = class ImageController {
     constructor() {
         this.imageService = new image_service_1.default();
     }
     findImageByPath(res, filePath) {
         return tslib_1.__awaiter(this, void 0, void 0, function* () {
-            // const {file} = await this.imageService.findFile(filePath)
-            // /////////// // тоже возвращение файла
-            //  res.setHeader('Content-type','image/png')
-            //  res.write(file)
-            // return res.end()
+            const { file } = yield this.imageService.findFile(filePath);
+            /////////// // тоже возвращение файла
+            res.setHeader('Content-type', 'image/png');
+            res.setHeader('Cross-Origin-Resource-Policy', 'cross-origin');
+            res.write(file);
+            return res.end();
             // //////////////// позволяет скачать файл
-            yield (0, util_1.promisify)(res.download.bind(res))(`${process.cwd()}\\src\\userImages\\temp.png`);
-            return res;
+            // await promisify<string, void>(res.download.bind(res))(`${process.cwd()}\\src\\userImages\\temp.png`)
+            // return res
             // /////// просто возвращает файл
             // res.setHeader('Content-type','image/png')
             // return file

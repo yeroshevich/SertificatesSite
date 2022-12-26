@@ -9,17 +9,17 @@
   line-height: 120%;
 }
 @media (min-width: 1280px) {
-  .content {
+  .contentGrid {
     padding-inline: 200px;
   }
 }
 @media (max-width: 1280px) {
-  .content {
+  .contentGrid {
     padding-inline: 100px;
   }
 }
 @media (max-width: 980px) {
-  .content {
+  .contentGrid {
     padding-inline: 0px;
   }
   .listBlock header {

@@ -1,16 +1,18 @@
 import styles from '../styles/PhisicalsFooter.module.scss'
 import {Link} from "../interfaces/Link";
+import {Logo} from "../interfaces/Logo";
 
 export interface PhisicalFooterProps{
-    links:Array<Link>
+    links:Array<Link>,
+    logo:Logo
 }
 
-const PhisicalFooter = ({links}:PhisicalFooterProps) => {
+const PhisicalFooter = ({links,logo}:PhisicalFooterProps) => {
     return (
        <div className={styles.footerBlock}>
            <footer className={styles.footer}>
                <div className={styles.logoBlock}>
-                   <img src="./logo-black 1.png" alt="" className={styles.logo}/>
+                   <img src={logo.url} alt={logo.alt} title={logo.title} className={styles.logo}/>
                    <div className={styles.socialLinks}>
                        {
                            links.map((link,index)=>

@@ -1,7 +1,6 @@
-import {Body, Controller, Get, Param, Post} from "routing-controllers";
-import {ConfigPage} from "@database/sequelize";
+import {Body, Controller, Get, Param, Patch, Post} from "routing-controllers";
 import ConfigService from "@services/config.service";
-import {Config} from "@interfaces/Config";
+import {SaveConfig} from "@interfaces/SaveConfig";
 
 @Controller()
 export default class ConfigController{
@@ -11,8 +10,12 @@ export default class ConfigController{
   public async getConfigs(@Param('page')page:string){
     return await this.configService.findConfigByPage(page)
   }
-  @Post('/configs')
-  public async updateConfig(@Body() config:Config){
+  @Patch('/configs')
+  public async updateConfig(@Body() config:SaveConfig){
     return await this.configService.updateConfig(config)
+  }
+  @Post('/configs')
+  public async save(@Body() obj:SaveConfig){
+    return await this.configService.setJSON(obj)
   }
 }

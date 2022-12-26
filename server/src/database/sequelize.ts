@@ -45,7 +45,13 @@ export const ConfigModel = sequelize.define('config',{
   },
   config:{
     type:DataTypes.JSON,
-    allowNull:false
+    allowNull:false,
+    get() {
+      return JSON.parse(this.getDataValue("config"));
+    },
+    set(value) {
+       this.setDataValue("config", JSON.stringify(value));
+    }
   }
 },modelOptions)
 

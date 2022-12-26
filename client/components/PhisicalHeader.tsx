@@ -7,6 +7,7 @@ const PhisicalHeader = ({uridicalLink,logo,links}:HeaderTemplateProps) => {
                 uridicalLink={uridicalLink}
                 logo={logo}
                 links={links}
+                style={{backgroundColor:'white'}}
             />
         </>
     );
