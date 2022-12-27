@@ -9,7 +9,6 @@ declare class App {
     getServer(): express.Application;
     private initializeMiddlewares;
     private initializeRoutes;
-    private initStatic;
     private initializeErrorHandling;
 }
 export default App;

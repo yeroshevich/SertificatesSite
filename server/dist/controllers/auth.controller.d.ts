@@ -1,8 +1,8 @@
-import { Request, Response } from 'express';
+import { Response } from 'express';
 import { CreateUserDto } from '@dtos/users.dto';
-import { RequestWithUser } from '@interfaces/auth.interface';
 import { User } from '@interfaces/users.interface';
 import AuthService from '@services/auth.service';
+import { RequestWithUser } from "@interfaces/auth.interface";
 export declare class AuthController {
     authService: AuthService;
     signUp(userData: CreateUserDto): Promise<{
@@ -13,7 +13,10 @@ export declare class AuthController {
         data: User;
         message: string;
     }>;
-    authUser(req: Request, res: Response): Promise<Response<any, Record<string, any>>>;
+    authUser(req: RequestWithUser, res: Response): Promise<{
+        user: User;
+        isAuthorized: boolean;
+    }>;
     logOut(req: RequestWithUser, res: Response): Promise<{
         data: User;
         message: string;

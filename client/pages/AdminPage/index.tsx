@@ -3,11 +3,12 @@ import useInput from "../../hooks/useInput";
 import { Input } from 'antd';
 import {serverRequest} from "../../app/http/serverRequest";
 import {AuthUser} from "../../interfaces/AuthUser";
+import {useEffect} from "react";
+import useRedirect from "../../hooks/useRedirect";
 
 export async function getStaticProps(){
     try{
-        const res= (await serverRequest.post('/auth')).data
-        console.log(res)
+
         // if(res.isAuthorized)
         //     return{
         //         redirect:{
@@ -26,11 +27,20 @@ const AdminPage = () => {
 
     const username = useInput()
     const password = useInput()
+    const redirectTo = useRedirect()
 
     const handleSubmit = async()=>{
         const res = await serverRequest.post('/login',{username:'admin',password:'192929129129admin'})
     }
 
+    useEffect(()=>{
+        serverRequest.post('/auth')
+            .then(data=>{
+                const res:AuthUser = data.data
+                if(res.isAuthorized)
+                    redirectTo('/')
+            })
+    },[])
 
     return (
         <>

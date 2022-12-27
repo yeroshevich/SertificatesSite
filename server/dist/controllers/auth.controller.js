@@ -26,14 +26,12 @@ let AuthController = class AuthController {
     }
     authUser(req, res) {
         return tslib_1.__awaiter(this, void 0, void 0, function* () {
-            //return {user:req.user,isAuthorized:req.user ?true:false}
-            console.log(req.cookies);
-            return res;
+            return { user: req.user, isAuthorized: req.user ? true : false };
         });
     }
     logOut(req, res) {
         return tslib_1.__awaiter(this, void 0, void 0, function* () {
-            const userData = req.user;
+            const userData = yield req.user;
             const logOutUserData = yield this.authService.logout(userData);
             res.setHeader('Set-Cookie', ['Authorization=; Max-age=0']);
             return { data: logOutUserData, message: 'logout' };
@@ -59,9 +57,8 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], AuthController.prototype, "logIn", null);
 tslib_1.__decorate([
-    (0, routing_controllers_1.Post)('/auth')
-    //@UseBefore(authMiddleware)
-    ,
+    (0, routing_controllers_1.Post)('/auth'),
+    (0, routing_controllers_1.UseBefore)(auth_middleware_1.default),
     tslib_1.__param(0, (0, routing_controllers_1.Req)()),
     tslib_1.__param(1, (0, routing_controllers_1.Res)()),
     tslib_1.__metadata("design:type", Function),

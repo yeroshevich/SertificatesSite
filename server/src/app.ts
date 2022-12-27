@@ -1,15 +1,18 @@
 import 'reflect-metadata';
+import { validationMetadatasToSchemas } from 'class-validator-jsonschema';
 import compression from 'compression';
 import cookieParser from 'cookie-parser';
 import express from 'express';
 import helmet from 'helmet';
 import hpp from 'hpp';
 import morgan from 'morgan';
-import { useExpressServer } from 'routing-controllers';
+import { useExpressServer, getMetadataArgsStorage } from 'routing-controllers';
+import { routingControllersToSpec } from 'routing-controllers-openapi';
+import swaggerUi from 'swagger-ui-express';
 import { NODE_ENV, PORT, LOG_FORMAT, ORIGIN, CREDENTIALS } from '@config';
 import errorMiddleware from '@middlewares/error.middleware';
 import { logger, stream } from '@utils/logger';
-import cors from 'cors';
+//import {defaultMetadataStorage} from "class-transformer/types/storage";
 
 
 class App {
@@ -20,12 +23,12 @@ class App {
   constructor(Controllers: Function[]) {
     this.app = express();
     this.env = NODE_ENV || 'development';
-    this.port = 8080;
+    this.port = PORT || 8080;
 
-    this.initializeRoutes(Controllers);
     this.initializeMiddlewares();
+    this.initializeRoutes(Controllers);
+    //this.initializeSwagger(Controllers);
     this.initializeErrorHandling();
-    this.initStatic();
   }
 
   public listen() {
@@ -49,7 +52,6 @@ class App {
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(cookieParser());
-    this.app.use(cors({origin:'http://localhost:3000',credentials:true}))
   }
 
   private initializeRoutes(controllers: Function[]) {
@@ -62,9 +64,38 @@ class App {
       defaultErrorHandler: false,
     });
   }
-  private initStatic(){
-    this.app.use('/userImages',express.static('./userImages'))
-  }
+  //
+  // private initializeSwagger(controllers: Function[]) {
+  //   const schemas = validationMetadatasToSchemas({
+  //     classTransformerMetadataStorage: defaultMetadataStorage,
+  //     refPointerPrefix: '#/components/schemas/',
+  //   });
+  //
+  //   const routingControllersOptions = {
+  //     controllers: controllers,
+  //   };
+  //
+  //   const storage = getMetadataArgsStorage();
+  //   const spec = routingControllersToSpec(storage, routingControllersOptions, {
+  //     components: {
+  //       schemas,
+  //       securitySchemes: {
+  //         basicAuth: {
+  //           scheme: 'basic',
+  //           type: 'http',
+  //         },
+  //       },
+  //     },
+  //     info: {
+  //       description: 'Generated with `routing-controllers-openapi`',
+  //       title: 'A sample API',
+  //       version: '1.0.0',
+  //     },
+  //   });
+  //
+  //   this.app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(spec));
+  // }
+
   private initializeErrorHandling() {
     this.app.use(errorMiddleware);
   }

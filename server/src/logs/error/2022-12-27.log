@@ -39,3 +39,26 @@ ReferenceError: cors is not defined
 2022-12-27 21:12:08 error: [POST] /auth >> StatusCode:: 401, Message:: Wrong authentication token
 2022-12-27 21:31:23 error: [POST] /auth >> StatusCode:: 500, Message:: Cannot set headers after they are sent to the client
 2022-12-27 21:31:40 error: [POST] /auth >> StatusCode:: 500, Message:: Cannot set headers after they are sent to the client
+2022-12-27 22:07:43 error: [POST] /auth >> StatusCode:: 500, Message:: Cannot set headers after they are sent to the client
+2022-12-27 22:07:43 error: [POST] /auth >> StatusCode:: 500, Message:: Cannot set headers after they are sent to the client
+2022-12-27 22:07:48 error: [PATCH] /configs >> StatusCode:: 500, Message:: WHERE parameter "title" has invalid "undefined" value
+2022-12-27 22:07:49 error: [PATCH] /configs >> StatusCode:: 500, Message:: WHERE parameter "title" has invalid "undefined" value
+2022-12-27 22:07:49 error: [PATCH] /configs >> StatusCode:: 500, Message:: WHERE parameter "title" has invalid "undefined" value
+2022-12-27 22:08:04 error: [PATCH] /configs >> StatusCode:: 500, Message:: WHERE parameter "title" has invalid "undefined" value
+2022-12-27 22:08:58 error: [PATCH] /configs >> StatusCode:: 500, Message:: WHERE parameter "title" has invalid "undefined" value
+2022-12-27 22:11:37 error: uncaughtException: Cannot find module '@controllers/users.controller'
+Require stack:
+- D:\repository\SertificatesSite\server\src\server.ts
+Error: Cannot find module '@controllers/users.controller'
+Require stack:
+- D:\repository\SertificatesSite\server\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (D:\repository\SertificatesSite\server\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._resolveFilename (D:\repository\SertificatesSite\server\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function.Module._load (node:internal/modules/cjs/loader:778:27)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (D:\repository\SertificatesSite\server\src\server.ts:4:1)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Module.m._compile (D:\repository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1157:10)

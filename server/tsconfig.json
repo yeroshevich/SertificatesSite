@@ -2,7 +2,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "target": "es6",
-    "lib": ["es2017", "esnext.asynciterable"],
+    "lib": ["es2021", "esnext.asynciterable"],
     "typeRoots": ["node_modules/@types"],
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
@@ -28,7 +28,6 @@
       "@exceptions/*": ["exceptions/*"],
       "@interfaces/*": ["interfaces/*"],
       "@middlewares/*": ["middlewares/*"],
-      "@models/*": ["models/*"],
       "@services/*": ["services/*"],
       "@utils/*": ["utils/*"],
       "@database/*": ["database/*"]
