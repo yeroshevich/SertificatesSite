@@ -1,64 +1,66 @@
-.contentGrid {
+.content {
   padding-top: 140px;
   width: 100%;
   min-width: 300px;
 }
-.contentGrid .container {
+.content .container {
   text-align: left;
   max-width: 600px;
   min-width: 300px;
   margin: auto;
   transition: 2s;
 }
-.contentGrid .container .header {
+.content .container .header {
   font-size: 15pt;
   font-family: "Gotham Pro", serif;
   color: #4B4B4B;
   padding-bottom: 15px;
 }
-.contentGrid .container .form {
+.content .container .form {
   width: 100%;
   margin: auto;
+  font-family: "Inter", serif;
+  color: #4B4B4B;
 }
-.contentGrid .container .form .agrees {
+.content .container .form .agrees {
   display: flex;
   align-items: start;
   padding-bottom: 15px;
 }
-.contentGrid .container .form .agrees span {
+.content .container .form .agrees span {
   text-align: justify;
   float: left;
   font-size: 12px;
 }
-.contentGrid .container .form .agrees span .checkbox {
+.content .container .form .agrees span .checkbox {
   padding-right: 10px;
 }
-.contentGrid .container .form .agrees span .redCross {
+.content .container .form .agrees span .redCross {
   position: absolute;
   content: " *";
   color: red;
 }
-.contentGrid .container .form .placeholder {
+.content .container .form .placeholder {
   position: absolute;
   left: 15px;
   top: 15px;
   opacity: 0.4;
   pointer-events: none;
 }
-.contentGrid .container .form .placeholder span:after {
+.content .container .form .placeholder span:after {
   position: absolute;
   content: " *";
   color: red;
 }
-.contentGrid .container .form .inputBlock {
+.content .container .form .inputBlock {
   position: relative;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   margin-bottom: 15px;
 }
-.contentGrid .container .form .inputBlock:last-child {
+.content .container .form .inputBlock:last-child {
   border: 0;
 }
-.contentGrid .container .form .inputBlock textarea {
+.content .container .form .inputBlock textarea {
   font-family: "Inter", serif;
   color: #4B4B4B;
   font-size: 16px;
@@ -70,21 +72,21 @@
   border: 0;
   outline: 0;
 }
-.contentGrid .container .form .inputBlock input {
+.content .container .form .inputBlock input {
   padding: 15px 5px;
   width: 100%;
   border: 0;
   outline: 0;
 }
-.contentGrid .container .form .inputBlock input:not(:placeholder-shown) ~ label {
+.content .container .form .inputBlock input:not(:placeholder-shown) ~ label {
   color: transparent;
   visibility: hidden;
 }
-.contentGrid .container .form .inputBlock textarea:not(:placeholder-shown) ~ label {
+.content .container .form .inputBlock textarea:not(:placeholder-shown) ~ label {
   color: transparent;
   visibility: hidden;
 }
-.contentGrid .container .form button {
+.content .container .form button {
   width: 100%;
   height: 50px;
   font-weight: bold;
@@ -97,7 +99,7 @@
 }
 
 @media (min-width: 1280px) {
-  .contentGrid {
+  .content {
     padding-inline: 200px;
   }
   .agrees {
@@ -105,7 +107,7 @@
   }
 }
 @media (max-width: 1280px) {
-  .contentGrid {
+  .content {
     padding-inline: 100px;
   }
   .agrees {
@@ -136,7 +138,7 @@
   }
 }
 @media (max-width: 500px) {
-  .contentGrid {
+  .content {
     padding-inline: 15px;
   }
 }

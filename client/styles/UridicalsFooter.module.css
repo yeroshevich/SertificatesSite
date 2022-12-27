@@ -1,3 +1,164 @@
+.footer {
+  transition: 2s;
+  width: 100%;
+  margin-top: 100px;
+  background-color: #fff;
+  padding: 15px 200px;
+  padding-bottom: 50px;
+  font-family: "Inter", serif;
+  color: #4B4B4B;
+}
+.footer .footerFlex {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .footerFlex .content {
+  width: 50%;
+}
+.footer .footerFlex .content .logo {
+  padding-bottom: 20px;
+}
+.footer .footerFlex .content .contacts {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .footerFlex .content .contacts div {
+  padding: 5px 0;
+}
+.footer .footerFlex .content .contacts .footerLink a {
+  color: #8DC640;
+}
+.footer .footerFlex .createContract {
+  width: 420px;
+  background-color: #E3ECD6;
+  padding: 25px;
+}
+.footer .footerFlex .createContract div {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+.footer .footerFlex .createContract div header {
+  font-family: "Gotham Pro", serif;
+  color: #4B4B4B;
+  width: 287px;
+  color: black;
+  font-size: 28px;
+  line-height: 27px;
+}
+.footer .footerFlex .createContract div .inputBlock {
+  position: relative;
+  height: 30px;
+  width: 100%;
+}
+.footer .footerFlex .createContract div .inputBlock input {
+  width: 100%;
+  background-color: transparent;
+  font-size: 14px;
+  padding-bottom: 5px;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid rgba(0, 30, 50, 0.6);
+  font-family: "Inter", serif;
+  color: #4B4B4B;
+  padding-right: 45px;
+}
+.footer .footerFlex .createContract div .inputBlock .icon {
+  position: absolute;
+  right: 0;
+  top: -2px;
+  cursor: pointer;
+}
+.footer .footerFlex .createContract div .inputBlock .icon img {
+  width: 35px;
+}
+.footer footer {
+  width: 1020px;
+  padding-top: 35px;
+  font-family: "Inter", serif;
+  color: #4B4B4B;
+  font-size: 14px;
+  line-height: 160%;
+}
 
+@media (max-width: 1280px) {
+  .footer {
+    padding-inline: 140px;
+    padding-left: 100px;
+  }
+}
+@media (max-width: 1125px) {
+  .footer footer {
+    width: 900px;
+    text-align: center;
+  }
+}
+@media (max-width: 1108px) {
+  .footer {
+    padding-right: 50px;
+  }
+  .footer .createContract {
+    padding-left: 55px;
+  }
+}
+@media (max-width: 1005px) {
+  .footer footer {
+    width: 800px;
+  }
+}
+@media (max-width: 980px) {
+  .footer {
+    padding-inline: 15px;
+  }
+  .footer .content .contacts {
+    padding-right: 35px;
+  }
+}
+@media (max-width: 768px) {
+  .footer .footerFlex {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer .footerFlex .content {
+    width: 100%;
+  }
+  .footer .createContract {
+    margin: auto;
+    height: 150px;
+    margin-top: 15px;
+  }
+  .footer footer {
+    margin: auto;
+    width: 500px;
+  }
+}
+@media (max-width: 500px) {
+  .footer .footerFlex .content {
+    width: 100%;
+  }
+  .footer .footerFlex .createContract {
+    min-width: 300px;
+    width: 100%;
+  }
+  .footer .footerFlex .createContract div header {
+    font-size: 24px;
+  }
+  .footer footer {
+    width: 300px;
+  }
+}
+@media (max-width: 380px) {
+  .footer .footerFlex .content .contacts {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+  .footer .footerFlex .content .contacts div {
+    width: 100%;
+    padding-left: 5px;
+  }
+}
 
 /*# sourceMappingURL=UridicalsFooter.module.css.map */

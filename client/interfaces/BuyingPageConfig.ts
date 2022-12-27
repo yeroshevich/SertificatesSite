@@ -15,5 +15,7 @@ export interface BuyingPagePageConfig{
     uridicalLink:Link,
     logo:Logo,
     links:Array<Link>,
-    footerLinks:Array<Link>
+    footerLinks:Array<Link>,
+    footerLogo:Logo
+
 }

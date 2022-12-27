@@ -18,12 +18,13 @@ export default function defaultConfiguration()
                 links:[
                 ],
                 footerLinks:[
-                    {link:'#',title:'Facebook'},
-                    {link:'#',title:'Вконтакте'},
-                    {link:'#',title:'Instagram'},
-                    {link:'#',title:'Youtube'},
-                    {link:'#',title:'Одноклассники'},
-                ]
+                    {link:'#',title:'./Facebook.png'},
+                    {link:'#',title:'./Вконтакте.png'},
+                    {link:'#',title:'./Instagram.png'},
+                    {link:'#',title:'./Youtube.png'},
+                    {link:'#',title:'./Одноклассники.png'},
+                ],
+                footerLogo:{url:'./logo_green.png',alt:'evrooptLogoFooter',title:'footerLogo'}
             } as BuyingPagePageConfig,
             page:'buyingpage'
         }
@@ -72,13 +73,13 @@ export default function defaultConfiguration()
                     {title:'Могу ли я передать сертификат другому человеку?',content:'нет'},
                 ],
                 footerLinks:[
-                    {link:'#',title:'Facebook'},
-                    {link:'#',title:'Вконтакте'},
-                    {link:'#',title:'Instagram'},
-                    {link:'#',title:'Youtube'},
-                    {link:'#',title:'Одноклассники'},
+                    {link:'#',title:'./Facebook.png'},
+                    {link:'#',title:'./Вконтакте.png'},
+                    {link:'#',title:'./Instagram.png'},
+                    {link:'#',title:'./Youtube.png'},
+                    {link:'#',title:'./Одноклассники.png'},
                 ],
-                footerLogo:{url:'./logo-black 1.png',alt:'evrooptLogoFooter',title:'footerLogo'}
+                footerLogo:{url:'./logo_green.png',alt:'evrooptLogoFooter',title:'footerLogo'}
             } as PhisicalPageConfig,
             page:'physical'
         }
@@ -102,13 +103,13 @@ export default function defaultConfiguration()
                 ],
                 formImage:{url:'./Rectangle 7.png',title:'rect 7'},
                 footerLinks:[
-                    {link:'#',title:'Facebook'},
-                    {link:'#',title:'Вконтакте'},
-                    {link:'#',title:'Instagram'},
-                    {link:'#',title:'Youtube'},
-                    {link:'#',title:'Одноклассники'},
+                    {link:'#',title:'./Facebook.png'},
+                    {link:'#',title:'./Вконтакте.png'},
+                    {link:'#',title:'./Instagram.png'},
+                    {link:'#',title:'./Youtube.png'},
+                    {link:'#',title:'./Одноклассники.png'},
                 ],
-                footerLogo:{url:'./logo-black 1.png',alt:'evrooptLogoFooter',title:'footerLogo'}
+                footerLogo:{url:'./logo_green.png',alt:'evrooptLogoFooter',title:'footerLogo'}
             } as CheckFormPageConfig,
             page:'checkform'
         }
@@ -122,8 +123,8 @@ export default function defaultConfiguration()
                 uridicalLink:{title:'Для физических лиц',link:PHISICALPAGE_PATH},
                 logo:{url:'./logo_green.png',alt:'logo',title:'evrooptLogo'},
                 links:[
-                    {title:'Как получить сертификат',link:'#',htmlElementId:'#'},
-                    {title:'Памятка',link:'#',htmlElementId:'#'},
+                    {title:'Как получить сертификат',link:'',htmlElementId:'#stepsBlock'},
+                    {title:'Памятка',link:'',htmlElementId:'#memoryUser'},
                 ],
                 bigImage:{url:'./Rectangle 5.png'},
                 firstContent:{
@@ -174,12 +175,12 @@ export default function defaultConfiguration()
                     }
                 },
                 footerLogo:{
-                    url:'./logo-black 1.png'
+                    url:'./logo_green.png'
                 },
                 footerLinks:[
-                    {link:'#',title:'Facebook'},
-                    {link:'#',title:'Вконтакте'},
-                    {link:'#',title:'Instagram'},
+                    {link:'#',title:'./Facebook.png'},
+                    {link:'#',title:'./Вконтакте.png'},
+                    {link:'#',title:'./Instagram.png'},
                 ],
                 footerLink:{title:'podari_sertifikat@eurotorg.by',link:'podari_sertifikat@eurotorg.by'},
                 phones:[

@@ -17,7 +17,7 @@ const PhisicalFooter = ({links,logo}:PhisicalFooterProps) => {
                        {
                            links.map((link,index)=>
                                <div  key={index}>
-                               <a href={link.link}>{link.title}</a>
+                               <a href={link.link}><img src={link.title} alt=""/></a>
                            </div>)
                        }
                    </div>

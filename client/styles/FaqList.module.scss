@@ -10,28 +10,28 @@
     font-size: 36px;
     line-height: 120%;
   }
-  .contentGrid{
+  .content{
 
   }
 
 }
 @media (min-width: 1280px)
 {
-  .contentGrid{
+  .content{
     padding-inline: 200px;
 
   }
 }
 @media (max-width: 1280px)
 {
-  .contentGrid{
+  .content{
     padding-inline: 100px;
 
   }
 }
 @media (max-width: 980px)
 {
-  .contentGrid{
+  .content{
     padding-inline: 0px;
   }
   .listBlock{

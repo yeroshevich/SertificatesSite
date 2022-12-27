@@ -61,7 +61,7 @@ $imgSize:700px;
     }
   }
   .text{
-    padding: 150px 200px;
+    padding: 100px 200px;
   }
 }
 @media (max-width: 1350px)
@@ -146,6 +146,9 @@ $imgSize:700px;
 @media (max-width: 550px)
 {
   .contentBlock{
+    .text{
+      padding-inline: 5px;
+    }
     .contentGrid{
       img{
         width: 300px;

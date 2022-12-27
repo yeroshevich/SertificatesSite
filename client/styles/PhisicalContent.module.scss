@@ -165,26 +165,26 @@
 }
 @media (min-width: 768px)
 {
-    .title{
-      font-size: 38px;
-      width: 600px;
-    }
-    .description{
-      width: 800px;
-    }
+  .title{
+    font-size: 38px;
+    width: 600px;
+  }
+  .description{
+    width: 800px;
+  }
 }
 @media (max-width: 768px) {
   .contentGrid{
     padding-top: 140px;
   }
-    .title{
-      font-size: 24px;
-      margin: auto;
-    }
-    .description{
-      font-size: 12pt;
-      width: 600px;
-    }
+  .title{
+    font-size: 24px;
+    margin: auto;
+  }
+  .description{
+    font-size: 12pt;
+    width: 600px;
+  }
   .secondContent{
     .smallImage{
       width: 100%;

@@ -43,7 +43,12 @@ const UridicalsPage = ({config}:UridicalsPageProps) => {
                 fivesContent={config.config.fivesContent}
                 bigImage={config.config.bigImage}
             />
-            <UridicalFooter/>
+            <UridicalFooter
+                footerLinks={config.config.footerLinks}
+                footerLink={config.config.footerLink}
+                footerLogo={config.config.footerLogo}
+                phones={config.config.phones}
+            />
         </>
     );
 };

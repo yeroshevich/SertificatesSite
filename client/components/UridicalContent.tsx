@@ -4,6 +4,7 @@ import {ContentPair} from "../interfaces/ContentPair";
 import About from "./uridicals/About";
 import Steps from "./uridicals/Steps";
 import Clients from "./uridicals/Clients";
+import MemoryOwner from "./uridicals/MemoryOwner";
 
 interface UridicalContentProps{
     bigImage:Image,
@@ -15,7 +16,7 @@ interface UridicalContentProps{
 }
 const UridicalContent = ({bigImage,firstContent,secondContent,thirtContent,fourthContent,fivesContent}:UridicalContentProps) => {
     return (
-        <div style={{height:5000}} className={styles.contentBlock}>
+        <div className={styles.contentBlock}>
             <div className={styles.contentGrid}>
                 <img src={bigImage.url} alt=""/>
                 <div className={styles.firstContent}>
@@ -38,6 +39,9 @@ const UridicalContent = ({bigImage,firstContent,secondContent,thirtContent,fourt
             </div>
             <div className={styles.text}>
                 <Clients content={fourthContent}/>
+            </div>
+            <div>
+                <MemoryOwner content={fivesContent}/>
             </div>
         </div>
     );

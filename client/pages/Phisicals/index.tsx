@@ -11,8 +11,6 @@ export async function getStaticProps(){
     const config = (await serverRequest.get('/configs/physical')).data
     config.config = JSON.parse(config.config)
 
-
-
     return {
         props:{
             config

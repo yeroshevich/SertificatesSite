@@ -12,6 +12,7 @@ const routing_controllers_1 = require("routing-controllers");
 const _config_1 = require("@config");
 const error_middleware_1 = tslib_1.__importDefault(require("@middlewares/error.middleware"));
 const logger_1 = require("@utils/logger");
+const cors_1 = tslib_1.__importDefault(require("cors"));
 class App {
     constructor(Controllers) {
         this.app = (0, express_1.default)();
@@ -41,13 +42,14 @@ class App {
         this.app.use(express_1.default.json());
         this.app.use(express_1.default.urlencoded({ extended: true }));
         this.app.use((0, cookie_parser_1.default)());
+        this.app.use((0, cors_1.default)({ origin: 'http://localhost:3000', credentials: true }));
     }
     initializeRoutes(controllers) {
         (0, routing_controllers_1.useExpressServer)(this.app, {
-            cors: {
-                origin: _config_1.ORIGIN,
-                credentials: _config_1.CREDENTIALS,
-            },
+            // cors: {
+            //   origin: ORIGIN,
+            //   credentials: CREDENTIALS,
+            // },
             controllers: controllers,
             defaultErrorHandler: false,
         });

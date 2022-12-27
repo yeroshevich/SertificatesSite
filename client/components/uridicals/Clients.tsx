@@ -20,14 +20,14 @@ const Clients = ({content}:ClientsProps) => {
                 <div className={styles.imageRow}>
                     {content.images.map((image,index)=>{
                             if(index<4)
-                                return <img src={image.url} alt={image.alt} title={image.title}/>
+                                return <img key={index} src={image.url} alt={image.alt} title={image.title}/>
                         }
                     )}
                 </div>
                 <div  className={styles.imageRow}>
                     {content.images.map((image,index)=>{
                             if(index>3)
-                                return <img src={image.url} alt={image.alt} title={image.title}/>
+                                return <img key={index} src={image.url} alt={image.alt} title={image.title}/>
                         }
                     )}
                 </div>

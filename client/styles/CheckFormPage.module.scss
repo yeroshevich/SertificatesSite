@@ -1,6 +1,6 @@
 @import 'Consts';
 
-.contentGrid{
+.content{
   margin: auto;
   min-width: 320px;
   header{
@@ -18,8 +18,8 @@
 
 @media (min-width: 1400px)
 {
-  .contentGrid{
-    padding: 140px 200px;
+  .content{
+    padding: 180px 200px;
     .descriptions{
       .description{
         width: 1200px;
@@ -28,7 +28,7 @@
   }
 }
 @media (max-width: 1400px){
-  .contentGrid{
+  .content{
     padding: 140px 200px;
     .descriptions{
       .description{
@@ -48,7 +48,7 @@
   }
 }
 @media (max-width: 1080px){
-  .contentGrid {
+  .content {
     .descriptions {
       .description {
         width: 900px;
@@ -57,7 +57,7 @@
   }
 }
 @media (max-width: 980px){
-  .contentGrid{
+  .content{
     padding: 140px 15px;
     .descriptions{
       .description{
@@ -67,7 +67,7 @@
   }
 }
 @media (max-width:800px){
-  .contentGrid{
+  .content{
     header{
       font-size: 26px;
     }
@@ -80,7 +80,7 @@
   }
 }
 @media (max-width: 600px){
-  .contentGrid{
+  .content{
     .descriptions{
       .description{
         width: 500px;
@@ -89,7 +89,7 @@
   }
 }
 @media (max-width: 500px){
-  .contentGrid{
+  .content{
     .descriptions{
       .description{
         width: 400px;
@@ -98,7 +98,7 @@
   }
 }
 @media (max-width: 400px){
-  .contentGrid{
+  .content{
     .descriptions{
       .description{
         width: 300px;

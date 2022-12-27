@@ -59,7 +59,7 @@
     font-size: 14px;
   }
   .text {
-    padding: 150px 200px;
+    padding: 100px 200px;
   }
 }
 @media (max-width: 1350px) {
@@ -127,6 +127,9 @@
   }
 }
 @media (max-width: 550px) {
+  .contentBlock .text {
+    padding-inline: 5px;
+  }
   .contentBlock .contentGrid img {
     width: 300px;
   }

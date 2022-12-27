@@ -9,6 +9,7 @@ import { useExpressServer } from 'routing-controllers';
 import { NODE_ENV, PORT, LOG_FORMAT, ORIGIN, CREDENTIALS } from '@config';
 import errorMiddleware from '@middlewares/error.middleware';
 import { logger, stream } from '@utils/logger';
+import cors from 'cors';
 
 
 class App {
@@ -48,14 +49,15 @@ class App {
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(cookieParser());
+    this.app.use(cors({origin:'http://localhost:3000',credentials:true}))
   }
 
   private initializeRoutes(controllers: Function[]) {
     useExpressServer(this.app, {
-      cors: {
-        origin: ORIGIN,
-        credentials: CREDENTIALS,
-      },
+      // cors: {
+      //   origin: ORIGIN,
+      //   credentials: CREDENTIALS,
+      // },
       controllers: controllers,
       defaultErrorHandler: false,
     });

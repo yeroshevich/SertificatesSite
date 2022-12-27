@@ -3,6 +3,8 @@
   display: flex;
   justify-content: space-between;
   min-width: 300px;
+  font-family: "Inter", serif;
+  color: #4B4B4B;
 }
 .contentGrid .instruction {
   padding-right: 25px;
@@ -101,10 +103,18 @@
 @media (max-width: 420px) {
   .contentGrid header {
     font-size: 12px;
+    text-align: center;
   }
   .contentGrid .header {
     font-size: 16px;
     width: auto;
+    text-align: center;
+  }
+  .contentGrid .instruction {
+    padding-inline: 5px;
+  }
+  .contentGrid .instruction .sendButton {
+    width: 100%;
   }
   .contentGrid .stepsGrid .step div {
     width: auto;

@@ -1,0 +1,163 @@
+@import 'Consts';
+
+.memoryBlock{
+  padding: 50px;
+  background: #f4f4f4;
+  min-width: 300px;
+  .innerBlock{
+    display: flex;
+    padding-inline: 150px;
+    justify-content: space-between;
+    img{
+      width: 420px;
+      height: 370px;
+    }
+    .content{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      a{
+        color:$lightGreen;
+      }
+      header{
+        width: 559.26px;
+        height: 78px;
+        @include gotham;
+        font-size: 28px;
+        line-height: 140%;
+      }
+      .descriptions{
+        @include inter;
+        .description{
+          width: 640px;
+
+          padding-top: 15px;
+          padding-bottom: 15px;
+          text-align: justify;
+          font-size: 14px;
+          line-height: 160%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1280px)
+{
+  .memoryBlock{
+    .innerBlock{
+      padding:0;
+    }
+  }
+}
+@media (max-width: 1112px)
+{
+  .memoryBlock{
+    padding:50px 0;
+     .innerBlock{
+       .content{
+         .descriptions{
+           .description{
+             width: 500px;
+           }
+         }
+       }
+     }
+   }
+}
+@media (max-width: 925px)
+{
+  .memoryBlock{
+    .innerBlock{
+      img{
+        width: 300px;
+        height: auto;
+      }
+      .content{
+        header{
+          font-size: 24px;
+          width: 450px;
+        }
+        .descriptions{
+          .description{
+            width: 400px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 710px)
+{
+  .memoryBlock{
+    .innerBlock{
+      flex-direction: column;
+      img{
+        margin: auto;
+      }
+      .content{
+        margin: auto;
+        header{
+          font-size: 20px;
+          height: auto;
+          width: 350px;
+          margin: auto;
+          text-align: center;
+        }
+        .descriptions{
+          .description{
+            width: 500px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 515px)
+{
+  .memoryBlock{
+    .innerBlock{
+      img{
+        width: 200px;
+      }
+      .content{
+        header{
+          font-size: 16px;
+          padding-top: 15px;
+        }
+        .descriptions{
+          margin: auto;
+          .description{
+            width: 350px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 372px)
+{
+  .memoryBlock{
+    .innerBlock{
+      img{
+        width: 150px;
+      }
+      .content{
+        margin: 0;
+        padding-inline: 15px;
+        header{
+          width: 250px;
+          font-size: 12px;
+          padding-top: 15px;
+        }
+        .descriptions{
+          margin: auto;
+          .description{
+            font-size: 12px;
+            width: 260px;
+          }
+        }
+      }
+    }
+  }
+}

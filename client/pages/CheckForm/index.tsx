@@ -5,8 +5,12 @@ import PhisicalHeader from "../../components/PhisicalHeader";
 import PhisicalFooter from "../../components/PhisicalFooter";
 import styles from '../../styles/CheckFormPage.module.scss'
 import {serverRequest} from "../../app/http/serverRequest";
+import defaultConfiguration from "../../app/defaultConfiguration";
 
 export async function getStaticProps(){
+
+    const {getCheckFormPageDefaultConfig,saveConfig} = defaultConfiguration()
+    await saveConfig(getCheckFormPageDefaultConfig().config)
 
     const config = (await serverRequest.get('/configs/checkform')).data
     config.config = JSON.parse(config.config)

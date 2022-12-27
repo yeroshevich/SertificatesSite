@@ -28,7 +28,11 @@ const TopScroll = () => {
                     className={styles.scrollBlock}
                     onClick={handleClickToTop}
                 >
-                    <UpOutlined />
+                   <div>
+                       <i>
+                           <UpOutlined />
+                       </i>
+                   </div>
                 </div>
             }
         </>

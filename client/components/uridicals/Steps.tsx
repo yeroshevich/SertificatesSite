@@ -7,7 +7,7 @@ interface StepsProps{
 
 const Steps = ({content}:StepsProps) => {
     return (
-        <div className={styles.contentGrid}>
+        <div className={styles.contentGrid} id={'stepsBlock'}>
             <div className={styles.instruction}>
                 <header>четыре простых шага</header>
                 <div className={styles.header}>

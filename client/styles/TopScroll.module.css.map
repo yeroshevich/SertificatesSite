@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["TopScroll.module.scss","Consts.scss"],"names":[],"mappings":"AAEA;EACE;EACA;EACA;EACA,OCLU;EDMV;EACA;EACA;EACA;EACA;EACA;EACA;EACA","file":"TopScroll.module.css"}
+{"version":3,"sourceRoot":"","sources":["TopScroll.module.scss","Consts.scss"],"names":[],"mappings":"AAEA;EACE;EACA;EACA;EAEA,OCNU;EDOV;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AACA;EACE;EACA;EACA;;AACA;EACE;EACA;EACA;EACA","file":"TopScroll.module.css"}

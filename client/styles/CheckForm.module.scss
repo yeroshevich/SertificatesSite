@@ -65,6 +65,7 @@ $maxHeight:300px;
   }
   p{
     padding-top: 15px;
+    @include inter;
     a{
       color:$lightGreen;
       text-decoration: underline;

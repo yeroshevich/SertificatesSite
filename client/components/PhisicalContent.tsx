@@ -38,7 +38,7 @@ const PhisicalContent = ({content,rectImage,smallImage,carousel,addresses,faq}:P
 
     return (
         <>
-            <div className={styles.content}>
+            <div className={styles.contentGrid}>
                 <div className={styles.text+' '+styles.firstContent}>
                     <div className={styles.title}>{firstContent.title}</div>
                     <div>
