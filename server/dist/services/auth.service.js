@@ -62,7 +62,7 @@ class AuthService {
     createToken(user) {
         const dataStoredInToken = { id: user.idUser };
         const secretKey = _config_1.SECRET_KEY;
-        const expiresIn = 60 * 60;
+        const expiresIn = new Date().getTime() + 60 * 60;
         return { expiresIn, token: (0, jsonwebtoken_1.sign)(dataStoredInToken, secretKey, { expiresIn }) };
     }
     createCookie(tokenData) {

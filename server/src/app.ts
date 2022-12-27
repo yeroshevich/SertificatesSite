@@ -22,8 +22,8 @@ class App {
     this.env = NODE_ENV || 'development';
     this.port = 8080;
 
-    this.initializeMiddlewares();
     this.initializeRoutes(Controllers);
+    this.initializeMiddlewares();
     this.initializeErrorHandling();
     this.initStatic();
   }
@@ -54,10 +54,10 @@ class App {
 
   private initializeRoutes(controllers: Function[]) {
     useExpressServer(this.app, {
-      // cors: {
-      //   origin: ORIGIN,
-      //   credentials: CREDENTIALS,
-      // },
+      cors: {
+        origin: ORIGIN,
+        credentials: CREDENTIALS,
+      },
       controllers: controllers,
       defaultErrorHandler: false,
     });

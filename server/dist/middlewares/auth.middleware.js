@@ -12,7 +12,7 @@ const authMiddleware = (req, res, next) => tslib_1.__awaiter(void 0, void 0, voi
             const secretKey = _config_1.SECRET_KEY;
             const verificationResponse = (yield (0, jsonwebtoken_1.verify)(Authorization, secretKey));
             const userId = verificationResponse.id;
-            const findUser = yield sequelize_1.UserModel.findByPk(userId);
+            const findUser = yield sequelize_1.UserModel.findByPk(userId, { raw: true });
             if (findUser) {
                 req.user = findUser;
                 next();

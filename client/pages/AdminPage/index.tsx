@@ -1,9 +1,27 @@
-import styles from '../../styles/ConstructorPage.module.scss';
+import styles from '../../styles/AdminPage.module.scss';
 import useInput from "../../hooks/useInput";
 import { Input } from 'antd';
 import {serverRequest} from "../../app/http/serverRequest";
+import {AuthUser} from "../../interfaces/AuthUser";
 
+export async function getStaticProps(){
+    try{
+        const res= (await serverRequest.post('/auth')).data
+        console.log(res)
+        // if(res.isAuthorized)
+        //     return{
+        //         redirect:{
+        //             destination:'/'
+        //         }
+        //     }
+    }catch (e){
+        console.log(e)
+    }
+    return {
+        props:{}
+    }
 
+}
 const AdminPage = () => {
 
     const username = useInput()
@@ -11,7 +29,6 @@ const AdminPage = () => {
 
     const handleSubmit = async()=>{
         const res = await serverRequest.post('/login',{username:'admin',password:'192929129129admin'})
-        console.log(res)
     }
 
 

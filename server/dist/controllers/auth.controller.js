@@ -24,6 +24,13 @@ let AuthController = class AuthController {
             return { data: findUser, message: 'login' };
         });
     }
+    authUser(req, res) {
+        return tslib_1.__awaiter(this, void 0, void 0, function* () {
+            //return {user:req.user,isAuthorized:req.user ?true:false}
+            console.log(req.cookies);
+            return res;
+        });
+    }
     logOut(req, res) {
         return tslib_1.__awaiter(this, void 0, void 0, function* () {
             const userData = req.user;
@@ -51,6 +58,16 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, users_dto_1.CreateUserDto]),
     tslib_1.__metadata("design:returntype", Promise)
 ], AuthController.prototype, "logIn", null);
+tslib_1.__decorate([
+    (0, routing_controllers_1.Post)('/auth')
+    //@UseBefore(authMiddleware)
+    ,
+    tslib_1.__param(0, (0, routing_controllers_1.Req)()),
+    tslib_1.__param(1, (0, routing_controllers_1.Res)()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object]),
+    tslib_1.__metadata("design:returntype", Promise)
+], AuthController.prototype, "authUser", null);
 tslib_1.__decorate([
     (0, routing_controllers_1.Post)('/logout'),
     (0, routing_controllers_1.UseBefore)(auth_middleware_1.default),

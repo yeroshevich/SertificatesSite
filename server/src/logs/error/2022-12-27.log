@@ -28,3 +28,14 @@ ReferenceError: cors is not defined
 2022-12-27 17:53:49 error: [POST] /login >> StatusCode:: 400, Message:: property username should not exist, property password should not exist
 2022-12-27 17:54:31 error: [POST] /login >> StatusCode:: 400, Message:: property username should not exist, property password should not exist
 2022-12-27 17:54:46 error: [POST] /login >> StatusCode:: 400, Message:: property username should not exist, property password should not exist
+2022-12-27 20:36:03 error: [POST] /login >> StatusCode:: 400, Message:: property username should not exist, property password should not exist
+2022-12-27 21:08:22 error: [POST] /auth >> StatusCode:: 404, Message:: Authentication token missing
+2022-12-27 21:09:00 error: [POST] /auth >> StatusCode:: 404, Message:: Authentication token missing
+2022-12-27 21:09:31 error: [POST] /auth >> StatusCode:: 404, Message:: Authentication token missing
+2022-12-27 21:09:43 error: [POST] /auth >> StatusCode:: 404, Message:: Authentication token missing
+2022-12-27 21:09:58 error: [POST] /auth >> StatusCode:: 404, Message:: Authentication token missing
+2022-12-27 21:11:50 error: [POST] /auth >> StatusCode:: 404, Message:: Authentication token missing
+2022-12-27 21:11:59 error: [POST] /auth >> StatusCode:: 404, Message:: Authentication token missing
+2022-12-27 21:12:08 error: [POST] /auth >> StatusCode:: 401, Message:: Wrong authentication token
+2022-12-27 21:31:23 error: [POST] /auth >> StatusCode:: 500, Message:: Cannot set headers after they are sent to the client
+2022-12-27 21:31:40 error: [POST] /auth >> StatusCode:: 500, Message:: Cannot set headers after they are sent to the client

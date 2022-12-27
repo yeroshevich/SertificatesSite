@@ -5,9 +5,11 @@ import {PhisicalPage} from "../../interfaces/PhisicalPageConfig";
 import TopScroll from "../../components/TopScroll";
 import {serverRequest} from "../../app/http/serverRequest";
 import Head from "next/head";
+import defaultConfiguration from "../../app/defaultConfiguration";
 
 export async function getStaticProps(){
-
+    const {getPhysicalPageDefaultConfig,saveConfig} = defaultConfiguration()
+    await saveConfig(getPhysicalPageDefaultConfig().config)
     const config = (await serverRequest.get('/configs/physical')).data
     config.config = JSON.parse(config.config)
 

@@ -1,4 +1,4 @@
-import { Response } from 'express';
+import {Request, Response} from 'express';
 import {Controller, Req, Body, Post, UseBefore, HttpCode, Res, Get} from 'routing-controllers';
 import { CreateUserDto } from '@dtos/users.dto';
 import { RequestWithUser } from '@interfaces/auth.interface';
@@ -25,6 +25,14 @@ export class AuthController {
     const { cookie, findUser } = await this.authService.login(userData);
     res.setHeader('Set-Cookie', [cookie]);
     return { data: findUser, message: 'login' };
+  }
+
+  @Post('/auth')
+  //@UseBefore(authMiddleware)
+  async authUser(@Req() req:Request,@Res() res:Response){
+      //return {user:req.user,isAuthorized:req.user ?true:false}
+    console.log(req.cookies)
+    return res
   }
 
   @Post('/logout')
