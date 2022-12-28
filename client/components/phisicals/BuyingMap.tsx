@@ -70,8 +70,8 @@ const BuyingMap = ({addresses}:BuyingMapProps) => {
                         onLoad={(maps)=>setYmaps(maps)}
                         state={{ center: [MINSK_COORDINATES.latitude,MINSK_COORDINATES.longitude], zoom: 10 }}
                         className={styles.yandexMap}
-                        width={'40%'}
-                        height={'200px'}
+                        width={'50%'}
+                        height={'50px'}
                         modules={["geolocation", "geocode","multiRouter.MultiRoute"]}
                     >
                         {

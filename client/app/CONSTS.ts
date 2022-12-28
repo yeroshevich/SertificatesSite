@@ -7,3 +7,4 @@ export const BUYPAGE_PATH = '/BuyingSertificates'
 export const BACKFORM_PATH = '/CheckForm'
 export const URIDICALPAGE_PATH = '/Uridicals'
 export const PHISICALPAGE_PATH = '/Phisicals'
+

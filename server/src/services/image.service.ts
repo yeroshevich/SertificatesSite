@@ -1,5 +1,7 @@
 import fs from "fs";
 import {HttpException} from "@exceptions/HttpException";
+import {ImageResponse} from "@interfaces/ImageResponse";
+import {DOMEN} from "@config";
 
 export default class ImageService{
   private path = `${process.cwd()}\\src\\userImages\\`
@@ -14,5 +16,15 @@ export default class ImageService{
      }catch (e){
        return {file:new Buffer(this.path)}
      }
+  }
+  public async findAllPathsImages():Promise<Array<ImageResponse>>{
+    try{
+      const files:Array<ImageResponse> = fs.readdirSync(this.path).map(x=>{return{url:DOMEN+'/images/'+ x,title:x}})
+       return files
+    }catch (e)
+    {
+      return []
+    }
+
   }
 }

@@ -1,6 +1,7 @@
 @import "Consts";
 
 .listBlock{
+  min-width: 300px;
   header{
     @include gotham;
     width: 79px;

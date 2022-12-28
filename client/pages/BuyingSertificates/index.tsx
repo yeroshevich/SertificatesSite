@@ -9,9 +9,6 @@ import defaultConfiguration from "../../app/defaultConfiguration";
 
 export async function getStaticProps(){
 
-    const {getBuyingPageDefaultConfig,saveConfig} = defaultConfiguration()
-    await saveConfig(getBuyingPageDefaultConfig().config)
-
      const config = (await serverRequest.get('http://localhost:8080/configs/buyingpage')).data
     config.config = JSON.parse(config.config)
 

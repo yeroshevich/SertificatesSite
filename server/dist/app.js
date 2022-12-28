@@ -12,6 +12,7 @@ const routing_controllers_1 = require("routing-controllers");
 const _config_1 = require("@config");
 const error_middleware_1 = tslib_1.__importDefault(require("@middlewares/error.middleware"));
 const logger_1 = require("@utils/logger");
+const body_parser_1 = tslib_1.__importDefault(require("body-parser"));
 //import {defaultMetadataStorage} from "class-transformer/types/storage";
 class App {
     constructor(Controllers) {
@@ -42,6 +43,8 @@ class App {
         this.app.use(express_1.default.json());
         this.app.use(express_1.default.urlencoded({ extended: true }));
         this.app.use((0, cookie_parser_1.default)());
+        this.app.use(body_parser_1.default.urlencoded());
+        this.app.use(body_parser_1.default.json());
     }
     initializeRoutes(controllers) {
         (0, routing_controllers_1.useExpressServer)(this.app, {

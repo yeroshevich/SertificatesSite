@@ -1,0 +1,36 @@
+2022-12-28 10:51:59 error: [PATCH] /configs >> StatusCode:: 404, Message:: Authentication token missing
+2022-12-28 13:26:50 error: uncaughtException: ⨯ Unable to compile TypeScript:
+src/services/image.service.ts(21,16): error TS1109: Expression expected.
+src/services/image.service.ts(22,9): error TS1109: Expression expected.
+
+TSError: ⨯ Unable to compile TypeScript:
+src/services/image.service.ts(21,16): error TS1109: Expression expected.
+src/services/image.service.ts(22,9): error TS1109: Expression expected.
+
+    at createTSError (D:\repository\SertificatesSite\server\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (D:\repository\SertificatesSite\server\node_modules\ts-node\src\index.ts:863:19)
+    at D:\repository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (D:\repository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (D:\repository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1157:10)
+    at Object.require.extensions.<computed> [as .ts] (D:\repository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+2022-12-28 14:04:29 error: uncaughtException: ⨯ Unable to compile TypeScript:
+src/controllers/image.controller.ts(35,38): error TS1003: Identifier expected.
+
+TSError: ⨯ Unable to compile TypeScript:
+src/controllers/image.controller.ts(35,38): error TS1003: Identifier expected.
+
+    at createTSError (D:\repository\SertificatesSite\server\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (D:\repository\SertificatesSite\server\node_modules\ts-node\src\index.ts:863:19)
+    at D:\repository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (D:\repository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (D:\repository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1157:10)
+    at Object.require.extensions.<computed> [as .ts] (D:\repository\SertificatesSite\server\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+2022-12-28 14:37:13 error: [POST] /images >> StatusCode:: 500, Message:: Cannot read properties of undefined (reading '0')

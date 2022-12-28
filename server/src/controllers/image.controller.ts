@@ -1,8 +1,8 @@
-import {Controller, Get, Param, Res} from "routing-controllers";
-import { Response} from "express";
+import {Body, Controller, Get, Param, Post, Req, Res, UseBefore} from "routing-controllers";
+import {Request, Response} from "express";
 import ImageService from "@services/image.service";
-import {promisify} from "util";
-import fs from "fs";
+import authMiddleware from "@middlewares/auth.middleware";
+import multer from "multer";
 
 
 
@@ -26,14 +26,18 @@ export default class ImageController{
     // /////// просто возвращает файл
     // res.setHeader('Content-type','image/png')
     // return file
-
-
-
   }
   @Get('/images')
+  @UseBefore(authMiddleware)
   public async findAllImages(){
-
+    return this.imageService.findAllPathsImages()
+  }
+  @Post('/images')
+  @UseBefore(authMiddleware)
+  public async uploadImage(@Body() file:any,@Req() req:Request){
+    console.log(file)
+    console.log(req.body)
+    return 'ok'
   }
 
 }
-// Привет, я первый раз пишу rest api на node js и у меня стоит задача на раздачу файлов с папки

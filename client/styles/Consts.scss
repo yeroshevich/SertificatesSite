@@ -36,3 +36,9 @@ $whiteGreen: #E3ECD6;
   line-height: 10px;
   color: #4B4B4B;
 }
+@mixin inputs{
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}

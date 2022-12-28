@@ -1,22 +1,23 @@
-import axios from "axios";
-import {ReactNode, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import {Button, Card, List, Modal} from 'antd'
 import {SearchOutlined} from "@ant-design/icons";
 import ImageResponse from "../../interfaces/ImageResponse";
 import styles from '../../styles/ChooseImage.module.scss'
+import {serverRequest} from "../../app/http/serverRequest";
 
 export interface ChooseImageProps{
-    onChoose?:(url:string)=>void
+    onChoose:(url:string)=>void
 }
 
-const ChooseImage = () => {
+const ChooseImage = ({onChoose}:ChooseImageProps) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [images,setImages] = useState<Array<ImageResponse>>([])
-    const [selectedImage,setSelectedImage] = useState<ImageResponse>({title:'',url:''})
+    const [selectedFile, setSelectedFile] = useState<Blob>();
+
+
 
     const showModal = () => {
         setIsModalOpen(true);
-        fetchImages()
     };
 
     const handleOk = () => {
@@ -28,20 +29,36 @@ const ChooseImage = () => {
     };
 
     const handleCardClick = (e:React.MouseEvent<HTMLDivElement>,image:ImageResponse)=>{
-        //e.target.style.backgroundColor='blue'
-       // setSelectedImage(image)
+        onChoose(image.url)
+        handleCancel()
     }
 
-    const fetchImages = ()=>{
-        //axios.get('')
-        setImages([
-            {title:'Первая',url:'./card 1.png'},
-            {title:'Вторая',url:'./Rectangle 7.png'},
-            {title:'Третья',url:'./security 1.png'},
-            {title:'четвертая',url:'logo-black 1.png'}
-        ])
+    const fetchImages = async()=>{
+        const res:Array<ImageResponse> = (await serverRequest.get('/images')).data
+        setImages([...res.map(x=>x)])
+    }
+    const handleSubmit = async(event:React.FormEvent) => {
+        event.preventDefault()
+        const formData = new FormData();
+       if(!selectedFile)return
+        formData.append("file", selectedFile);
+
+        try {
+            const response = await serverRequest.post('/images', {file:formData},{headers:{'Content-type':'multipart/form-data'}})
+            await fetchImages()
+        } catch(error) {
+            console.log(error)
+        }
+    }
+    const handleFileSelect = (files:FileList | null) => {
+        if(!files)return
+        setSelectedFile(files[0])
+
     }
 
+    useEffect(()=>{
+       fetchImages()
+    },[])
     return (
         <>
             <Button type="primary" icon={<SearchOutlined />} onClick={showModal}>
@@ -80,6 +97,10 @@ const ChooseImage = () => {
                         </List.Item>
                     )}
                 />
+                <form onSubmit={handleSubmit}>
+                    <input type="file" onChange={(e)=>handleFileSelect(e.target.files)}/>
+                    <input type="submit" value={'Загрузить'}/>
+                </form>
             </Modal>
         </>
     );

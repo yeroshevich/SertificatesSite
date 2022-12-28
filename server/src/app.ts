@@ -12,6 +12,7 @@ import swaggerUi from 'swagger-ui-express';
 import { NODE_ENV, PORT, LOG_FORMAT, ORIGIN, CREDENTIALS } from '@config';
 import errorMiddleware from '@middlewares/error.middleware';
 import { logger, stream } from '@utils/logger';
+import bodyParser from "body-parser";
 //import {defaultMetadataStorage} from "class-transformer/types/storage";
 
 
@@ -52,6 +53,8 @@ class App {
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(cookieParser());
+    this.app.use(bodyParser.urlencoded())
+    this.app.use(bodyParser.json())
   }
 
   private initializeRoutes(controllers: Function[]) {

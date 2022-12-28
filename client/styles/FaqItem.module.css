@@ -1,6 +1,12 @@
 .content {
   transition: height 2s;
+  font-family: "Inter", serif;
+  color: #4B4B4B;
   cursor: pointer;
+}
+.content header {
+  font-family: "Gotham Pro", serif;
+  color: #4B4B4B;
 }
 .content div {
   display: flex;

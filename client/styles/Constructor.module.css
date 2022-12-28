@@ -1,0 +1,48 @@
+.constructorBlock {
+  max-width: 1200px;
+  max-height: 1000px;
+  background-color: #f4f4f4;
+  margin: auto;
+  min-width: 600px;
+  min-height: 600px;
+  width: 1200px;
+  padding: 15px;
+  display: flex;
+  height: 100%;
+}
+.constructorBlock header {
+  font-family: "Gotham Pro", serif;
+  color: #4B4B4B;
+  font-size: 10pt;
+  background-color: #efefef;
+  overflow-y: auto;
+  max-height: 500px;
+  max-width: 200px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.constructorBlock header .menu .item {
+  margin: 15px 10px;
+  cursor: pointer;
+  border-radius: 15px;
+  background-color: gainsboro;
+  padding: 15px 10px;
+}
+.constructorBlock .content {
+  background-color: gainsboro;
+  width: 100%;
+  margin-left: 10px;
+  overflow-y: auto;
+  max-height: 1000px;
+}
+
+.chooseBlock {
+  height: 100%;
+  font-family: "Gotham Pro", serif;
+  color: #4B4B4B;
+  text-align: center;
+}
+
+/*# sourceMappingURL=Constructor.module.css.map */

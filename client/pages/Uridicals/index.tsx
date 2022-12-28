@@ -7,9 +7,6 @@ import Head from "next/head";
 import defaultConfiguration from "../../app/defaultConfiguration";
 
 export async function getStaticProps(){
-
-    const {getUridicalPageDefaultConfig,saveConfig} = defaultConfiguration()
-    await saveConfig(getUridicalPageDefaultConfig().config)
     const config = (await serverRequest.get('/configs/uridical')).data
     config.config = JSON.parse(config.config)
     return {

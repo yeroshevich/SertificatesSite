@@ -1,0 +1,17 @@
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.buttons button {
+  font-family: "Gotham Pro", serif;
+  color: #4B4B4B;
+  color: white;
+}
+.buttons .saveButton {
+  background-color: #30e830;
+}
+.buttons .cancelButton {
+  background-color: red;
+}
+
+/*# sourceMappingURL=Buttons.module.css.map */

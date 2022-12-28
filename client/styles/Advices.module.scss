@@ -18,6 +18,7 @@
   }
   .grid{
     display: grid;
+    @include inter;
     .gridCol{
       display: grid;
       grid-template-rows: 1fr 1fr 1fr 1fr;

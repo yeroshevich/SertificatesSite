@@ -1,0 +1,19 @@
+.inputs {
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.image {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+.image img {
+  width: auto;
+  max-width: 250px;
+  max-height: 250px;
+}
+
+/*# sourceMappingURL=LogoCosntructor.module.css.map */

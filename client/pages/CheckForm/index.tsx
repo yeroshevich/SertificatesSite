@@ -9,9 +9,6 @@ import defaultConfiguration from "../../app/defaultConfiguration";
 
 export async function getStaticProps(){
 
-    const {getCheckFormPageDefaultConfig,saveConfig} = defaultConfiguration()
-    await saveConfig(getCheckFormPageDefaultConfig().config)
-
     const config = (await serverRequest.get('/configs/checkform')).data
     config.config = JSON.parse(config.config)
 

@@ -196,6 +196,10 @@ export default function defaultConfiguration()
         const saveRes = await serverRequest.patch('/configs',config)
         return saveRes.data
     }
+    const fetchConfig = async(page:string)=>{
+        const res = await serverRequest.get(`/configs/${page}`)
+        return JSON.parse(res.data.config)
+    }
 
-    return {getBuyingPageDefaultConfig,getPhysicalPageDefaultConfig,getCheckFormPageDefaultConfig,getUridicalPageDefaultConfig,saveConfig}
+    return {getBuyingPageDefaultConfig,getPhysicalPageDefaultConfig,getCheckFormPageDefaultConfig,getUridicalPageDefaultConfig,saveConfig,fetchConfig}
 }

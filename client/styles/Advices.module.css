@@ -18,6 +18,8 @@
 }
 .adviceContainer .grid {
   display: grid;
+  font-family: "Inter", serif;
+  color: #4B4B4B;
 }
 .adviceContainer .grid .gridCol {
   display: grid;

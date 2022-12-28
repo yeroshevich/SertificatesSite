@@ -1,5 +1,10 @@
+@import 'Consts';
 .content{
   transition: height 2s;
+  @include inter;
+  header{
+    @include gotham;
+  }
   div{
     display: flex;
     justify-content: space-between;
