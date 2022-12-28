@@ -18,7 +18,7 @@ const AdminPage = () => {
     const handleSubmit = async()=>{
         const res:LoginResponse = (await serverRequest.post('/login',{username:'admin',password:'192929129129admin'})).data
         if(res.data)
-            redirectTo('/Administrate/constructor')
+            redirectTo('/Administrate/Constructor')
     }
 
     useEffect(()=>{

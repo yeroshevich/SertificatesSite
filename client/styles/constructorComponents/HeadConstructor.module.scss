@@ -5,15 +5,6 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    @include inter;
-    .icon{
-      font-size: 10pt;
-      border-radius: 50%;
-      background-color: $lightGreen;
-      color:white;
-      padding: 5px;
-      cursor: pointer;
-    }
   }
   div{
     text-align: left;

@@ -8,3 +8,6 @@ export const BACKFORM_PATH = '/CheckForm'
 export const URIDICALPAGE_PATH = '/Uridicals'
 export const PHISICALPAGE_PATH = '/Phisicals'
 
+export const generateId = ()=>{
+    return new Date().getTime()
+}

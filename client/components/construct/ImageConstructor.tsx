@@ -7,9 +7,11 @@ import ChooseImage from "./ChooseImage";
 interface ImageConstructorProps{
     image:Image,
     imageChange:(img:Image)=>void,
-    legend:string
+    legend:string,
+    imageChangeByIndex?:(index:number,img:Image)=>void,
+    index?:number
 }
-const ImageConstructor = ({imageChange,image,legend}:ImageConstructorProps) => {
+const ImageConstructor = ({imageChange,image,legend,imageChangeByIndex,index}:ImageConstructorProps) => {
     const [imageUrl,setImageUrl] = useState<string>(image.url)
 
     const alt = useInput(image.alt)
@@ -20,7 +22,10 @@ const ImageConstructor = ({imageChange,image,legend}:ImageConstructorProps) => {
     }
 
     useEffect(()=>{
-        imageChange({url:imageUrl,alt:alt.value,title:title.value})
+        const img = {url:imageUrl,alt:alt.value,title:title.value}
+        imageChange(img)
+        if(imageChangeByIndex && index)
+            imageChangeByIndex(index,img)
     },[imageUrl,alt.value,title.value])
 
     return (

@@ -2,16 +2,6 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  font-family: "Inter", serif;
-  color: #4B4B4B;
-}
-.head legend .icon {
-  font-size: 10pt;
-  border-radius: 50%;
-  background-color: #8DC640;
-  color: white;
-  padding: 5px;
-  cursor: pointer;
 }
 .head div {
   text-align: left;

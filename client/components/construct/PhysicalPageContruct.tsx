@@ -32,18 +32,20 @@ const PhysicalPageContruct = () => {
 
     }
     const saveConfiguration = ()=>{
-        saveConfig({config,page:PAGE_TITLE} as SaveConfig)
-            .then(res=>console.log(res))
-            .catch(e=>console.log(e))
+        // saveConfig({config,page:PAGE_TITLE} as SaveConfig)
+        //     .then(res=>console.log(res))
+        //     .catch(e=>console.log(e))
+        console.log(config)
     }
 
     useEffect(()=>{
        fetchConfiguration()
     },[])
 
-    const handleAddHeadLink = ()=>{
-        if(config?.head && config.head.length<10)
-            setConfig({...config,head:[...config.head,{rel:'',href:''}]})
+
+    const handleSaveHead = (change:Array<HeadLink>)=>{
+        if(config?.head)
+            setConfig({...config,head:change})
     }
     const handleTitleChange = (e:ChangeEvent<HTMLInputElement>)=>{
         if(config?.title)
@@ -73,22 +75,16 @@ const PhysicalPageContruct = () => {
         if(config?.carousel)
             setConfig({...config,carousel:change})
     }
-    const handleAddImage = ()=>{
-        if(config?.carousel)
-            setConfig({...config,carousel:[...config.carousel,{url:'',title:'',alt:''}]})
-    }
-    useEffect(()=>{
-        console.log(config?.carousel)
-    },[config?.carousel])
+
 
     return (
         <div className={styles.content}>
             {
                 config &&
                 <div>
-                    <fieldset>
+                    <fieldset className={styles.contentPart}>
                         <legend>Шапка</legend>
-                        <HeadConstructor head={config?.head} addLink={handleAddHeadLink}/>
+                        <HeadConstructor saveHead={handleSaveHead} head={config?.head}/>
                         <fieldset>
                             <legend>Title</legend>
                             <input type="text" onChange={handleTitleChange} value={config.title}/>
@@ -100,33 +96,33 @@ const PhysicalPageContruct = () => {
                     </fieldset>
 
 
-                    <fieldset>
-                        <legend>Контент</legend>
-                        <div style={{paddingInline:'15px'}}>
-                            <ContentConstructor
-                                content={config.content}
-                                saveContent={handleSaveContent}/>
-                            <ImageConstructor
-                                image={config.rectImage}
-                                imageChange={handleSaveRectImage}
-                                legend={'For first content'}/>
-                            <ImageConstructor
-                                image={config.smallImage}
-                                imageChange={handleSaveSmallImage}
-                                legend={'For second content'}/>
-                            <SliderConstructor
-                                carousel={config.carousel}
-                                saveCarousel={handleSaveCaroussel}
-                                legend={'Slider'} addImage={handleAddImage}/>
+                    {/*<fieldset className={styles.contentPart}>*/}
+                    {/*    <legend>Контент</legend>*/}
+                    {/*    <div style={{paddingInline:'15px'}}>*/}
+                    {/*        <ContentConstructor*/}
+                    {/*            content={config.content}*/}
+                    {/*            saveContent={handleSaveContent}/>*/}
+                    {/*        <ImageConstructor*/}
+                    {/*            image={config.rectImage}*/}
+                    {/*            imageChange={handleSaveRectImage}*/}
+                    {/*            legend={'For first content'}/>*/}
+                    {/*        <ImageConstructor*/}
+                    {/*            image={config.smallImage}*/}
+                    {/*            imageChange={handleSaveSmallImage}*/}
+                    {/*            legend={'For second content'}/>*/}
+                    {/*        <SliderConstructor*/}
+                    {/*            carousel={config.carousel}*/}
+                    {/*            saveCarousel={handleSaveCaroussel}*/}
+                    {/*            legend={'Slider'} />*/}
 
-                        </div>
-                    </fieldset>
+                    {/*    </div>*/}
+                    {/*</fieldset>*/}
 
 
-                    <fieldset>
-                        <legend>Подвал</legend>
+                    {/*<fieldset className={styles.contentPart}>*/}
+                    {/*    <legend>Подвал</legend>*/}
 
-                    </fieldset>
+                    {/*</fieldset>*/}
                 </div>
             }
             <Buttons cancel={fetchConfiguration} save={saveConfiguration}>

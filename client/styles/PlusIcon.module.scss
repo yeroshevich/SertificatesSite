@@ -1,0 +1,27 @@
+@import 'Consts';
+$size: 25px;
+
+@mixin icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:5px;
+  font-size: 12pt;
+  border-radius: 50%;
+  width: $size;
+  height: $size;
+  text-align: center;
+  cursor: pointer;
+  color:white;
+}
+
+.iconPlus{
+  @include icon;
+  background-color:$lightGreen;
+
+}
+.iconMinus{
+  @include icon;
+  background-color:red;
+
+}

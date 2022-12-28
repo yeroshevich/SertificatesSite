@@ -12,10 +12,10 @@ interface ButtonsProps{
 const Buttons = ({children,save,cancel}:ButtonsProps) => {
     return (
         <div className={styles.buttons}>
-            <Button className={styles.saveButton} icon={<SaveOutlined />} >
+            <Button className={styles.saveButton} icon={<SaveOutlined />} onClick={save} >
                 Сохранить конфигурацию
             </Button>
-            <Button className={styles.cancelButton} icon={<CloseOutlined />} >
+            <Button className={styles.cancelButton} icon={<CloseOutlined />} onClick={cancel} >
                 Отменить изменения
             </Button>
             {children}

@@ -9,12 +9,20 @@ import defaultConfiguration from "../../app/defaultConfiguration";
 
 export async function getStaticProps(){
 
-    const config = (await serverRequest.get('/configs/physical')).data
-    config.config = JSON.parse(config.config)
+    try{
+        const config = (await serverRequest.get('/configs/physical')).data
+        config.config = JSON.parse(config.config)
 
-    return {
-        props:{
-            config
+        return {
+            props:{
+                config
+            }
+        }
+    }catch (e){
+        return {
+            redirect:{
+                destination:'/404'
+            }
         }
     }
 }

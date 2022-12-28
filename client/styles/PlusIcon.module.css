@@ -1,0 +1,31 @@
+.iconPlus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  font-size: 12pt;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+  background-color: #8DC640;
+}
+
+.iconMinus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  font-size: 12pt;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+  background-color: red;
+}
+
+/*# sourceMappingURL=PlusIcon.module.css.map */
