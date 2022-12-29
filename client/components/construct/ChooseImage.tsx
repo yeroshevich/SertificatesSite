@@ -44,7 +44,7 @@ const ChooseImage = ({onChoose}:ChooseImageProps) => {
         formData.append("file", selectedFile);
 
         try {
-            const response = await serverRequest.post('/images', {file:formData},{headers:{'Content-type':'multipart/form-data'}})
+            const response = await serverRequest.post('/images', formData,{headers:{'Content-type':'multipart/form-data'}})
             await fetchImages()
         } catch(error) {
             console.log(error)

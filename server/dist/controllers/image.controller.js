@@ -4,9 +4,11 @@ const tslib_1 = require("tslib");
 const routing_controllers_1 = require("routing-controllers");
 const image_service_1 = tslib_1.__importDefault(require("@services/image.service"));
 const auth_middleware_1 = tslib_1.__importDefault(require("@middlewares/auth.middleware"));
+const multer_1 = tslib_1.__importDefault(require("multer"));
 let ImageController = class ImageController {
     constructor() {
         this.imageService = new image_service_1.default();
+        this.upload = (0, multer_1.default)({ dest: 'userImages/' });
     }
     findImageByPath(res, filePath) {
         return tslib_1.__awaiter(this, void 0, void 0, function* () {
@@ -29,10 +31,10 @@ let ImageController = class ImageController {
             return this.imageService.findAllPathsImages();
         });
     }
-    uploadImage(file, req) {
+    uploadImage(req, res) {
         return tslib_1.__awaiter(this, void 0, void 0, function* () {
-            console.log(file);
-            console.log(req.body);
+            const file = req.files[0];
+            yield this.imageService.saveImage(file);
             return 'ok';
         });
     }
@@ -55,8 +57,8 @@ tslib_1.__decorate([
 tslib_1.__decorate([
     (0, routing_controllers_1.Post)('/images'),
     (0, routing_controllers_1.UseBefore)(auth_middleware_1.default),
-    tslib_1.__param(0, (0, routing_controllers_1.Body)()),
-    tslib_1.__param(1, (0, routing_controllers_1.Req)()),
+    tslib_1.__param(0, (0, routing_controllers_1.Req)()),
+    tslib_1.__param(1, (0, routing_controllers_1.Res)()),
     tslib_1.__metadata("design:type", Function),
     tslib_1.__metadata("design:paramtypes", [Object, Object]),
     tslib_1.__metadata("design:returntype", Promise)

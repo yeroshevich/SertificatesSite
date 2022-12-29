@@ -3,13 +3,15 @@ import {Request, Response} from "express";
 import ImageService from "@services/image.service";
 import authMiddleware from "@middlewares/auth.middleware";
 import multer from "multer";
-
+import {File} from "@interfaces/File";
 
 
 @Controller()
 export default class ImageController{
 
   private imageService = new ImageService()
+
+  private upload = multer({dest:'userImages/'})
 
   @Get('/images/:path')
   public async findImageByPath(@Res() res:Response,@Param('path') filePath:string){
@@ -34,9 +36,10 @@ export default class ImageController{
   }
   @Post('/images')
   @UseBefore(authMiddleware)
-  public async uploadImage(@Body() file:any,@Req() req:Request){
-    console.log(file)
-    console.log(req.body)
+  public async uploadImage(@Req() req,@Res() res){
+    const file:File = req.files[0]
+    await this.imageService.saveImage(file)
+
     return 'ok'
   }
 

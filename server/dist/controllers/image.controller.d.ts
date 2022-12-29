@@ -1,7 +1,8 @@
-import { Request, Response } from "express";
+import { Response } from "express";
 export default class ImageController {
     private imageService;
+    private upload;
     findImageByPath(res: Response, filePath: string): Promise<Response<any, Record<string, any>>>;
     findAllImages(): Promise<import("../interfaces/ImageResponse").ImageResponse[]>;
-    uploadImage(file: any, req: Request): Promise<string>;
+    uploadImage(req: any, res: any): Promise<string>;
 }

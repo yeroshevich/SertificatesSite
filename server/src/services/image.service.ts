@@ -2,6 +2,7 @@ import fs from "fs";
 import {HttpException} from "@exceptions/HttpException";
 import {ImageResponse} from "@interfaces/ImageResponse";
 import {DOMEN} from "@config";
+import {File} from "@interfaces/File";
 
 export default class ImageService{
   private path = `${process.cwd()}\\src\\userImages\\`
@@ -25,6 +26,12 @@ export default class ImageService{
     {
       return []
     }
-
+  }
+  public async saveImage (file:File){
+    fs.writeFile(this.path+file.originalname,file.buffer,(e)=>{
+        if(e)
+          return console.log(e)
+    })
+    return
   }
 }

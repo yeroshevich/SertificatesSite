@@ -32,6 +32,15 @@ class ImageService {
             }
         });
     }
+    saveImage(file) {
+        return tslib_1.__awaiter(this, void 0, void 0, function* () {
+            fs_1.default.writeFile(this.path + file.originalname, file.buffer, (e) => {
+                if (e)
+                    return console.log(e);
+            });
+            return;
+        });
+    }
 }
 exports.default = ImageService;
 //# sourceMappingURL=image.service.js.map
