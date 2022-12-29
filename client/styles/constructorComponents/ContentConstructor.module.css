@@ -2,10 +2,12 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  flex-wrap: wrap;
 }
 .contents .content {
   text-align: left;
-  width: 100%;
+  margin: 10px;
+  width: 45%;
 }
 .contents .content div {
   display: flex;

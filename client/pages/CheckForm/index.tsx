@@ -9,7 +9,9 @@ import defaultConfiguration from "../../app/defaultConfiguration";
 
 export async function getStaticProps(){
 
-    try{
+     try{
+    //     const {saveConfig,getCheckFormPageDefaultConfig} = defaultConfiguration()
+    //     await saveConfig(getCheckFormPageDefaultConfig().config)
         const config = (await serverRequest.get('/configs/checkform')).data
         config.config = JSON.parse(config.config)
 
@@ -50,7 +52,7 @@ const CheckFormPage = ({config}:CheckFormPageProps) => {
                     <div className={styles.descriptions}>
                         {config.config.description.map((desc,index)=><div key={index} className={styles.description}>{desc}</div>)}
                     </div>
-                    <CheckForm image={config.config.formImage}/>
+                    <CheckForm image={config.config.formImage} hereLink={config.config.hereLink}/>
                 </div>
                 <PhisicalFooter links={config.config.footerLinks} logo={config.config.footerLogo}/>
             </>

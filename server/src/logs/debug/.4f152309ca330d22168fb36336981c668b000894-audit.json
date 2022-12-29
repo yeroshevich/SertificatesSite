@@ -39,6 +39,11 @@
             "date": 1672206998208,
             "name": "D:\\repository\\SertificatesSite\\server\\src\\logs\\debug\\2022-12-28.log",
             "hash": "954fef6d0c330746cbe17a818eb8df0507cc106552341a85475e1b4c14736c28"
+        },
+        {
+            "date": 1672290111950,
+            "name": "D:\\repository\\SertificatesSite\\server\\src\\logs\\debug\\2022-12-29.log",
+            "hash": "0ac35b1aef87ae0d01313ce1b6873bd7aed32c67e51d521b88663fb40ec8b028"
         }
     ],
     "hashType": "sha256"

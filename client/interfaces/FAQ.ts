@@ -1,5 +1,8 @@
+import {Image} from "./Image";
+
 export interface FAQ{
     title:string,
-    url?:string,
-    content?:string
+    img:Image,
+    content?:string,
+    id:number
 }

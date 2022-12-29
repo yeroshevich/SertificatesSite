@@ -5,7 +5,6 @@ import {serverRequest} from "../../app/http/serverRequest";
 import {AuthUser} from "../../interfaces/AuthUser";
 import {useEffect} from "react";
 import useRedirect from "../../hooks/useRedirect";
-import useNotification from "../../hooks/useNotification";
 import {LoginResponse} from "../../interfaces/LoginResponse";
 
 const AdminPage = () => {
@@ -13,7 +12,6 @@ const AdminPage = () => {
     const username = useInput()
     const password = useInput()
     const redirectTo = useRedirect()
-    const {openNotificationWithIcon,contextHolder} = useNotification()
 
     const handleSubmit = async()=>{
         const res:LoginResponse = (await serverRequest.post('/login',{username:'admin',password:'192929129129admin'})).data
@@ -22,21 +20,18 @@ const AdminPage = () => {
     }
 
     useEffect(()=>{
-        try{
             serverRequest.post('/auth')
                 .then(data=>{
                     const res:AuthUser = data.data
                     if(res.isAuthorized)
                         redirectTo('/Administrate/constructor')
                 })
-        }catch (e){
-            console.log(e)
-        }
+                .catch(e=>console.log(e))
+
     },[])
 
     return (
         <>
-            {contextHolder}
          <div className={styles.form}>
              <header>Форма авторизации</header>
              <div className={styles.inputs}>

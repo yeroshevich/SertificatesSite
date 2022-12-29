@@ -1,10 +1,13 @@
-import React, {ChangeEvent, useEffect, useState} from 'react';
+import React, {ChangeEvent, useContext, useEffect, useState} from 'react';
 import styles from "../../styles/constructorComponents/HeadConstructor.module.scss";
 import {HeadLink} from "../../interfaces/HeadLink";
 import PlusIcon from "../PlusIcon";
 import useInput from "../../hooks/useInput";
 import MinusIcon from "../MinusIcon";
 import {generateId} from "../../app/CONSTS";
+import {ConfigContext} from "../../app/context";
+import {PhisicalPageConfig} from "../../interfaces/PhisicalPageConfig";
+import {Button} from "antd";
 
 interface HeadConstructorProps{
     head:Array<HeadLink>,
@@ -13,7 +16,8 @@ interface HeadConstructorProps{
 
 const HeadConstructor = ({head,saveHead}:HeadConstructorProps) => {
 
-    const [changedHead,setChangedHead] = useState(head.map(x=>{return{...x,id:generateId()}}))
+
+    const [changedHead,setChangedHead] = useState(head)
 
     const handleRemoveLink = (index:number,link:HeadLink)=>{
 
@@ -25,8 +29,8 @@ const HeadConstructor = ({head,saveHead}:HeadConstructorProps) => {
             setChangedHead([...changedHead,{rel:' ',href:' ',id:generateId()}])
     }
     const handleSaveLink = (index:number,link:HeadLink)=>{
-        setChangedHead(changedHead.map((item,i)=>{
-            if(i==index)
+        setChangedHead(changedHead.map(item=>{
+            if(item.id == index)
                 return {...link,id:generateId()}
             return item
         }))
@@ -35,41 +39,38 @@ const HeadConstructor = ({head,saveHead}:HeadConstructorProps) => {
         saveHead(changedHead)
     }
     return (
-        <fieldset className={styles.head}>
+        <fieldset className={styles.head} onBlur={handleAcceptChanges}>
             <legend>
                 <div>Head (макс 10)</div>
                 <PlusIcon onClick={handleAddHeadLink}/>
             </legend>
             {
                 changedHead.map((link,index)=>
-                    <Head key={link.id}  index={index} link={link} saveLink={handleSaveLink} removeLink={handleRemoveLink}/>
+                   <Head key={link.id}  link={link} saveLink={handleSaveLink} removeLink={handleRemoveLink}/>
                 )
             }
-            <button onClick={handleAcceptChanges}>accept</button>
         </fieldset>
     );
 };
 interface HeadProps{
     link:HeadLink,
     saveLink:(index:number,link:HeadLink)=>void,
-    index:number,
     removeLink:(index:number,link:HeadLink)=>void
 }
-const Head = ({link,saveLink,index,removeLink}:HeadProps)=>{
+const Head = ({link,saveLink,removeLink}:HeadProps)=>{
 
     const href = useInput(link.href)
     const rel = useInput(link.rel)
 
     const handleRemoveClick = ()=>{
-        removeLink(link.id ?link.id:index,link)
+        removeLink(link.id,link)
     }
-
-    useEffect(()=>{
-        saveLink(index,{href:href.value,rel:rel.value})
-    },[href.value,rel.value])
-
+    const handleSaveClick = ()=>{
+        if(href.value && rel.value)
+            saveLink(link.id,{href:href.value,rel:rel.value,id:generateId()})
+    }
     return (
-        <div className={styles.inputs} >
+        <div className={styles.inputs} onBlur={handleSaveClick}>
             <div>
                 <span>href:</span><input  type="text" onChange={href.onChange} value={href.value}/>
             </div>

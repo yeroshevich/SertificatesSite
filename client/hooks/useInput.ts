@@ -7,5 +7,5 @@ export default function useInput(init:string='',callback:Function=(value:string)
         setValue(e.target.value)
         callback(e.target.value)
     }
-    return {value,onChange}
+    return {value,onChange,setValue}
 }

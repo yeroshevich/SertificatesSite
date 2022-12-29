@@ -7,10 +7,11 @@ import useInput from "../../hooks/useInput";
 import useNotification from "../../hooks/useNotification";
 
 interface CheckFormProps{
-    image:Image
+    image:Image,
+    hereLink:string
 }
 
-const CheckForm = ({image}:CheckFormProps) => {
+const CheckForm = ({image,hereLink}:CheckFormProps) => {
     const {contextHolder,openNotificationWithIcon} = useNotification()
     const code = useInput()
 
@@ -64,7 +65,7 @@ const CheckForm = ({image}:CheckFormProps) => {
                         title={image.title}/>
                 </div>
                 <p>
-                    С полным положением об обращении Подарочных сертификатов ООО "Евроторг" можно ознакомиться <a href={'#'}>здесь</a>
+                    С полным положением об обращении Подарочных сертификатов ООО "Евроторг" можно ознакомиться <a href={hereLink}>здесь</a>
                 </p>
             </div>
         </>

@@ -25,7 +25,7 @@ const UridicalFooter = ({footerLogo,footerLink,footerLinks,phones}:UridicalFoote
                             }
                         </div>
                         <div>
-                            {footerLinks.map((link,index)=><div key={index}><a href={link.link}>{link.title}</a></div>)}
+                            {footerLinks.map((link,index)=><div key={index}><a href={link.link}><img src={link.title} alt=""/></a></div>)}
                         </div>
                     </div>
                 </div>

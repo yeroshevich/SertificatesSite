@@ -30,11 +30,11 @@ const FaqItem = ({faq}:FaqItemProps) => {
                 {
                     isDropped &&
 
-                    <div className={styles.dropped +' '+styles.content+' '+styles.innerContent+' '+(!faq.url || !faq.content ?styles.singleContent :styles.doubleContent)}>
+                    <div className={styles.dropped +' '+styles.content+' '+styles.innerContent+' '+(!faq.img.url || !faq.content ?styles.singleContent :styles.doubleContent)}>
                         {
-                            faq.url &&
+                            faq.img.url &&
                             <div>
-                                <img src={faq.url} alt="faq image"/>
+                                <img src={faq.img.url} alt={faq.img.alt} title={faq.img.title}/>
                             </div>
                         }
                         {

@@ -2,6 +2,7 @@ import React, {ChangeEvent, useEffect, useState} from 'react';
 import {ContentPair} from "../../interfaces/ContentPair";
 import styles from '../../styles/constructorComponents/ContentConstructor.module.scss'
 import useInput from "../../hooks/useInput";
+import {generateId} from "../../app/CONSTS";
 
 interface ContentConstructorProps{
     content:Array<ContentPair>,
@@ -25,14 +26,13 @@ const ContentConstructor = ({content,saveContent}:ContentConstructorProps) => {
     },[changedContent])
 
     return (
-        <fieldset>
-            <legend>Контент</legend>
+        <div>
             <div className={styles.contents}>
                 {
                     content.map((item,index)=><Content savePair={handleSave} index={index} content={item} key={index}/>)
                 }
             </div>
-        </fieldset>
+        </div>
     );
 };
 interface ContentProps{
@@ -47,7 +47,7 @@ const Content = ({content,savePair,index}:ContentProps)=>{
     const underDescription = useInput(content.underDescription)
 
     useEffect(()=>{
-        savePair(index,{underDescription:underDescription.value,description:description.value,title:title.value})
+        savePair(index,{underDescription:underDescription.value,description:description.value,title:title.value,id:generateId()})
     },[title.value,description.value,underDescription.value])
     return (
         <>

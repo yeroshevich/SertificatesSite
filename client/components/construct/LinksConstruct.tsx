@@ -1,9 +1,9 @@
 import {Link} from "../../interfaces/Link";
-import {ChangeEvent, useEffect, useState} from "react";
+import {ChangeEvent, ReactNode, useEffect, useState} from "react";
 
 interface LinksConstructProps{
     links:Array<Link>,
-    saveLinks:(changedLinks:Array<Link>)=>void
+    saveLinks:(changedLinks:Array<Link>)=>void,
 }
 
 const LinksConstruct = ({links,saveLinks}:LinksConstructProps) => {
@@ -22,17 +22,22 @@ const LinksConstruct = ({links,saveLinks}:LinksConstructProps) => {
     },[changedLinks])
 
     return (
-        <fieldset style={{display:'flex'}}>
-            <legend>Навигационная панель шапки</legend>
-            {
-                changedLinks.map((link,index)=>
-                    <div key={index} style={{marginInline:'15px',margin:'auto'}}>
-                        <input type="text" onChange={(e)=>handleLinkChange(e,link)} value={link.title}/>
-                        <div>Ссылается на блок с id {link.htmlElementId}</div>
-                </div>)
-            }
-        </fieldset>
-    );
+            <fieldset>
+                <legend>Навигационная панель шапки</legend>
+                <div                         style={{display:'flex'}}>
+                    {
+                        changedLinks.map((link,index)=>
+                            <div key={index} style={{marginInline:'15px',margin:'auto'}}>
+                                <input type="text" onChange={(e)=>handleLinkChange(e,link)} value={link.title}/>
+                                {
+                                    link.htmlElementId && <div>Ссылается на блок с id {link.htmlElementId}</div>
+                                }
+                            </div>)
+                     }
+                </div>
+            </fieldset>
+
+);
 };
 
 export default LinksConstruct;

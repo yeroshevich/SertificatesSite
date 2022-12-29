@@ -4,10 +4,11 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  flex-wrap: wrap;
   .content{
     text-align: left;
-
-    width: 100%;
+    margin:10px;
+    width: 45%;
     div{
       display: flex;
       align-items: center;

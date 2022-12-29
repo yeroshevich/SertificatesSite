@@ -33,7 +33,7 @@ const BuyingMap = ({addresses}:BuyingMapProps) => {
         if(ymaps)
         {
             const multi = new ymaps.multiRouter.MultiRoute({
-                    referencePoints:['Минск',coords.longitude+','+coords.latitude],
+                    referencePoints:['Минск',coords.latitude+','+coords.longitude],
                     params:{
                         routingMode:'pedestrian'
                     }
@@ -84,12 +84,12 @@ const BuyingMap = ({addresses}:BuyingMapProps) => {
                                                "geoObject.addon.balloon",
                                                "geoObject.addon.hint"
                                            ]}
-                                           geometry={[address.longitude,address.latitude]}
+                                           geometry={[address.latitude,address.longitude]}
                                            properties={{
                                                iconContent:index+1,
                                                hintContent:address.description,
                                                balloonContentHeader:`<div>${address.description}</div>`,
-                                               balloonContent:`<button style="background-color: transparent; border: 0;cursor: pointer" onclick="document.getElementById(${address.latitude}).click()">Проложить маршрут</button>`
+                                               balloonContent:`<div><div>${address.address}</div><button style="background-color: transparent; border: 0;cursor: pointer" onclick="document.getElementById(${address.latitude}).click()">Проложить маршрут</button></div>`
                                            }}
                                        />
                                        <span id={`${address.latitude}`} onClick={()=>buildRoute(address)} style={{display:'none'}}></span>

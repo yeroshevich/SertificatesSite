@@ -31,6 +31,7 @@ const UridicalsPage = ({config}:UridicalsPageProps) => {
     return (
         <>
             <Head>
+                <title>{config.config.title}</title>
                 {config.config.head.map((link,index)=> <link key={index} rel={link.rel} href={link.href}/>)}
             </Head>
             <UridicalHeader

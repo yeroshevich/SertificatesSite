@@ -1,0 +1,45 @@
+@import 'Consts';
+
+.form{
+  position: absolute;
+  left: 50%;
+  top:30%;
+  transform: translate(-50%,-50%);
+  max-width: 300px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20%;
+  max-height: 600px;
+  @include inter;
+  .inputBlock{
+    margin:15px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    input{
+      width: 100%;
+      padding: 15px 15px;
+      margin: 0 15px;
+      border-radius: 25px;
+      border:0;
+      outline: 0;
+      @include inter;
+    }
+  }
+  button{
+    @include gotham;
+    padding: 25px 0;
+    border-radius: 15px;
+    border-color: #fff;
+    cursor: pointer;
+    background-color: $lightGreen;
+
+    &:active{
+      transform: translateY(5px);
+    }
+
+  }
+}

@@ -17,6 +17,7 @@ export interface CheckFormPageConfig{
     links:Array<Link>,
     header:string,
     description:Array<string>,
+    hereLink:string,
     formImage:Image,
     footerLinks:Array<Link>,
     footerLogo:Logo

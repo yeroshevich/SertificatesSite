@@ -1,5 +1,6 @@
 export interface ContentPair{
     title:string,
     description:string,
-    underDescription?:string
+    underDescription?:string,
+    id:number
 }

@@ -10,6 +10,8 @@ import defaultConfiguration from "../../app/defaultConfiguration";
 export async function getStaticProps(){
 
     try{
+        // const {saveConfig,getPhysicalPageDefaultConfig} = defaultConfiguration()
+        // await saveConfig(getPhysicalPageDefaultConfig().config)
         const config = (await serverRequest.get('/configs/physical')).data
         config.config = JSON.parse(config.config)
 

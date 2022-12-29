@@ -7,7 +7,7 @@ import ChooseImage from "./ChooseImage";
 interface ImageConstructorProps{
     image:Image,
     imageChange:(img:Image)=>void,
-    legend:string,
+    legend?:string,
     imageChangeByIndex?:(index:number,img:Image)=>void,
     index?:number
 }
@@ -22,7 +22,7 @@ const ImageConstructor = ({imageChange,image,legend,imageChangeByIndex,index}:Im
     }
 
     useEffect(()=>{
-        const img = {url:imageUrl,alt:alt.value,title:title.value}
+        const img = {url:imageUrl,alt:alt.value,title:title.value,id:image.id} as Image
         imageChange(img)
         if(imageChangeByIndex && index)
             imageChangeByIndex(index,img)
@@ -30,7 +30,7 @@ const ImageConstructor = ({imageChange,image,legend,imageChangeByIndex,index}:Im
 
     return (
         <fieldset>
-            <legend>{legend}</legend>
+            <legend>{legend?legend:'Конструктор изображения'}</legend>
             <div className={styles.image}>
                 <img src={image.url} alt="img"/>
                 <ChooseImage onChoose={handleImageChoose}/>

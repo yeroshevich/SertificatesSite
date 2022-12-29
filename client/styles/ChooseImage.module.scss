@@ -5,9 +5,12 @@
 .card{
     text-align: center;
     height: 300px;
+    max-height: 280px;
+
     .image{
         max-width: 280px;
-        max-height: 280px;
+
+        max-height: 180px;
     }
     &:hover{
         transition: background-color 2s;

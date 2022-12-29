@@ -2,6 +2,7 @@ import {Image} from "../../interfaces/Image";
 import ImageConstructor from "./ImageConstructor";
 import {useEffect, useState} from "react";
 import PlusIcon from "../PlusIcon";
+import {generateId} from "../../app/CONSTS";
 
 interface SliderConstructorProps{
     carousel:Array<Image>,
@@ -15,13 +16,13 @@ const SliderConstructor = ({carousel,saveCarousel,legend}:SliderConstructorProps
 
     const handleChangeImage = (index:number,change:Image)=>{
         setChangeSlider(changeSlider.map((img,i)=>{
-            if(i == index)
+            if(i == index-1)
                 return change
             return img
         }))
     }
     const handleAddImage = ()=>{
-        setChangeSlider([...changeSlider,{url:' ',title:' ',alt:' '}])
+        setChangeSlider([...changeSlider,{url:' ',title:' ',alt:' ',id:generateId()}])
     }
 
     useEffect(()=>{
@@ -34,7 +35,7 @@ const SliderConstructor = ({carousel,saveCarousel,legend}:SliderConstructorProps
             <div style={{paddingInline:'15px'}}>
                 {
                     changeSlider.map((image,index)=>
-                        <ImageConstructor key={index} image={image} imageChange={()=>{}} index={index} imageChangeByIndex={handleChangeImage} legend={`image ${index}`}/>
+                        <ImageConstructor key={image.id} image={image} imageChange={()=>{}} index={index+1} imageChangeByIndex={handleChangeImage} legend={`image ${index+1}`}/>
                     )
                 }
             </div>

@@ -2,6 +2,7 @@ export interface Address{
     city:string
     street:string,
     building?:string,
+    id:number
 }
 // export interface Country{
 //     Address8Id:string,

@@ -10,7 +10,7 @@ import defaultConfiguration from "../../app/defaultConfiguration";
 export async function getStaticProps(){
 
   try{
-      const config = (await serverRequest.get('http://localhost:8080/configs/buyingpage')).data
+      const config = (await serverRequest.get('/configs/buyingpage')).data
       config.config = JSON.parse(config.config)
 
       return {

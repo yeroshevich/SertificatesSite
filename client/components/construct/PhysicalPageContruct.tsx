@@ -1,11 +1,6 @@
-import {serverRequest} from "../../app/http/serverRequest";
-import {ChangeEvent, useEffect, useState} from "react";
-import {PhisicalPageConfig} from "../../interfaces/PhisicalPageConfig";
-import defaultConfiguration from "../../app/defaultConfiguration";
-import {SaveConfig} from "../../interfaces/SaveConfig";
+import {ChangeEvent, useContext, useEffect, useState} from "react";
+import {PhisicalPage, PhisicalPageConfig} from "../../interfaces/PhisicalPageConfig";
 import styles from '../../styles/PhysicalConscruct.module.scss'
-import Buttons from "./Buttons";
-import {PlusOutlined} from "@ant-design/icons";
 import {HeadLink} from "../../interfaces/HeadLink";
 import HeadConstructor from "./HeadConstructor";
 import LogoConstructor from "./LogoConstructor";
@@ -17,47 +12,50 @@ import {ContentPair} from "../../interfaces/ContentPair";
 import {Image} from "../../interfaces/Image";
 import ImageConstructor from "./ImageConstructor";
 import SliderConstructor from "./SliderConstructor";
+import FooterLinksConstruct from "./FooterLinksConstruct";
+import FaqConstruct from "./FaqConstruct";
+import {FAQ} from "../../interfaces/FAQ";
+import ConstructLayout from "./ConstructLayout";
+import TitleConstruct from "./TitleConstruct";
+import useConfiguration from "../../hooks/useConfiguration";
+import Fieldset from "./Fieldset";
+import MapConstructor from "./MapConstructor";
+import {GeometryCoordinates} from "../../interfaces/GeometryCoordinates";
 
 const PAGE_TITLE = 'physical'
 
 const PhysicalPageContruct = () => {
-    const [config,setConfig] = useState<PhisicalPageConfig>()
-    const {saveConfig,fetchConfig} = defaultConfiguration()
-
-
-    const fetchConfiguration = ()=>{
-        fetchConfig(PAGE_TITLE)
-            .then(res=>setConfig(res))
-            .catch(e=>console.log(e))
-
-    }
-    const saveConfiguration = ()=>{
-        // saveConfig({config,page:PAGE_TITLE} as SaveConfig)
-        //     .then(res=>console.log(res))
-        //     .catch(e=>console.log(e))
-        console.log(config)
-    }
+    const {config,fetchConfiguration,contextHolder,saveConfiguration,setConfig}= useConfiguration<PhisicalPageConfig>(PAGE_TITLE)
 
     useEffect(()=>{
        fetchConfiguration()
     },[])
 
 
-    const handleSaveHead = (change:Array<HeadLink>)=>{
-        if(config?.head)
+
+    const handleSaveHead = (change:Array<HeadLink>):void=>{
+        if(config?.head )
             setConfig({...config,head:change})
     }
-    const handleTitleChange = (e:ChangeEvent<HTMLInputElement>)=>{
-        if(config?.title)
-            setConfig({...config,title:e.target.value})
+    const handleSaveTitle = (changed:string)=>{
+        if(config?.title || config?.title == '')
+            setConfig({...config,title:changed})
     }
     const handleLogoChange = (changed:Logo)=>{
         if(config?.logo)
             setConfig({...config,logo:changed})
     }
+    const handleFooterLogoChange = (changed:Logo)=>{
+        if(config?.footerLogo)
+            setConfig({...config,footerLogo:changed})
+    }
     const handleSaveLinks = (changedLinks:Array<Link>)=>{
         if(config?.links)
             setConfig({...config,links:changedLinks})
+    }
+    const handleSaveFooterLinks = (changedLinks:Array<Link>)=>{
+        if(config?.links)
+            setConfig({...config,footerLinks:changedLinks})
     }
     const handleSaveContent = (changeContent:Array<ContentPair>)=>{
         if(config?.content)
@@ -75,20 +73,26 @@ const PhysicalPageContruct = () => {
         if(config?.carousel)
             setConfig({...config,carousel:change})
     }
+    const handleSaveFaqs = (changed:Array<FAQ>)=>{
+        if(config?.faq)
+            setConfig({...config,faq:changed})
+    }
 
+    const handleSaveAddresses = (changed:Array<GeometryCoordinates>)=>{
+        if(config?.addresses)
+            setConfig({...config,addresses:changed})
+    }
 
     return (
-        <div className={styles.content}>
+        <ConstructLayout reloadClick={fetchConfiguration} saveClick={saveConfiguration}>
+            {contextHolder}
             {
                 config &&
                 <div>
                     <fieldset className={styles.contentPart}>
                         <legend>Шапка</legend>
-                        <HeadConstructor saveHead={handleSaveHead} head={config?.head}/>
-                        <fieldset>
-                            <legend>Title</legend>
-                            <input type="text" onChange={handleTitleChange} value={config.title}/>
-                        </fieldset>
+                        <HeadConstructor saveHead={handleSaveHead} head={config?.head ? config.head : []}/>
+                       <TitleConstruct saveTitle={handleSaveTitle} title={config.title}/>
                         <LogoConstructor
                             logoChange={handleLogoChange}
                             logo={config.logo}/>
@@ -96,38 +100,43 @@ const PhysicalPageContruct = () => {
                     </fieldset>
 
 
-                    {/*<fieldset className={styles.contentPart}>*/}
-                    {/*    <legend>Контент</legend>*/}
-                    {/*    <div style={{paddingInline:'15px'}}>*/}
-                    {/*        <ContentConstructor*/}
-                    {/*            content={config.content}*/}
-                    {/*            saveContent={handleSaveContent}/>*/}
-                    {/*        <ImageConstructor*/}
-                    {/*            image={config.rectImage}*/}
-                    {/*            imageChange={handleSaveRectImage}*/}
-                    {/*            legend={'For first content'}/>*/}
-                    {/*        <ImageConstructor*/}
-                    {/*            image={config.smallImage}*/}
-                    {/*            imageChange={handleSaveSmallImage}*/}
-                    {/*            legend={'For second content'}/>*/}
-                    {/*        <SliderConstructor*/}
-                    {/*            carousel={config.carousel}*/}
-                    {/*            saveCarousel={handleSaveCaroussel}*/}
-                    {/*            legend={'Slider'} />*/}
+                    <fieldset className={styles.contentPart}>
+                        <legend>Контент</legend>
+                        <div style={{paddingInline:'15px'}}>
+                            <ContentConstructor
+                                content={config.content}
+                                saveContent={handleSaveContent}/>
+                            <ImageConstructor
+                                image={config.rectImage}
+                                imageChange={handleSaveRectImage}
+                                legend={'For first content'}/>
+                            <ImageConstructor
+                                image={config.smallImage}
+                                imageChange={handleSaveSmallImage}
+                                legend={'For second content'}/>
+                            <SliderConstructor
+                                carousel={config.carousel}
+                                saveCarousel={handleSaveCaroussel}
+                                legend={'Slider'} />
+                            <Fieldset legend={'Адреса'}>
+                                <MapConstructor addresses={config.addresses} saveAddresses={handleSaveAddresses}/>
+                            </Fieldset>
+                            <FaqConstruct faqs={config.faq} saveFaqs={handleSaveFaqs}/>
+                        </div>
+                    </fieldset>
 
-                    {/*    </div>*/}
-                    {/*</fieldset>*/}
 
-
-                    {/*<fieldset className={styles.contentPart}>*/}
-                    {/*    <legend>Подвал</legend>*/}
-
-                    {/*</fieldset>*/}
+                    <fieldset className={styles.contentPart}>
+                        <legend>Подвал</legend>
+                        <div style={{paddingInline:'15px'}}>
+                            <LogoConstructor logo={config.footerLogo} logoChange={handleFooterLogoChange}/>
+                            <FooterLinksConstruct links={config.footerLinks} saveFooterLinks={handleSaveFooterLinks}/>
+                        </div>
+                    </fieldset>
                 </div>
             }
-            <Buttons cancel={fetchConfiguration} save={saveConfiguration}>
-            </Buttons >
-        </div>
+
+        </ConstructLayout>
     );
 };
 

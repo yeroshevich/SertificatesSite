@@ -6,10 +6,11 @@ import useInput from "../../hooks/useInput";
 
 interface LogoConstructorProps{
     logo:Logo,
-    logoChange:(logo:Logo)=>void
+    logoChange:(logo:Logo)=>void,
+    legend?:string
 }
 
-const LogoConstructor = ({logo,logoChange}:LogoConstructorProps) => {
+const LogoConstructor = ({logo,logoChange,legend}:LogoConstructorProps) => {
 
     const [imageUrl,setImageUrl] = useState<string>(logo.url)
 
@@ -26,7 +27,7 @@ const LogoConstructor = ({logo,logoChange}:LogoConstructorProps) => {
 
     return (
         <fieldset>
-            <legend>Logo</legend>
+            <legend>{legend ? legend : 'Logo'}</legend>
             <div className={styles.image}>
                 <img src={logo.url} alt="logo" width={220} height={50}/>
                 <ChooseImage onChoose={handleImageChoose}/>

@@ -97,10 +97,12 @@ const ChooseImage = ({onChoose}:ChooseImageProps) => {
                         </List.Item>
                     )}
                 />
-                <form onSubmit={handleSubmit}>
-                    <input type="file" onChange={(e)=>handleFileSelect(e.target.files)}/>
-                    <input type="submit" value={'Загрузить'}/>
-                </form>
+                <div style={{display:'flex',justifyContent:'space-between'}}>
+                    <form onSubmit={handleSubmit}>
+                        <input type="file" onChange={(e)=>handleFileSelect(e.target.files)}/>
+                        <input type="submit" value={'Загрузить'}/>
+                    </form>
+                </div>
             </Modal>
         </>
     );
