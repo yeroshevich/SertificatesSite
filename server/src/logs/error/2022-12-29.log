@@ -1,0 +1,13 @@
+2022-12-29 08:59:01 error: [PATCH] /configs >> StatusCode:: 404, Message:: Authentication token missing
+2022-12-29 12:16:37 error: [POST] /auth >> StatusCode:: 404, Message:: Authentication token missing
+2022-12-29 12:16:37 error: [POST] /auth >> StatusCode:: 404, Message:: Authentication token missing
+2022-12-29 12:17:06 error: [POST] /auth >> StatusCode:: 404, Message:: Authentication token missing
+2022-12-29 12:17:06 error: [POST] /auth >> StatusCode:: 404, Message:: Authentication token missing
+2022-12-29 12:17:18 error: [POST] /auth >> StatusCode:: 404, Message:: Authentication token missing
+2022-12-29 12:17:18 error: [POST] /auth >> StatusCode:: 404, Message:: Authentication token missing
+2022-12-29 12:17:42 error: [POST] /auth >> StatusCode:: 404, Message:: Authentication token missing
+2022-12-29 12:17:44 error: [POST] /auth >> StatusCode:: 404, Message:: Authentication token missing
+2022-12-29 16:00:05 error: [PATCH] /configs >> StatusCode:: 404, Message:: Authentication token missing
+2022-12-29 16:03:32 error: [PATCH] /configs >> StatusCode:: 404, Message:: Authentication token missing
+2022-12-29 16:03:37 error: [PATCH] /configs >> StatusCode:: 404, Message:: Authentication token missing
+2022-12-29 16:03:47 error: [PATCH] /configs >> StatusCode:: 404, Message:: Authentication token missing
