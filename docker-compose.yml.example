@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  node:
+    build:
+      context: ./Docker
+      dockerfile: Dockerfile-dev
+    container_name: b2b-node
+    environment:
+      - WEB_URL=https://b2b-node/
+    ports:
+      - 443:443
+    volumes:
+      - ./:/var/www/:cached
+      - ./.logs/npm:/root/.npm/:cached
+    tty: true
