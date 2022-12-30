@@ -1,6 +1,6 @@
 /// <reference types="node" />
 import { ImageResponse } from "@interfaces/ImageResponse";
-import { File } from "@interfaces/File";
+import { File } from "@interfaces/file.interface";
 export default class ImageService {
     private path;
     findFile(path: string): Promise<{

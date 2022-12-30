@@ -2,7 +2,7 @@ import fs from "fs";
 import {HttpException} from "@exceptions/HttpException";
 import {ImageResponse} from "@interfaces/ImageResponse";
 import {DOMEN} from "@config";
-import {File} from "@interfaces/File";
+import {File} from "@interfaces/file.interface";
 
 export default class ImageService{
   private path = `${process.cwd()}\\src\\userImages\\`

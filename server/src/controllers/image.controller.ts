@@ -3,7 +3,7 @@ import {Request, Response} from "express";
 import ImageService from "@services/image.service";
 import authMiddleware from "@middlewares/auth.middleware";
 import multer from "multer";
-import {File} from "@interfaces/File";
+import {File} from "@interfaces/file.interface";
 
 
 @Controller()
@@ -36,11 +36,10 @@ export default class ImageController{
   }
   @Post('/images')
   @UseBefore(authMiddleware)
-  public async uploadImage(@Req() req,@Res() res){
+  public async uploadImage(@Req() req:Request,@Res() res:Response){
     const file:File = req.files[0]
     await this.imageService.saveImage(file)
-
-    return 'ok'
+    return res.end()
   }
 
 }

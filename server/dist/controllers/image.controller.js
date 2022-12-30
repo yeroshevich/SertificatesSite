@@ -35,7 +35,7 @@ let ImageController = class ImageController {
         return tslib_1.__awaiter(this, void 0, void 0, function* () {
             const file = req.files[0];
             yield this.imageService.saveImage(file);
-            return 'ok';
+            return res.end();
         });
     }
 };

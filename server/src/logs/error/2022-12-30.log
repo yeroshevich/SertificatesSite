@@ -1,0 +1,1 @@
+2022-12-30 09:08:30 error: [POST] /images >> StatusCode:: 500, Message:: Cannot read properties of undefined (reading 'originalname')
