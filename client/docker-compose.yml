@@ -9,6 +9,9 @@ services:
       - 3000:3000
     environment:
       SERVER_DOMEN: http://localhost:443
+      CHOKIDAR_USEPOLLING: true
     volumes:
       - ./:/var/www
+      - /var/www/node_modules
+      - /var/www/.next
     tty: true

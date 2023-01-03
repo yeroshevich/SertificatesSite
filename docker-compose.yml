@@ -1,0 +1,59 @@
+version: '3'
+
+services:
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    environment:
+      SERVER_DOMEN: http://localhost:443
+      CHOKIDAR_USEPOLLING: true
+    volumes:
+      - ./:/var/www
+      - /var/www/node_modules
+      - /var/www/.next
+    tty: true
+    command: yarn client
+
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      PORT: 443
+      SECRET_KEY: secretKey
+      LOG_FORMAT: dev
+      LOG_DIR: ../logs
+      ORIGIN: http://localhost:3000
+      CREDENTIALS: true
+      USER: root
+      PASSWORD: root
+      DATABASE: sertificatedb
+      HOST: 192.168.0.1
+      #HOST: localhost
+      #HOST: 10.5.0.1
+      NODE_ENV: development
+      DOMEN: http://localhost:443
+    volumes:
+      - ./:/var/www
+    ports:
+      - 443:443
+    depends_on:
+      - db
+    tty: true
+    command: yarn server
+  db:
+    image: mysql
+    restart: always
+    hostname: mysql
+    environment:
+      MYSQL_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: sertificatedb
+      # MYSQL_ROOT_HOST: 10.5.0.1
+      MYSQLX: OFF
+    ports:
+      - 3307:3306
