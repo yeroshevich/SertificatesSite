@@ -1,35 +1,45 @@
-version: '3.7'
+version: '3'
 
 services:
-  proxy:
-    image: nginx:alpine
-    container_name: proxy
-    ports:
-      - '80:80'
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf
-    restart: 'unless-stopped'
-    networks:
-      - backend
-  server:
+  server-node:
     build:
-      context: ./
-      target: development-build-stage
+      context: .
       dockerfile: Dockerfile
     container_name: server
-    ports:
-      - '3000:3000'
+    restart: always
+    environment:
+      PORT: 443
+      SECRET_KEY: secretKey
+      LOG_FORMAT: dev
+      LOG_DIR: ../logs
+      ORIGIN: http://localhost:3000
+      CREDENTIALS: true
+      USER: root
+      PASSWORD: root
+      DATABASE: sertificatedb
+      HOST: 192.168.0.1
+      #HOST: localhost
+      #HOST: 10.5.0.1
+      NODE_ENV: development
+      DOMEN: http://localhost:443
     volumes:
-      - ./:/app
-      - /app/node_modules
-    restart: 'unless-stopped'
-    networks:
-      - backend
+      - ./:/var/www
+    ports:
+      - 443:443
+    depends_on:
+      - db-node
+    tty: true
 
-networks:
-  backend:
-    driver: bridge
-
-volumes:
-  data:
-    driver: local
+  db-node:
+    image: mysql
+    restart: always
+    hostname: mysql
+    container_name: db
+    environment:
+      MYSQL_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: sertificatedb
+      # MYSQL_ROOT_HOST: 10.5.0.1
+      MYSQLX: OFF
+    ports:
+      - 3307:3306

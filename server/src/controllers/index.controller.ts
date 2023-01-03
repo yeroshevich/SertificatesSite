@@ -1,4 +1,4 @@
-import {Controller, Get, Req, Res, UseAfter, UseBefore} from "routing-controllers";
+import {Controller, Get} from "routing-controllers";
 
 
 @Controller()
@@ -6,6 +6,6 @@ export class IndexController {
 
   @Get('/')
   async index() {
-    return 'IndexController to index'
+    return `изменения сохраняются IndexController to index ${new Date().toString()}`
   }
 }

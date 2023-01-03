@@ -16,6 +16,7 @@ const Sequelize = require('sequelize')
    PASSWORD,
    {
      host:HOST,
+     port:3307,
      dialect:'mysql'
    }
 )
@@ -35,7 +36,6 @@ export const ConfigPage = sequelize.define('page',{
     allowNull:false
   }
 },modelOptions)
-
 export const ConfigModel = sequelize.define('config',{
   idConfig:{
     type:DataTypes.BIGINT,
@@ -54,8 +54,6 @@ export const ConfigModel = sequelize.define('config',{
     }
   }
 },modelOptions)
-
-
 export const UserModel = sequelize.define('user',{
   idUser:{
     type:DataTypes.BIGINT,
@@ -72,22 +70,18 @@ export const UserModel = sequelize.define('user',{
     allowNull:false
   }
 },modelOptions)
-
 UserModel.hasMany(ConfigModel,{
   foreignKey:{
     name:'userId',
     allowNull:false
   }
 })
-
 ConfigModel.belongsTo(UserModel,{
   foreignKey:{
     name:'userId',
     allowNull:false
   }
 })
-
-
 ConfigPage.hasOne(ConfigModel,{
   foreignKey:{
     name:'pageId',
@@ -101,13 +95,35 @@ ConfigModel.belongsTo(ConfigPage,{
   }
 })
 
-sequelize.authenticate()
-  .then(()=>{
-  console.log('DataBase was connected')
-})
-  .catch((error)=>{
-    console.log('Database want connected = '+error)
-  })
+const connecting = ()=>{
+  sequelize.authenticate()
+    .then(()=>{
+      console.log(`Database connected db=${DATABASE}  user=${USER} host=${HOST} password=${PASSWORD} = `)
+    })
+    .catch((error)=>{
+      console.log(`Database wasnt connected db=${DATABASE}  user=${USER} host=${HOST} password=${PASSWORD} = `+error)
+      const testCOn = new Sequelize(
+        DATABASE,
+        USER,
+        PASSWORD,
+        {
+          host:HOST,
+          port:3306,
+          dialect:'mysql'
+        }
+      )
+      testCOn.authenticate()
+        .then(()=>{
+          console.log('testCon DataBase was connected db=${DATABASE}  user=${USER} host=${HOST} password=${PASSWORD}')
+        })
+        .catch((error)=>{
+          console.log(`db with 3307 isnt work`+error)
+
+        })
+    })
+
+}
+connecting()
 sequelize.sync().then(()=>{
   console.log('tables was created')
 }).catch(e=>{

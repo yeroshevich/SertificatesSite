@@ -7,7 +7,7 @@
   "main": "dist/server.js",
   "scripts": {
     "start": "npm run build && cross-env NODE_ENV=production node dist/server.js",
-    "dev": "concurrently --kill-others \"tsc --watch\" \"nodemon ./dist/server.js\"   \"cd .. && cd client && yarn dev\"",
+    "dev": "nodemon -L ./dist/server.js",
     "build": "swc src -d dist --source-maps --copy-files",
     "build:tsc": "tsc && tsc-alias",
     "test": "jest --forceExit --detectOpenHandles",

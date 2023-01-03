@@ -1,24 +1,12 @@
-# Common build stage
-FROM node:14.14.0-alpine3.12 as common-build-stage
+FROM node:lts
 
-COPY . ./app
+#COPY . .
 
-WORKDIR /app
+WORKDIR /var/www
 
-RUN npm install
+COPY entrypoint.sh /entrypoint.sh
 
-EXPOSE 3000
+RUN chmod +x /entrypoint.sh
 
-# Development build stage
-FROM common-build-stage as development-build-stage
+ENTRYPOINT ["/entrypoint.sh"]
 
-ENV NODE_ENV development
-
-CMD ["npm", "run", "dev"]
-
-# Production build stage
-FROM common-build-stage as production-build-stage
-
-ENV NODE_ENV production
-
-CMD ["npm", "run", "start"]

@@ -42,6 +42,6 @@ echo '
 
 '
 echo "💪 💪 💪 Ready server  - run dev ... "
-yarn docker-dev
+yarn dev
 
 exec "$@"
