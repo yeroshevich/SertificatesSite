@@ -2,51 +2,50 @@ import PhisicalHeader from "../../components/PhisicalHeader";
 import {PhisicalPageProps} from "../Phisicals";
 import PhisicalFooter from "../../components/PhisicalFooter";
 import BuyingSertificateForm from "../../components/buingSertificate/BuyingSertificateForm";
-import {serverRequest} from "../../app/http/serverRequest";
 import Head from "next/head";
-import defaultConfiguration from "../../app/defaultConfiguration";
+import useConfiguration from "../../hooks/useConfiguration";
+import useRedirect from "../../hooks/useRedirect";
+import {useEffect} from "react";
+import {BuyingPagePageConfig} from "../../interfaces/BuyingPageConfig";
 
 
-export async function getStaticProps(){
+const BuyingSertificatesPage = () => {
+    const {config,fetchConfiguration} = useConfiguration<BuyingPagePageConfig>('buyingpage')
+    const routeTo = useRedirect()
 
-  try{
-      const config = (await serverRequest.get('/configs/buyingpage')).data
-      config.config = JSON.parse(config.config)
+    useEffect(()=>{
+        try{
+            fetchConfiguration()
+        } catch (e)
+        {
+            routeTo('/404')
+        }
+    },[])
 
-      return {
-          props:{
-              config
-          }
-      }
-  }catch (e){
-      return {
-          redirect:{
-              destination:'/404'
-          }
-      }
-  }
 
-}
-
-const BuyingSertificatesPage = ({config}:PhisicalPageProps) => {
     return (
         <>
-            <Head>
-                {config.config.head.map((link,index)=> <link key={index} rel={link.rel} href={link.href}/>)}
-                <title>{config.config.title}</title>
-            </Head>
-            <div>
-                <PhisicalHeader
-                    uridicalLink={config.config.uridicalLink}
-                    logo={config.config.logo}
-                    links={config.config.links}
-                />
-                <BuyingSertificateForm/>
-                <PhisicalFooter
-                    links={config.config.footerLinks}
-                    logo={config.config.footerLogo}
-                />
-            </div>
+            {
+                config &&
+                <>
+                    <Head>
+                        {config.head.map((link,index)=> <link key={index} rel={link.rel} href={link.href}/>)}
+                        <title>{config.title}</title>
+                    </Head>
+                    <div>
+                        <PhisicalHeader
+                            uridicalLink={config.uridicalLink}
+                            logo={config.logo}
+                            links={config.links}
+                        />
+                        <BuyingSertificateForm/>
+                        <PhisicalFooter
+                            links={config.footerLinks}
+                            logo={config.footerLogo}
+                        />
+                    </div>
+                </>
+            }
         </>
     );
 };

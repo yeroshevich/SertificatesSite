@@ -34,8 +34,13 @@ const ChooseImage = ({onChoose}:ChooseImageProps) => {
     }
 
     const fetchImages = async()=>{
-        const res:Array<ImageResponse> = (await serverRequest.get('/images')).data
-        setImages([...res.map(x=>x)])
+        try{
+            const res:Array<ImageResponse> = (await serverRequest.get('/images')).data
+            setImages([...res.map(x=>x)])
+        }catch (e)
+        {
+            console.log(e)
+        }
     }
     const handleSubmit = async(event:React.FormEvent) => {
         event.preventDefault()

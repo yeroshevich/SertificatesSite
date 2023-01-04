@@ -1,61 +1,55 @@
 import CheckForm from "../../components/checkpage/CheckForm";
-import {CheckFormPage} from "../../interfaces/CheckFormPageConfig";
 import Head from "next/head";
 import PhisicalHeader from "../../components/PhisicalHeader";
 import PhisicalFooter from "../../components/PhisicalFooter";
 import styles from '../../styles/CheckFormPage.module.scss'
-import {serverRequest} from "../../app/http/serverRequest";
-import defaultConfiguration from "../../app/defaultConfiguration";
+import useConfiguration from "../../hooks/useConfiguration";
+import {useEffect} from "react";
+import useRedirect from "../../hooks/useRedirect";
+import {CheckFormPageConfig} from "../../interfaces/CheckFormPageConfig";
 
-export async function getStaticProps(){
 
-     try{
-    //     const {saveConfig,getCheckFormPageDefaultConfig} = defaultConfiguration()
-    //     await saveConfig(getCheckFormPageDefaultConfig().config)
-        const config = (await serverRequest.get('/configs/checkform')).data
-        config.config = JSON.parse(config.config)
+const CheckFormPage = () => {
+    const {config,fetchConfiguration} = useConfiguration<CheckFormPageConfig>('checkform')
+    const routeTo = useRedirect()
 
-        return {
-            props:{
-                config
-            }
-        }
-    }catch (e){
-        return {
-            redirect:{
-                destination:'/404'
-            }
-        }
-    }
+    useEffect(()=>{
+       try{
+           fetchConfiguration()
+       } catch (e)
+       {
+           routeTo('/404')
+       }
+    },[])
 
-}
-interface CheckFormPageProps{
-    config:CheckFormPage
-}
-const CheckFormPage = ({config}:CheckFormPageProps) => {
     return (
         <>
-            <Head>
-                <title>{config.config.title}</title>
-                {
-                    config.config.head.map((link,index)=>
-                        <link key={index} rel={link.rel} href={link.href}/>
-                    )
-                }
-            </Head>
-            <>
-                <PhisicalHeader logo={config.config.logo} links={config.config.links} uridicalLink={config.config.uridicalLink}/>
-                <div className={styles.content}>
-                    <header>
-                        {config.config.header}
-                    </header>
-                    <div className={styles.descriptions}>
-                        {config.config.description.map((desc,index)=><div key={index} className={styles.description}>{desc}</div>)}
-                    </div>
-                    <CheckForm image={config.config.formImage} hereLink={config.config.hereLink}/>
-                </div>
-                <PhisicalFooter links={config.config.footerLinks} logo={config.config.footerLogo}/>
-            </>
+            {
+                config &&
+                <>
+                    <Head>
+                        <title>{config.title}</title>
+                        {
+                            config.head.map((link,index)=>
+                                <link key={index} rel={link.rel} href={link.href}/>
+                            )
+                        }
+                    </Head>
+                    <>
+                        <PhisicalHeader logo={config.logo} links={config.links} uridicalLink={config.uridicalLink}/>
+                        <div className={styles.content}>
+                            <header>
+                                {config.header}
+                            </header>
+                            <div className={styles.descriptions}>
+                                {config.description.map((desc,index)=><div key={index} className={styles.description}>{desc}</div>)}
+                            </div>
+                            <CheckForm image={config.formImage} hereLink={config.hereLink}/>
+                        </div>
+                        <PhisicalFooter links={config.footerLinks} logo={config.footerLogo}/>
+                    </>
+                </>
+            }
         </>
     );
 };

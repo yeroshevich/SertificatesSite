@@ -5,6 +5,7 @@ import About from "./uridicals/About";
 import Steps from "./uridicals/Steps";
 import Clients from "./uridicals/Clients";
 import MemoryOwner from "./uridicals/MemoryOwner";
+import useRedirect from "../hooks/useRedirect";
 
 interface UridicalContentProps{
     bigImage:Image,
@@ -15,6 +16,12 @@ interface UridicalContentProps{
     fivesContent:{image:Image,content:ContentPair},
 }
 const UridicalContent = ({bigImage,firstContent,secondContent,thirtContent,fourthContent,fivesContent}:UridicalContentProps) => {
+    const routeTo = useRedirect()
+
+    const handleNavigateBuyingPage = ()=>{
+        routeTo('/BuyingSertificates')
+    }
+
     return (
         <div className={styles.contentBlock}>
             <div className={styles.contentGrid}>
@@ -26,7 +33,7 @@ const UridicalContent = ({bigImage,firstContent,secondContent,thirtContent,fourt
                         <div className={styles.description}>{firstContent.underDescription}</div>
                     </div>
                     <div  className={styles.sendButton}>
-                        <button>Оставить заявку</button>
+                        <button onClick={handleNavigateBuyingPage}>Оставить заявку</button>
                     </div>
                 </div>
             </div>

@@ -1,64 +1,60 @@
 import PhisicalHeader from "../../components/PhisicalHeader";
 import PhisicalContent from "../../components/PhisicalContent";
 import PhisicalFooter from "../../components/PhisicalFooter";
-import {PhisicalPage} from "../../interfaces/PhisicalPageConfig";
+import {PhisicalPage, PhisicalPageConfig} from "../../interfaces/PhisicalPageConfig";
 import TopScroll from "../../components/TopScroll";
 import {serverRequest} from "../../app/http/serverRequest";
 import Head from "next/head";
 import defaultConfiguration from "../../app/defaultConfiguration";
+import {useEffect, useState} from "react";
+import useConfiguration from "../../hooks/useConfiguration";
+import useRedirect from "../../hooks/useRedirect";
 
-export async function getStaticProps(){
-
-    try{
-        // const {saveConfig,getPhysicalPageDefaultConfig} = defaultConfiguration()
-        // await saveConfig(getPhysicalPageDefaultConfig().config)
-        const config = (await serverRequest.get('/configs/physical')).data
-        config.config = JSON.parse(config.config)
-
-        return {
-            props:{
-                config
-            }
-        }
-    }catch (e){
-        return {
-            redirect:{
-                destination:'/404'
-            }
-        }
-    }
-}
 export interface PhisicalPageProps{
     config:PhisicalPage
 }
-const PhisicalsPage = ({config}:PhisicalPageProps) => {
-
+const PhisicalsPage = () => {
+    const {fetchConfiguration,config} = useConfiguration<PhisicalPageConfig>('physical')
+    const routeTo = useRedirect()
+    useEffect(()=>{
+        try{
+            fetchConfiguration()
+        }catch (e)
+        {
+            routeTo('/404')
+        }
+    },[])
 
 
     return (
         <>
-            <Head>
-                {config.config.head.map((link,index)=><link rel={link.rel} href={link.href} key={index}/>)}
-                <title>{config.config.title}</title>
-            </Head>
-            <PhisicalHeader
-                uridicalLink={config.config.uridicalLink}
-                logo={config.config.logo}
-                links={config.config.links}
-            />
-            <PhisicalContent
-                content={config.config.content}
-                rectImage={config.config.rectImage}
-                smallImage={config.config.smallImage}
-                carousel={config.config.carousel}
-                addresses={config.config.addresses}
-                faq={config.config.faq}
-            />
-            <PhisicalFooter
-                links={config.config.footerLinks}
-                logo={config.config.footerLogo}
-            />
-            <TopScroll/>
+            {
+                config &&
+                <>
+                    <Head>
+                        {config.head.map((link,index)=><link rel={link.rel} href={link.href} key={index}/>)}
+                        <title>{config.title}</title>
+                    </Head>
+                    <PhisicalHeader
+                        uridicalLink={config.uridicalLink}
+                        logo={config.logo}
+                        links={config.links}
+                    />
+                    <PhisicalContent
+                        content={config.content}
+                        rectImage={config.rectImage}
+                        smallImage={config.smallImage}
+                        carousel={config.carousel}
+                        addresses={config.addresses}
+                        faq={config.faq}
+                    />
+                    <PhisicalFooter
+                        links={config.footerLinks}
+                        logo={config.footerLogo}
+                    />
+                    <TopScroll/>
+                </>
+            }
         </>
     );
 };

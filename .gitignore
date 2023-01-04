@@ -4,4 +4,4 @@
 /server/.env.*
 /client/.env.*
 /server/.env
-/client/.env
+/client/.env.local

@@ -16,7 +16,7 @@ const Sequelize = require('sequelize')
    PASSWORD,
    {
      host:HOST,
-     port:3307,
+     port:3306,
      dialect:'mysql'
    }
 )
@@ -108,7 +108,7 @@ const connecting = ()=>{
         PASSWORD,
         {
           host:HOST,
-          port:3306,
+          port:3307,
           dialect:'mysql'
         }
       )

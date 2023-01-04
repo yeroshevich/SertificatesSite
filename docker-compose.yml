@@ -1,27 +1,27 @@
 version: '3'
 
 services:
-  client:
-    build:
-      context: ./client
-      dockerfile: Dockerfile
-    ports:
-      - 3000:3000
+
+  db:
+    image: mysql
+    container_name: db
+    restart: always
+    hostname: mysql
     environment:
-      SERVER_DOMEN: http://localhost:443
-      CHOKIDAR_USEPOLLING: true
-    volumes:
-      - ./:/var/www
-      - /var/www/node_modules
-      - /var/www/.next
-    tty: true
-    command: yarn client
+      MYSQL_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: sertificatedb
+      MYSQLX: OFF
+    ports:
+      - 3307:3306
 
   server:
     build:
       context: ./server
       dockerfile: Dockerfile
     restart: always
+    container_name: server
+
     environment:
       PORT: 443
       SECRET_KEY: secretKey
@@ -32,28 +32,40 @@ services:
       USER: root
       PASSWORD: root
       DATABASE: sertificatedb
-      HOST: 192.168.0.1
-      #HOST: localhost
-      #HOST: 10.5.0.1
+      HOST: db
       NODE_ENV: development
       DOMEN: http://localhost:443
     volumes:
       - ./:/var/www
     ports:
       - 443:443
+    expose:
+      - 443
     depends_on:
+      - db
+    links:
       - db
     tty: true
     command: yarn server
-  db:
-    image: mysql
-    restart: always
-    hostname: mysql
-    environment:
-      MYSQL_PASSWORD: root
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: sertificatedb
-      # MYSQL_ROOT_HOST: 10.5.0.1
-      MYSQLX: OFF
+
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: client
     ports:
-      - 3307:3306
+      - 3000:3000
+    environment:
+      SERVER_DOMEN: http://localhost:443
+      CHOKIDAR_USEPOLLING: true
+    volumes:
+      - ./:/var/www
+      - /var/www/node_modules
+      - /var/www/.next
+    depends_on:
+      - server
+    links:
+      - server
+    tty: true
+    command: yarn client
+

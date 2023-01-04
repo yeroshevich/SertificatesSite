@@ -1,11 +1,17 @@
 import {Image} from "../../interfaces/Image";
 import styles from '../../styles/Steps.module.scss';
+import useRedirect from "../../hooks/useRedirect";
 
 interface StepsProps{
     content:{header:string,image:Image}
 }
 
 const Steps = ({content}:StepsProps) => {
+    const routeTo = useRedirect()
+
+    const handleNavigateBuyingPage = ()=>{
+        routeTo('/BuyingSertificates')
+    }
     return (
         <div className={styles.contentGrid} id={'stepsBlock'}>
             <div className={styles.instruction}>
@@ -35,7 +41,7 @@ const Steps = ({content}:StepsProps) => {
                         </div>
                     </div>
                 </div>
-                <button className={styles.sendButton}>ОСТАВИТЬ ЗАЯВКУ</button>
+                <button className={styles.sendButton} onClick={handleNavigateBuyingPage}>ОСТАВИТЬ ЗАЯВКУ</button>
                 <div className={styles.footer}>
                     В течении <span>5 дней</span> с момента оплаты вы получите подарочные сертификаты «Евроопт».
                 </div>

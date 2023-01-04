@@ -21,6 +21,7 @@ import useConfiguration from "../../hooks/useConfiguration";
 import Fieldset from "./Fieldset";
 import MapConstructor from "./MapConstructor";
 import {GeometryCoordinates} from "../../interfaces/GeometryCoordinates";
+import {serverRequest} from "../../app/http/serverRequest";
 
 const PAGE_TITLE = 'physical'
 

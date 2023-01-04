@@ -30,9 +30,9 @@ export default class ImageController{
     // return file
   }
   @Get('/images')
-  @UseBefore(authMiddleware)
   public async findAllImages(){
-    return this.imageService.findAllPathsImages()
+    const images = await this.imageService.findAllPathsImages()
+    return images
   }
   @Post('/images')
   @UseBefore(authMiddleware)

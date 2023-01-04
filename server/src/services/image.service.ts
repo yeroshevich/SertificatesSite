@@ -5,7 +5,7 @@ import {DOMEN} from "@config";
 import {File} from "@interfaces/file.interface";
 
 export default class ImageService{
-  private path = `${process.cwd()}\\src\\userImages\\`
+  private path = `${process.cwd()}/src/userImages/`
 
   public async findFile(path:string):Promise<{file:Buffer}> {
      try{
@@ -24,7 +24,7 @@ export default class ImageService{
        return files
     }catch (e)
     {
-      return []
+      throw new HttpException(404,'Images not found')
     }
   }
   public async saveImage (file:File){
