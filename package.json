@@ -1,0 +1,15 @@
+{
+  "name": "ser",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/yeroshevich/SertificatesSite.git",
+  "author": "yeroshevich valeriy <pybin2001@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "client": "cd client && yarn dev",
+    "server": "cd server && yarn dev"
+  },
+  "dependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
