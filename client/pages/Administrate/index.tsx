@@ -1,4 +1,4 @@
-import styles from '../../styles/AdminPage.module.scss';
+import styles from './AdminPage.module.scss';
 import useInput from "../../hooks/useInput";
 import { Input } from 'antd';
 import {serverRequest} from "../../app/http/serverRequest";

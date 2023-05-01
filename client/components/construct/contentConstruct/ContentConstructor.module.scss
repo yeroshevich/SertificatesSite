@@ -1,0 +1,25 @@
+@import '../../../styles/Consts';
+
+.contents{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  .content{
+    text-align: left;
+    margin:10px;
+    width: 45%;
+    div{
+      display: flex;
+      align-items: center;
+      div
+      {
+        min-width: 120px;
+      }
+      textarea{
+        height: 100px;
+        width: 350px;
+      }
+    }
+  }
+}

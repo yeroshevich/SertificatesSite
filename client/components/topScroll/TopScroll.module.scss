@@ -1,0 +1,30 @@
+@import '../../styles/Consts';
+
+.scrollBlock{
+  position: fixed;
+  left: 5px;
+  bottom:5px;
+
+  color:$lightGreen;
+  border-radius: 50%;
+  border:1px solid gainsboro;
+  padding: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 5pt;
+  z-index: 2;
+  background-color: #fff;
+  width: 50px;
+  height: 50px;
+  div{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    i{
+      font-size: 25pt;
+      position: absolute;
+      top:-10px;
+      left: -8px;
+    }
+  }
+}

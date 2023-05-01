@@ -1,0 +1,43 @@
+@import "../../../styles/Consts";
+
+.listBlock{
+  min-width: 300px;
+  header{
+    @include gotham;
+    width: 79px;
+    height: 43px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 120%;
+  }
+  .content{
+
+  }
+
+}
+@media (min-width: 1280px)
+{
+  .content{
+    padding-inline: 200px;
+
+  }
+}
+@media (max-width: 1280px)
+{
+  .content{
+    padding-inline: 100px;
+
+  }
+}
+@media (max-width: 980px)
+{
+  .content{
+    padding-inline: 0px;
+  }
+  .listBlock{
+    header{
+      margin: auto;
+    }
+  }
+}

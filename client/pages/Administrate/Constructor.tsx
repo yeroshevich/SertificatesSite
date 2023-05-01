@@ -1,10 +1,10 @@
-import styles from '../../styles/Constructor.module.scss'
+import styles from './Constructor.module.scss'
 import {ReactNode, useState} from "react";
-import PhysicalPageContruct from "../../components/construct/PhysicalPageContruct";
-import AddUserConstruct from "../../components/construct/AddUserConstruct";
-import UridicalPageConstruct from "../../components/construct/UridicalPageConstruct";
-import CheckFormConstruct from "../../components/construct/CheckFormConstruct";
-import BackFormConstruct from "../../components/construct/BackFormConstruct";
+import PhysicalPageContruct from "../../components/construct/physicalConstruct/PhysicalPageContruct";
+import AddUserConstruct from "../../components/construct/addUser/AddUserConstruct";
+import UridicalPageConstruct from "../../components/construct/uriducalConstruct/UridicalPageConstruct";
+import CheckFormConstruct from "../../components/construct/checkForm/CheckFormConstruct";
+import BackFormConstruct from "../../components/construct/backForm/BackFormConstruct";
 import {ConfigContext} from "../../app/context";
 
 const Constructor = () => {

@@ -1,6 +1,4 @@
 
-import ChooseImage from "../components/construct/ChooseImage";
-
 export async function getStaticProps(){
   return {
     redirect:{
@@ -12,8 +10,6 @@ export async function getStaticProps(){
 export default function Home() {
 
   return (
-    <>
-
-    </>
+    <></>
   )
 }

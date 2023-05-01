@@ -1,0 +1,50 @@
+@import '../../styles/Consts';
+
+
+
+.constructorBlock{
+  max-width: 1300px;
+  max-height: 1000px;
+  background-color: #f4f4f4;
+  margin: auto;
+  min-width: 600px;
+  min-height: 600px;
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  height: 100%;
+  header{
+    @include gotham;
+    font-size: 10pt;
+    background-color: #efefef;
+    overflow-y: auto;
+    max-height: 500px;
+    max-width: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .menu{
+      .item{
+        margin:15px 10px;
+        cursor: pointer;
+        border-radius: 15px;
+        background-color: gainsboro;
+        padding: 15px 10px;
+      }
+    }
+  }
+  .content{
+    background-color: gainsboro;
+    width: 100%;
+    margin-left: 10px;
+    overflow-y: auto;
+    max-height: 1000px;
+    position: relative;
+  }
+}
+.chooseBlock{
+  height: 100%;
+  @include gotham;
+  text-align: center;
+}

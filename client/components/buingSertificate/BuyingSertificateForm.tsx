@@ -1,5 +1,5 @@
 import React, {ChangeEvent, MouseEventHandler, useEffect, useState} from 'react';
-import styles from '../../styles/BuyingSertificateForm.module.scss'
+import styles from './BuyingSertificateForm.module.scss'
 import ReactInputMask from "react-input-mask";
 import {Checkbox} from "antd";
 import useInput from "../../hooks/useInput";

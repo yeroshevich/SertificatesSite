@@ -1,0 +1,16 @@
+@import '../../../styles/Consts';
+
+.buttons{
+  display: flex;
+  justify-content: space-between;
+  button{
+    @include gotham;
+    color:white;
+  }
+  .saveButton{
+    background-color: #30e830;
+  }
+  .cancelButton{
+    background-color: red;
+  }
+}

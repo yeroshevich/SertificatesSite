@@ -1,4 +1,4 @@
-import styles from '../../styles/CheckForm.module.scss'
+import styles from './CheckForm.module.scss'
 import {Image} from "../../interfaces/Image";
 import {QuestionOutlined} from "@ant-design/icons";
 import {Tooltip} from "antd";

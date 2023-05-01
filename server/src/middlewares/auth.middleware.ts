@@ -3,9 +3,8 @@ import { verify } from 'jsonwebtoken';
 import { SECRET_KEY } from '@config';
 import { HttpException } from '@exceptions/HttpException';
 import { DataStoredInToken, RequestWithUser } from '@interfaces/auth.interface';
-import {UserModel} from "@database/sequelize";
-import {User} from "@interfaces/users.interface";
-
+import { UserModel } from '@database/sequelize';
+import { User } from '@interfaces/users.interface';
 
 const authMiddleware = async (req: RequestWithUser, res: Response, next: NextFunction) => {
   try {
@@ -14,7 +13,7 @@ const authMiddleware = async (req: RequestWithUser, res: Response, next: NextFun
       const secretKey: string = SECRET_KEY;
       const verificationResponse = (await verify(Authorization, secretKey)) as DataStoredInToken;
       const userId = verificationResponse.id;
-      const findUser:User =await  UserModel.findByPk(userId,{raw:true})
+      const findUser: User = await UserModel.findByPk(userId, { raw: true });
 
       if (findUser) {
         req.user = findUser;

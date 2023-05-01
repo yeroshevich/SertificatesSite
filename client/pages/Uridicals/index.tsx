@@ -1,6 +1,6 @@
-import UridicalHeader from "../../components/UridicalHeader";
-import UridicalFooter from "../../components/UridicalFooter";
-import UridicalContent from "../../components/UridicalContent";
+import UridicalHeader from "../../components/uridicals/header/UridicalHeader";
+import UridicalFooter from "../../components/uridicals/footer/UridicalFooter";
+import UridicalContent from "../../components/uridicals/content/UridicalContent";
 import {serverRequest} from "../../app/http/serverRequest";
 import {UridicalPage, UridicalPageConfig} from "../../interfaces/UridicalPageConfig";
 import Head from "next/head";

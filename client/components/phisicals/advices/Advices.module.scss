@@ -1,0 +1,105 @@
+@import '../../../styles/Consts';
+
+.adviceContainer{
+  background: #E3ECD6;
+  padding: 35px 0;
+  transition: 2s;
+  header{
+    @include gotham;
+    .smallHeader{
+      font-style: normal;
+      line-height: 160%;
+    }
+    .bigHeader{
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%;
+    }
+  }
+  .grid{
+    display: grid;
+    @include inter;
+    .gridCol{
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+
+      div{
+        display: flex;
+        align-items: center;
+        padding-top: 25px;
+        div{
+          padding-left: 25px;
+        }
+      }
+    }
+
+  }
+}
+@media (min-width: 1200px)
+{
+  .adviceContainer{
+    padding-inline: 200px;
+  }
+  .grid{
+    grid-template-columns: 1fr 1fr;
+  }
+  .smallHeader{
+    font-size: 22px;
+  }
+  .bigHeader{
+    font-size: 36px;
+  }
+}
+@media (max-width: 1200px)
+{
+  .adviceContainer{
+    padding-inline: 100px;
+  }
+  .smallHeader{
+    font-size: 16px;
+  }
+  .bigHeader{
+    font-size: 22px;
+  }
+  .grid{
+    grid-template-columns: 1fr 1fr;
+  }
+  .gridCol{
+    img{
+      height: 35px;
+      width: auto;
+      margin-top: 20px;
+    }
+  }
+}
+
+@media (max-width: 900px)
+{
+  .adviceContainer{
+    padding-inline: 15px;
+  }
+  .grid{
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+@media (max-width: 560px)
+{
+  .grid{
+    grid-template-columns: 1fr;
+  }
+  .smallHeader{
+    font-size: 14px;
+  }
+  .bigHeader{
+    font-size: 20px;
+  }
+  .gridCol{
+    margin-top: 0;
+    img{
+      height: 30px;
+      width: auto;
+      margin-top: 20px;
+    }
+  }
+}

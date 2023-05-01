@@ -1,11 +1,9 @@
-import PhisicalHeader from "../../components/PhisicalHeader";
-import PhisicalContent from "../../components/PhisicalContent";
-import PhisicalFooter from "../../components/PhisicalFooter";
+import PhisicalHeader from "../../components/phisicals/header/PhisicalHeader";
+import PhisicalContent from "../../components/phisicals/content/PhisicalContent";
+import PhisicalFooter from "../../components/phisicals/footer/PhisicalFooter";
 import {PhisicalPage, PhisicalPageConfig} from "../../interfaces/PhisicalPageConfig";
-import TopScroll from "../../components/TopScroll";
-import {serverRequest} from "../../app/http/serverRequest";
+import TopScroll from "../../components/topScroll/TopScroll";
 import Head from "next/head";
-import defaultConfiguration from "../../app/defaultConfiguration";
 import {useEffect, useState} from "react";
 import useConfiguration from "../../hooks/useConfiguration";
 import useRedirect from "../../hooks/useRedirect";
