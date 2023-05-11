@@ -15,8 +15,12 @@ MySQL
 Страница для юридических лиц
 ![image](https://github.com/yeroshevich/SertificatesSite/assets/55634867/02e4146a-b15c-4dd2-b5fd-4acde08f7253)
 
-Страницы покупки
+Страница покупки
 ![image](https://github.com/yeroshevich/SertificatesSite/assets/55634867/38ebcd8e-8399-4fbb-aff1-75253e24979e)
+
+Страница проверки сертификатов
+![image](https://github.com/yeroshevich/SertificatesSite/assets/55634867/baedd8ea-7ebe-43e5-8b6d-06dbe9c527d6)
+
 
 Все страницы имеют разные версии для размеров (1280px,768px,320px)
 ![image](https://github.com/yeroshevich/SertificatesSite/assets/55634867/97b2f5a8-1d55-4e5b-bde9-5013215711ac)
