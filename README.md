@@ -19,3 +19,6 @@ MySQL
 
 Все страницы имеют разные версии для размеров (1280px,768px,320px)
 ![image](https://github.com/yeroshevich/SertificatesSite/assets/55634867/97b2f5a8-1d55-4e5b-bde9-5013215711ac)
+
+Контент на каждой странице может быть настроен из панели администратора:
+![image](https://github.com/yeroshevich/SertificatesSite/assets/55634867/25e7dd89-9b75-4139-ac10-9b13c21702f6)
